@@ -2,6 +2,6 @@
 
 
 > [!NOTE]
-> For a gameplay and design description see [this](https://github.com/bluzier4409/UnityProject1/blob/main/Design.md).
+> Gameplay and design can be found [here](https://github.com/bluzier4409/UnityProject1/blob/main/Design.md).
 
 
