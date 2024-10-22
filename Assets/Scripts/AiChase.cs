@@ -7,7 +7,7 @@ public class AiChase : MonoBehaviour
 {
     public GameObject player;
     public float speed;
-    public float touching;
+    public float touchingDistance;
 
     private float distance;
     // Start is called before the first frame update
@@ -22,10 +22,13 @@ public class AiChase : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
 
+    
 
-        if(distance > touching){
+        if(distance > touchingDistance){
                     transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
 
         }
     }
+
+
 }
