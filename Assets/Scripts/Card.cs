@@ -6,9 +6,8 @@ public class Card : MonoBehaviour
     private bool _consumable;
     
     
-    public Card(bool isConsumable)
+    public Card(bool consumable)
     {
-        _consumable = isConsumable;
-        
+        _consumable = consumable;
     }
 }
