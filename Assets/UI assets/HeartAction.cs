@@ -9,12 +9,12 @@ public class HeartAction : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private Sprite _full, _half;
-    [SerializeField] private Image _sprite;
+    [SerializeField] private RawImage _sprite;
 
     // Update is called once per frame
     public void setState(int state)
     {
-        switch(state){
+        /*switch(state){
             //set heart as invisible
             case 0:
                 //_sprite.invisible;
@@ -28,7 +28,7 @@ public class HeartAction : MonoBehaviour
                 //set heart as full
                 _sprite.sprite = _full;
                 break;
-        }
+        }*/
 
         
         
