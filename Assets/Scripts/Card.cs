@@ -1,77 +1,69 @@
 using System.Collections.Generic;
-using System.IO.IsolatedStorage;
 using UnityEngine;
-using Random = System.Random;
-
-class CardDeck : MonoBehaviour
-{
-    private readonly List<Card> _cardDeck;
-    private List<Card> _discardPile;
-    private Random _random;
-
-    public CardDeck()
-    {
-        _cardDeck = new List<Card>();
-        _discardPile = new List<Card>();
-        _random = new Random();
-    }
-
-    public void AddCardToDeck(Card card)
-    {
-        _cardDeck.Add(card);
-    }
-
-    public void RemoveCardFromDeck(Card card)
-    {
-        _cardDeck.Remove(card);
-    }
-
-    public void DiscardFromDeck(Card card)
-    {
-        RemoveCardFromDeck(card);
-        _discardPile.Add(card);
-    }
-
-    // public void Reset(List<Card> cards, List<Card> discardPile)
-    //{
-      //  for (int i = 0; i < cards.Count; i++)
-   //     {
-    //        
-    //    }
-   // }
-
-    public void ShuffleDeck()
-    {
-        for (int i = _cardDeck.Count - 1; i > 0; i--)
-        {
-            int j = _random.Next(i + 1);
-            (_cardDeck[i], _cardDeck[j]) = (_cardDeck[j], _cardDeck[i]);
-        }
-    }
-}
-
 
 public class Card : MonoBehaviour
 {
-    private bool _consumable;
-    private bool _utility;
+    private string Name { get; set; }
+    private string Type { get; set; }
+    private Sprite Sprite { get; set; }
 
-    public Card() {}
-    public Card(bool consumable, bool utility)
+    public Card(string name, string type, Sprite sprite)
     {
-        _consumable = consumable;
-        _utility = utility;
+        Name = name;
+        Type = type;
+        Sprite = sprite;
     }
 
-    void UseCard()
+    public override string ToString()
     {
-        
+        return "This " + Type + " " + Name + "'s sprite is " + Sprite;
     }
-
-    void ConsumeCard()
-    {
-        
-    }
-    
-    
 }
+
+public class Deck : MonoBehaviour
+{
+    private List<Card> _cards;
+
+    public Deck()
+    {
+        _cards = new List<Card>();
+    }
+
+    public Card this[int i]
+    {
+        get { throw new System.NotImplementedException(); }
+    }
+}
+
+public class Discard : MonoBehaviour
+{
+    private List<Card> _discardedCards;
+
+    public Discard()
+    {
+        _discardedCards = new List<Card>();
+    }
+}
+
+public class Hand : MonoBehaviour
+{
+    private List<Card> _hand;
+
+    public Hand()
+    {
+        _hand = new List<Card>();
+    }
+
+    void Draw(Deck deck)
+    {
+        Card instanceCard = deck[0];
+        _hand.Add(instanceCard);
+    }
+}
+
+
+
+
+
+
+
