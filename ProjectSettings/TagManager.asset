@@ -14,10 +14,10 @@ TagManager:
   - walls
   - player
   - enemies
-  - 
-  - 
-  - 
-  - 
+  - playerAttack
+  - enemyAttack
+  - playerHitbox
+  - enemyHitbox
   - 
   - 
   - 
