@@ -5,13 +5,18 @@ public class Card : MonoBehaviour
 {
     private string Name { get; set; }
     private string Type { get; set; }
+    
+    private GameObject CardObj {get; set;}
     private Sprite Sprite { get; set; }
+    private static Animator Animator { get; set; }
 
-    public Card(string name, string type, Sprite sprite)
+    public Card(string name, string type, GameObject cardObj, Sprite sprite)
     {
         Name = name;
         Type = type;
+        CardObj = cardObj;
         Sprite = sprite;
+        Animator = cardObj.GetComponent<Animator>();
     }
 
     public override string ToString()
@@ -31,7 +36,12 @@ public class Deck : MonoBehaviour
 
     public Card this[int i]
     {
-        get { throw new System.NotImplementedException(); }
+        get { return _cards[i]; }
+    }
+
+    public void AddCard(Card card)
+    {
+        _cards.Add(card);
     }
 }
 
@@ -43,21 +53,33 @@ public class Discard : MonoBehaviour
     {
         _discardedCards = new List<Card>();
     }
+
+    public void DiscardCard(Card card)
+    {
+        _discardedCards.Add(card);
+    }
 }
 
 public class Hand : MonoBehaviour
 {
     private List<Card> _hand;
+    private int _handSize;
 
-    public Hand()
+    public Hand(int handSize)
     {
-        _hand = new List<Card>();
+        _handSize = handSize;
+        _hand = new List<Card>(_handSize);
     }
 
     void Draw(Deck deck)
     {
         Card instanceCard = deck[0];
         _hand.Add(instanceCard);
+    }
+
+    void useCard(Card card)
+    {
+        
     }
 }
 
