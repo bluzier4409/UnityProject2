@@ -17,7 +17,7 @@ private BoxCollider2D redBoxCollider;
     {
         
     }
-    private void OnTriggerEnter(Collider collision){
+    private void OnTriggerEnter2D(Collider2D collision){
            if (collision.tag == "Rat enemy"){
                 Debug.Log("Hit: " + collision.transform.name);
                 Destroy(collision.gameObject);

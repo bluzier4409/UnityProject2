@@ -127,6 +127,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1001502159104969250, guid: 6188e1b94aa4d4c0dad9ccb0c765c8cb, type: 3}
   m_PrefabInstance: {fileID: 1048237639}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &80202443
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80202437}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &673985486 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6430796983886819411, guid: cc582101546ed482f999363489e2f488, type: 3}
@@ -4520,10 +4547,15 @@ PrefabInstance:
       propertyPath: touchingDistance
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 6861359039884964133, guid: 6188e1b94aa4d4c0dad9ccb0c765c8cb, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 9050812953570202258, guid: 6188e1b94aa4d4c0dad9ccb0c765c8cb, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1001502159104969250, guid: 6188e1b94aa4d4c0dad9ccb0c765c8cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 80202443}
   m_SourcePrefab: {fileID: 100100000, guid: 6188e1b94aa4d4c0dad9ccb0c765c8cb, type: 3}
 --- !u!1001 &1069586445
 PrefabInstance:
@@ -4578,7 +4610,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6762335532554484225, guid: cc582101546ed482f999363489e2f488, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc582101546ed482f999363489e2f488, type: 3}
