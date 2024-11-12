@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class ObjHealth : MonoBehaviour
 {
 
     [SerializeField]private int health = 10;
@@ -18,6 +18,8 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         
+       
+
     }
 
     public void Damage(int amount){
@@ -27,13 +29,13 @@ public class PlayerHealth : MonoBehaviour
 
         this.health -= amount;
 
-        if(health < 0){
+        if(health < 1){
             die();
         }
     }
 
     public void Heal(int amount){
-        if(amount > 0){
+        if(amount < 0){
             throw new System.ArgumentOutOfRangeException("Cannont have negative healing");
         }
 
