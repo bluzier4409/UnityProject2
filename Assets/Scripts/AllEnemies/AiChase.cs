@@ -33,7 +33,7 @@ public class AiChase : MonoBehaviour
     }
 
     public bool getTouching(){
-        return distance > touchingDistance;
+        return distance <= touchingDistance;
     }
 
     

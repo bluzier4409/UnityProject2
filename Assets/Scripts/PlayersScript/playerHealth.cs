@@ -2,19 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjHealth : MonoBehaviour
+public class playerHealth : MonoBehaviour
 {
-
     [SerializeField]private int health = 10;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -30,7 +27,7 @@ public class ObjHealth : MonoBehaviour
         this.health -= amount;
 
         if(health < 1){
-            die();
+            playerDie();
         }
     }
 
@@ -42,7 +39,7 @@ public class ObjHealth : MonoBehaviour
         this.health += amount;
     }
 
-    private void die(){
+    private void playerDie(){
         Debug.Log("you died");
         Destroy(this.gameObject);
     }

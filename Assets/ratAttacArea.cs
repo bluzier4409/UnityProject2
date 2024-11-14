@@ -2,20 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackArea : MonoBehaviour
+public class ratAttacArea : MonoBehaviour
 {
-
-    private int damage = 2;
+        private int damage = 2;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         
         
-        if(collider.GetComponent<ObjHealth>() != null)
+        if(collider.GetComponent<playerHealth>() != null)
         {
             Debug.Log("hit");
 
-            ObjHealth health = collider.GetComponent<ObjHealth>();
+            playerHealth health = collider.GetComponent<playerHealth>();
             health.Damage(damage);
         }
     }
