@@ -1,15 +1,13 @@
 using System;
 using UnityEngine;
 
-public class Sword : Card
+public class Sword : MeleeCard
 {
     public GameObject swordObject;
     public Animator animator;
+    
 
-    public Sword() : base("Sword", "Melee", false, false)
-    {
-        
-    }
 
-  
+
+
 }

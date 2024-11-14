@@ -3,29 +3,36 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    public string Name { get; set; }
-    public string Type { get; set; }
+    protected string Name { get; set; }
+    protected string Type { get; set; }
     
-    private bool InHand {get; set;}
-    private bool Active {get; set;}
-   // public GameObject CardObj {get; set;}
-   // public Sprite Sprite { get; set; }
-   // public static Animator Animator { get; set; }
+    public bool InHand {get; set;}
+    public bool Active {get; set;}
 
-    public Card(string name, string type, bool inHand, bool active/*, GameObject cardObj, Sprite sprite*/)
+   public Card()
+   {
+       Name = string.Empty;
+       Type = string.Empty;
+       InHand = false;
+       Active = false;
+   }
+
+    public Card(string name, string type, bool inHand, bool active)
     {
         Name = name;
         Type = type;
         InHand = inHand;
         Active = active;
-     //   CardObj = cardObj;
-      //  Sprite = sprite;
-      //  Animator = cardObj.GetComponent<Animator>();
     }
 
-    public void setHandStatus(bool activity)
+    public void SetHandStatus(bool activity)
     {
         InHand = activity;
+    }
+
+    public void PlayCard()
+    {
+        
     }
 
     public override string ToString()

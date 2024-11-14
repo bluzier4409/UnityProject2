@@ -14,13 +14,24 @@ public class Hand : MonoBehaviour
 
     void Draw(Deck deck)
     {
-        if (DeckSize() >= _handSize)
+        if (deck.DeckSize() >= _handSize)
+        {
             for (int i = 0; i < _handSize; i++)
             {
                 Card instanceCard = deck[0];
                 _hand.Add(instanceCard);
-                instanceCard.setHandStatus(true);
+                instanceCard.SetHandStatus(true);
             }
+        }
+        else
+        {
+            for (int i = 0; i < deck.DeckSize(); i++)
+            {
+                Card instanceCard = deck[0];
+                _hand.Add(instanceCard);
+                instanceCard.SetHandStatus(true);
+            }
+        }
     }
 
     void useCard(Card card)
