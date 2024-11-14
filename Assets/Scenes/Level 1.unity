@@ -189,7 +189,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 5
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -221,7 +221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 15.700012, y: -16.5}
+  m_AnchoredPosition: {x: 15.699951, y: -16.5}
   m_SizeDelta: {x: 240.3703, y: 38.7699}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &701479861
@@ -6597,7 +6597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d550ae82a904504b8d4a8fb747b739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalHeartNum: 3
+  startHeartNum: 5
   health: 0
   heartBar: {fileID: 428586847}
   hearts: []
