@@ -26,7 +26,6 @@ public class ratAttack : MonoBehaviour
         if(this.GetComponent<AiChase>().getTouching() == true){
             Attack();
         }
-
         if(Attacking){
             timer += Time.deltaTime;
 

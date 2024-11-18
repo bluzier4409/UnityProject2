@@ -12,7 +12,7 @@ public class ratAttacArea : MonoBehaviour
         
         if(collider.GetComponent<playerHealth>() != null)
         {
-            Debug.Log("hit");
+            Debug.Log("player hit");
 
             playerHealth health = collider.GetComponent<playerHealth>();
             health.Damage(damage);

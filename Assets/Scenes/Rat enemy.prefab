@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7075577267869708096}
   - component: {fileID: 7163581832148751196}
   - component: {fileID: 7036947028252906539}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: ratAttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,10 +77,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.104754694, y: 0.13975617}
+    - - {x: 0.11451699, y: 0.1578952}
       - {x: -0.032271326, y: 0.1297939}
-      - {x: -0.046949137, y: 0.025981963}
-      - {x: 0.11093679, y: 0.02481018}
+      - {x: -0.030678667, y: 0.02295879}
+      - {x: 0.108767375, y: -0.0096539855}
   m_UseDelaunayMesh: 0
 --- !u!114 &7036947028252906539
 MonoBehaviour:
