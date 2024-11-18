@@ -51,7 +51,7 @@ public class HealthScript : MonoBehaviour
         }
     }
 
-    bool setHealth(int num) { //hearts are automatically created for health value; each value = half heart
+    public bool setHealth(int num) { //hearts are automatically created for health value; each value = half heart
         if (health < 0) return false;
         int heartNum;
         
@@ -81,7 +81,7 @@ public class HealthScript : MonoBehaviour
         return true;
     }
 
-    bool changeHealth(int num) { //change health by positive or negative num
+    public bool changeHealth(int num) { //change health by positive or negative num
         
         int newHealth = health + num;
         Debug.unityLogger.Log("new" + (newHealth));
