@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class playerHealth : MonoBehaviour
 {
-
     [SerializeField]private int health = 10;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+       
+
     }
 
     public void Damage(int amount){
@@ -27,20 +26,20 @@ public class PlayerHealth : MonoBehaviour
 
         this.health -= amount;
 
-        if(health < 0){
-            die();
+        if(health < 1){
+            playerDie();
         }
     }
 
     public void Heal(int amount){
-        if(amount > 0){
+        if(amount < 0){
             throw new System.ArgumentOutOfRangeException("Cannont have negative healing");
         }
 
         this.health += amount;
     }
 
-    private void die(){
+    private void playerDie(){
         Debug.Log("you died");
         Destroy(this.gameObject);
     }
