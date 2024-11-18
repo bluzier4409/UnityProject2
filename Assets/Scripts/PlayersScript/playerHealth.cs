@@ -2,14 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class playerHealth : MonoBehaviour
 {
     [SerializeField]private int health = 10;
 
+    private HealthScript healthScript;
+
+
 
     void Start()
     {
-        
+        healthScript = GetComponent<HealthScript>();
+        if(!healthScript) Debug.LogError("HealthScript does not exist");
+        if(!healthScript.setHealth(health)) Debug.LogError("Health could not be set");
+
+
     }
 
     void Update()
@@ -25,6 +33,7 @@ public class playerHealth : MonoBehaviour
         }
 
         this.health -= amount;
+        healthScript.changeHealth((-1* amount));
 
         if(health < 1){
             playerDie();
@@ -37,6 +46,7 @@ public class playerHealth : MonoBehaviour
         }
 
         this.health += amount;
+        healthScript.changeHealth(amount);
     }
 
     private void playerDie(){
