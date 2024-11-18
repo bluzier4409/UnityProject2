@@ -8,7 +8,7 @@ public class ratAttack : MonoBehaviour
     
     private GameObject ratAttacArea = default;
     private bool Attacking = false;
-    private float timeToAttack = 0.25f;
+    private float timeToAttack = 0.8f;
     private float timer = 0f;
     
 
