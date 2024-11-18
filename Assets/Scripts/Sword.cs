@@ -1,19 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-
+using System;
 using UnityEngine;
 
 public class Sword : MeleeCard
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject swordObject;
+    public Animator animator;
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
 }
