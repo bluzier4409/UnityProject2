@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//use this script it works
 public class playerHealth : MonoBehaviour
 {
     [SerializeField]private int health = 10;
