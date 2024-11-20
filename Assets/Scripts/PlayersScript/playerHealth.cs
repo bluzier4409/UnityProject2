@@ -33,7 +33,7 @@ public class playerHealth : MonoBehaviour
         }
 
         this.health -= amount;
-        //healthScript.changeHealth((-1* amount));
+        healthScript.changeHealth((-1* amount));
 
         if(health < 1){
             playerDie();

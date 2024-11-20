@@ -144,8 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d550ae82a904504b8d4a8fb747b739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHeartNum: 6
-  health: 6
+  startHeartNum: 10
+  health: 10
   heartBar: {fileID: 788349641}
   hearts: []
   sprites:
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 788349641}
   - component: {fileID: 788349640}
   m_Layer: 5
-  m_Name: NewBar
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
