@@ -5227,6 +5227,18 @@ PrefabInstance:
       propertyPath: health
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1715714403080623659, guid: cc582101546ed482f999363489e2f488, type: 3}
+      propertyPath: sprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715714403080623659, guid: cc582101546ed482f999363489e2f488, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7987a29234d5c45f88c3a129881ff1d6, type: 3}
+    - target: {fileID: 1715714403080623659, guid: cc582101546ed482f999363489e2f488, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 140d4b93f85ab4e55ae4ae5272b61fe0, type: 3}
     - target: {fileID: 4655451392016640918, guid: cc582101546ed482f999363489e2f488, type: 3}
       propertyPath: m_Name
       value: AttackArea
