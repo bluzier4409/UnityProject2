@@ -8,8 +8,8 @@ public class playerHealth : MonoBehaviour
     [SerializeField]private int health = 10;
 
     private HealthScript healthScript;
-
-
+    public GameManagerScript gameManager;
+    private bool isDead = false;
 
     void Start()
     {
@@ -50,7 +50,18 @@ public class playerHealth : MonoBehaviour
     }
 
     private void playerDie(){
-        Debug.Log("you died");
-        Destroy(this.gameObject);
+        
+        if (!isDead) {
+            isDead = true;
+            Debug.Log("you died");
+            gameManager.gameOver();
+            Camera playerCamera = GetComponentInChildren<Camera>();
+            if (playerCamera != null)
+            {
+                playerCamera.transform.parent = null; // Detach the camera
+            }
+            Destroy(this.gameObject);
+        }
+
     }
 }
