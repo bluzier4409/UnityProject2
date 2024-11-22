@@ -5204,6 +5204,14 @@ PrefabInstance:
       propertyPath: touchingDistance
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6395868636856399582, guid: 6188e1b94aa4d4c0dad9ccb0c765c8cb, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395868636856399582, guid: 6188e1b94aa4d4c0dad9ccb0c765c8cb, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8549058702571048868, guid: 6188e1b94aa4d4c0dad9ccb0c765c8cb, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -5224,6 +5232,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 143430426668841356, guid: cc582101546ed482f999363489e2f488, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715714403080623659, guid: cc582101546ed482f999363489e2f488, type: 3}
       propertyPath: health
       value: 10
       objectReference: {fileID: 0}

@@ -24,6 +24,10 @@ public class playerAttack : MonoBehaviour
         }
 
         if(Attacking){
+            //StartCoroutine(attackWaiter());
+        }
+
+        if(Attacking){
             timer += Time.deltaTime;
 
             if(timer >= timeToAttack){
@@ -39,5 +43,11 @@ public class playerAttack : MonoBehaviour
         Attacking = true;
         AttackArea.SetActive(Attacking);
    }
+
+   /*IEnumerator attackWaiter(){
+        yield return new WaitForSeconds((float)0.25);
+        Attacking = false;
+        AttackArea.SetActive(Attacking);
+   }*/
     
 }
