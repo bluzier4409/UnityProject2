@@ -4,7 +4,7 @@ using System.Collections.Generic;
 //using UnityEditor.Tilemaps;
 using UnityEngine;
 
-public class testmove : MonoBehaviour
+public class playerMove : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 21f;
     private Rigidbody2D rb;
