@@ -31,7 +31,7 @@ public class playerAttack : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)){
             Shoot();
-            }
+        }
 
         if(Attacking){
             //StartCoroutine(attackWaiter());
@@ -55,7 +55,7 @@ public class playerAttack : MonoBehaviour
    }
 
    private void Shoot(){
-    //instatiate
+    Instantiate(bulletPrefab,firingPoint.position, firingPoint.rotation);
    }
 
    /*IEnumerator attackWaiter(){
