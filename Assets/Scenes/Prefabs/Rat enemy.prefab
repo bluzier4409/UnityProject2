@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7075577267869708096}
   - component: {fileID: 7163581832148751196}
   - component: {fileID: 7036947028252906539}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ratAttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4803291977961322789}
   - component: {fileID: 6395868636856399582}
   - component: {fileID: 3283718735922331676}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Rat enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

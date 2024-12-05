@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8565969714046694467}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482600774406465287}
-  m_Layer: 7
+  - component: {fileID: 658293267536493061}
+  m_Layer: 9
   m_Name: firingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -56,13 +57,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635053306587072156}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.194, y: 0.154, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8565969714046694467}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &658293267536493061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635053306587072156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9763005befefe465db87516eb9bd3a3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4655451392016640918
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +87,7 @@ GameObject:
   - component: {fileID: 465254020391895379}
   - component: {fileID: 1250790465205051340}
   - component: {fileID: 5607298771199737070}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: SwordArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +103,7 @@ Transform:
   m_GameObject: {fileID: 4655451392016640918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.534, y: -0.002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -131,19 +144,20 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.625, y: 0.875}
+    newSize: {x: 0.625, y: 0.875}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.008524656, y: 0.21026242}
-      - {x: -0.84876096, y: 0.5019022}
-      - {x: -0.8477862, y: -0.6634433}
-      - {x: 0.00893819, y: -0.37229577}
+    - - {x: 0.6789818, y: -0.11052442}
+      - {x: 0.58297706, y: 0.21957204}
+      - {x: -0.2790661, y: 0.51353943}
+      - {x: -0.22357452, y: -0.62853205}
+      - {x: 0.58953667, y: -0.51426816}
   m_UseDelaunayMesh: 0
 --- !u!114 &5607298771199737070
 MonoBehaviour:
@@ -169,7 +183,7 @@ GameObject:
   - component: {fileID: 3897521282488370880}
   - component: {fileID: 8597701510130736368}
   - component: {fileID: 905165144209245488}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -412,7 +426,7 @@ GameObject:
   - component: {fileID: 4868893151308583985}
   - component: {fileID: 143430426668841356}
   - component: {fileID: 1715714403080623659}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
