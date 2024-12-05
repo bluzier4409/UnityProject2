@@ -1,0 +1,67 @@
+using System.Collections;
+using System.Collections.Generic;
+//using UnityEditor.Callbacks;
+using UnityEngine;
+
+public class playerAttack : MonoBehaviour
+{
+
+//ranged vars
+
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firingPoint;
+
+//melee vars
+    private GameObject meleeAttackArea = default;
+    private bool Attacking = false;
+    private float timeToAttack = 0.25f;
+    private float timer = 0f;
+
+
+    void Start()
+    {
+        meleeAttackArea = transform.GetChild(0).gameObject;
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space)){
+            meleeAttack();
+        }
+
+        if (Input.GetMouseButtonDown(0)){
+            Shoot();
+            }
+
+        if(Attacking){
+            //StartCoroutine(attackWaiter());
+        }
+
+        if(Attacking){
+            timer += Time.deltaTime;
+
+            if(timer >= timeToAttack){
+                timer = 0;
+                Attacking = false;
+                meleeAttackArea.SetActive(Attacking);
+            }
+        }
+        
+    }
+   
+   private void meleeAttack(){
+        Attacking = true;
+        meleeAttackArea.SetActive(Attacking);
+   }
+
+   private void Shoot(){
+    //instatiate
+   }
+
+   /*IEnumerator attackWaiter(){
+        yield return new WaitForSeconds((float)0.25);
+        Attacking = false;
+        meleeAttackArea.SetActive(Attacking);
+   }*/
+    
+}
