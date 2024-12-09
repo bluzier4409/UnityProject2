@@ -12,12 +12,12 @@ TagManager:
   - Water
   - UI
   - walls
-  - player
-  - enemies
   - playerAttack
   - enemyAttack
-  - playerHitbox
-  - enemyHitbox
+  - Player
+  - enemy
+  - 
+  - 
   - 
   - 
   - 

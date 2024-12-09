@@ -6,7 +6,13 @@ using UnityEngine;
 public class playerAttack : MonoBehaviour
 {
 
-    private GameObject AttackArea = default;
+//ranged vars
+
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firingPoint;
+
+//melee vars
+    private GameObject meleeAttackArea = default;
     private bool Attacking = false;
     private float timeToAttack = 0.25f;
     private float timer = 0f;
@@ -14,13 +20,17 @@ public class playerAttack : MonoBehaviour
 
     void Start()
     {
-        AttackArea = transform.GetChild(0).gameObject;
+        meleeAttackArea = transform.GetChild(0).gameObject;
     }
 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space)){
-            Attack();
+            meleeAttack();
+        }
+
+        if (Input.GetMouseButtonDown(0)){
+            Shoot();
         }
 
         if(Attacking){
@@ -33,21 +43,25 @@ public class playerAttack : MonoBehaviour
             if(timer >= timeToAttack){
                 timer = 0;
                 Attacking = false;
-                AttackArea.SetActive(Attacking);
+                meleeAttackArea.SetActive(Attacking);
             }
         }
         
     }
    
-   private void Attack(){
+   private void meleeAttack(){
         Attacking = true;
-        AttackArea.SetActive(Attacking);
+        meleeAttackArea.SetActive(Attacking);
+   }
+
+   private void Shoot(){
+    Instantiate(bulletPrefab,firingPoint.position, firingPoint.rotation);
    }
 
    /*IEnumerator attackWaiter(){
         yield return new WaitForSeconds((float)0.25);
         Attacking = false;
-        AttackArea.SetActive(Attacking);
+        meleeAttackArea.SetActive(Attacking);
    }*/
     
 }
