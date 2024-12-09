@@ -30,11 +30,29 @@ public class Card : MonoBehaviour
         InHand = activity;
     }
 
-    public void PlayCard()
+    public Card GetCard()
     {
-        
+        return this;
     }
 
+    public bool GetActiveStatus()
+    {
+        return Active;
+    }
+
+    
+
+    public void SetActiveStatus(bool activity)
+    {
+        Active = activity;
+    }
+
+    public void playCard()
+    {
+        print("play card");
+    }
+    
+    
     public override string ToString()
     {
         return "This " + Type + " " + Name + "'s sprite is "/* + Sprite*/;
