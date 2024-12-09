@@ -14,6 +14,8 @@ public class bullet : MonoBehaviour
 
    private Rigidbody2D rb;
 
+   private int bulletDammage = 1;
+
    private void Start() {
     rb = GetComponent<Rigidbody2D>();
     Destroy(gameObject, lifeTime);
@@ -22,6 +24,18 @@ public class bullet : MonoBehaviour
    private void FixedUpdate(){
     rb.velocity = transform.up * speed;
    }
+
+    private void OnTriggerEnter2D(Collider2D collider){
+      Destroy(this.gameObject);
+      if(collider.GetComponent<ObjHealth>() != null)
+        {
+            Debug.Log("hit");
+
+            ObjHealth health = collider.GetComponent<ObjHealth>();
+            health.Damage(bulletDammage);
+        }
+    }
+
 
    
 }
