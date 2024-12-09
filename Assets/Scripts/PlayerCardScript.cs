@@ -6,7 +6,6 @@ public class PlayerCardScript : Card
  private List<Card> _deck = new List<Card>();
  private List<Card> _discard = new List<Card>();
  private List<Card> _hand = new List<Card>(3);
- private List<Card> _activeArea = new List<Card>();
 
 
  public void Draw()
