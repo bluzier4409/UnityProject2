@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/bens copy mainlevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/bens copy mainlevel.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +96,7 @@
       <workItem from="1729012664048" duration="36000" />
       <workItem from="1729012736188" duration="11000" />
       <workItem from="1733768489748" duration="15000" />
-      <workItem from="1733769039843" duration="1255000" />
+      <workItem from="1733769039843" duration="1940000" />
     </task>
     <servers />
   </component>
