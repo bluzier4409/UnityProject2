@@ -62,7 +62,7 @@ namespace Pathfinding {
 	[AddComponentMenu("Pathfinding/AI/AIPath (2D,3D)")]
 	public partial class AIPath : AIBase, IAstarAI {
 		//sayers code
-		public GameObject player;
+		//public GameObject player;
 
 		/// <summary>
 		/// How quickly the agent accelerates.
@@ -240,6 +240,7 @@ namespace Pathfinding {
 		bool IAstarAI.canMove { get { return canMove; } set { canMove = value; } }
 
 		#endregion
+		
 
 		/// <summary>\copydoc Pathfinding::IAstarAI::GetRemainingPath</summary>
 		public void GetRemainingPath (List<Vector3> buffer, out bool stale) {
@@ -273,8 +274,9 @@ namespace Pathfinding {
 		/// So when the agent is close to the destination this method will typically be called every <see cref="repathRate"/> seconds.
 		/// </summary>
 		public virtual void OnTargetReached () {
-			 Quaternion LookAt = Quaternion.LookRotation(player.transform.position);
-      		 transform.rotation = LookAt;
+			// Quaternion LookAt = Quaternion.LookRotation(player.transform.position);
+      		// transform.rotation = LookAt;
+	         BroadcastMessage("explode");
 		}
 
 		/// <summary>
