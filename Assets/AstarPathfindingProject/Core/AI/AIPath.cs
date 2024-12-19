@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace Pathfinding {
-	using Pathfinding.RVO;
+    using System.Diagnostics;
+    using Pathfinding.RVO;
 	using Pathfinding.Util;
 
 	/// <summary>
@@ -60,6 +61,9 @@ namespace Pathfinding {
 	/// </summary>
 	[AddComponentMenu("Pathfinding/AI/AIPath (2D,3D)")]
 	public partial class AIPath : AIBase, IAstarAI {
+		//sayers code
+		public GameObject player;
+
 		/// <summary>
 		/// How quickly the agent accelerates.
 		/// Positive values represent an acceleration in world units per second squared.
@@ -269,6 +273,8 @@ namespace Pathfinding {
 		/// So when the agent is close to the destination this method will typically be called every <see cref="repathRate"/> seconds.
 		/// </summary>
 		public virtual void OnTargetReached () {
+			 Quaternion LookAt = Quaternion.LookRotation(player.transform.position);
+      		 transform.rotation = LookAt;
 		}
 
 		/// <summary>

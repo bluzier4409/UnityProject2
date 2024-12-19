@@ -5,6 +5,16 @@ using UnityEngine;
 
 public class rangedEnemyMovement : MonoBehaviour
 {
+
+    [SerializeField] private GameObject projectilePrefab;
+
+    [SerializeField] private Transform firingPoint;
+
+    [SerializeField] private float fireRate = 0.5f;
+
+    private float fireTimer;
+
+
     public GameObject player;
 
     public float speed;
@@ -39,8 +49,15 @@ public class rangedEnemyMovement : MonoBehaviour
        
 
         if(distance > touchingDistance && seen == true){
-                    transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-                     
+            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime); 
+        }
+
+        else if(distance <= touchingDistance && fireTimer <= 0f){
+            Instantiate(projectilePrefab,firingPoint.position, firingPoint.rotation);
+            fireTimer = fireRate;
+        }
+        else{
+            fireTimer -= Time.deltaTime;
         }
 
         

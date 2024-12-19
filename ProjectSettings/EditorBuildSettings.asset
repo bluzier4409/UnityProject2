@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level 1.unity
     guid: 993e708ce56f74f3d8306c32791d6123
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sayers Scene copy.unity
     guid: 06f264bdf6e724ac782fc66cdd69372a
+  - enabled: 1
+    path: Assets/Scenes/level 2 sk's.unity
+    guid: 40cd7103d152d4bd99699f101f866cb2
   m_configObjects: {}
