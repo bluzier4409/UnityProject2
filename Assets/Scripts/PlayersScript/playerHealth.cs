@@ -29,16 +29,22 @@ public class playerHealth : MonoBehaviour
     }
 
     public void Damage(int amount){
-        if(amount < 0 || !invulnerable){
+        if(amount < 0){
             throw new System.ArgumentOutOfRangeException("Cannont have negative damage");
         }
+        else if(!invulnerable){
+                this.health -= amount;
+            healthScript.changeHealth((-1* amount));
 
-        this.health -= amount;
-        healthScript.changeHealth((-1* amount));
-
-        if(health < 1){
-            playerDie();
+            if(health < 1){
+                playerDie();
+            }
         }
+        else if(invulnerable){
+            Debug.Log("your are invulnerable");
+        }
+
+        
     }
 
     public void Heal(int amount){
@@ -68,6 +74,7 @@ public class playerHealth : MonoBehaviour
 
     public void setInvulnerable(bool mode){
         invulnerable = mode;
+        Debug.Log("player is invulnerable: " + invulnerable);
     }
     
 }

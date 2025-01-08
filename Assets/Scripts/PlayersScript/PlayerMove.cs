@@ -6,36 +6,45 @@ using UnityEngine;
 
 public class playerMove : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed = 8f;
+    private float CurrentMoveSpeed;
+    [SerializeField] private float startingMoveSpeed = 8f;
+
     private Rigidbody2D rb;
     private Vector2 movementDirection;
+
     private float dodgeDelay = 0.1f;
     private float timer = 0f;
+    [SerializeField] private float dodgeSpeed = 30f;
     private bool dodgeOnCooldown;
 
-   // [SerializeField] private float dodgeSpeed = 21f;
+    private playerHealth pHealth;
+
 
 
     bool facingRight = false;
 
     void Start()
     {
+        CurrentMoveSpeed = startingMoveSpeed;
+
         rb = GetComponent<Rigidbody2D>();
+        pHealth = GetComponent<playerHealth>();
     }
 
     void Update()
     {
         movementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        rb.velocity = movementDirection * movementSpeed;
+        rb.velocity = movementDirection * CurrentMoveSpeed;
 
         if(dodgeOnCooldown){
             timer += Time.deltaTime;
 
             if(timer >= dodgeDelay){
                 timer = 0;
-                movementSpeed = 8;
+                CurrentMoveSpeed = 8;
                 dodgeOnCooldown = false;
-                // iFrames
+                pHealth.setInvulnerable(false);
+
             }
         }
 
@@ -66,7 +75,8 @@ public class playerMove : MonoBehaviour
     void Dodge(){
         Debug.Log("Left Shift key was released");
         
-        movementSpeed = 30;
+        CurrentMoveSpeed = dodgeSpeed;
+        pHealth.setInvulnerable(true);
         dodgeOnCooldown = true;
         
     }
