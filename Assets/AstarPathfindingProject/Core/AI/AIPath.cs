@@ -276,7 +276,7 @@ namespace Pathfinding {
 		public virtual void OnTargetReached () {
 			// Quaternion LookAt = Quaternion.LookRotation(player.transform.position);
       		// transform.rotation = LookAt;
-	         BroadcastMessage("explode");
+	        
 		}
 
 		/// <summary>

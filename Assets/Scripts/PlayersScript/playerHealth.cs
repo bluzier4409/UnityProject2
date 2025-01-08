@@ -10,7 +10,7 @@ public class playerHealth : MonoBehaviour
     private HealthScript healthScript;
     public GameManagerScript gameManager;
     private bool isDead = false;
-    private bool invulnerable;
+    private bool invulnerable = false;
 
     void Start()
     {

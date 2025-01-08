@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AstarPathfindingProject/Core/AI/AIPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AstarPathfindingProject/Core/AI/AIPath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/bens copy mainlevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/bens copy mainlevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sword.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Sword.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/explodescript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/explodescript.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +99,9 @@
       <workItem from="1733769039843" duration="1940000" />
       <workItem from="1733945437841" duration="402000" />
       <workItem from="1734460561831" duration="1945000" />
-      <workItem from="1734633755800" duration="4421000" />
+      <workItem from="1734633755800" duration="4821000" />
+      <workItem from="1736189130733" duration="3274000" />
+      <workItem from="1736361569536" duration="1190000" />
     </task>
     <servers />
   </component>
