@@ -10,7 +10,7 @@ public class playerHealth : MonoBehaviour
     private HealthScript healthScript;
     public GameManagerScript gameManager;
     private bool isDead = false;
-    private bool invulnerable;
+    private bool invulnerable = false;
 
     void Start()
     {
@@ -29,7 +29,7 @@ public class playerHealth : MonoBehaviour
     }
 
     public void Damage(int amount){
-        if(amount < 0 || !invulnerable){
+        if(invulnerable){
             throw new System.ArgumentOutOfRangeException("Cannont have negative damage");
         }
 
