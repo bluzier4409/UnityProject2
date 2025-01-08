@@ -10,6 +10,7 @@ public class playerHealth : MonoBehaviour
     private HealthScript healthScript;
     public GameManagerScript gameManager;
     private bool isDead = false;
+    private bool invulnerable;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class playerHealth : MonoBehaviour
         if(!healthScript) Debug.LogError("HealthScript does not exist");
         if(!healthScript.setHealth(health)) Debug.LogError("Health could not be set");
 
-
+        invulnerable = false;
     }
 
     void Update()
@@ -28,7 +29,7 @@ public class playerHealth : MonoBehaviour
     }
 
     public void Damage(int amount){
-        if(amount < 0){
+        if(amount < 0 || !invulnerable){
             throw new System.ArgumentOutOfRangeException("Cannont have negative damage");
         }
 
@@ -63,6 +64,10 @@ public class playerHealth : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+    }
+
+    public void setInvulnerable(bool mode){
+        invulnerable = mode;
     }
     
 }
