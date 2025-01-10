@@ -101,9 +101,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 180
-  slowdownDistance: 6
+  slowdownDistance: 7
   pickNextWaypointDist: 1
-  endReachedDistance: 6
+  endReachedDistance: 8
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   firingPoint: {fileID: 7048595389746210529}
   fireRate: 0.5
   player: {fileID: 0}
-  touchingDistance: 7
+  touchingDistance: 8
 --- !u!114 &111491647941678022
 MonoBehaviour:
   m_ObjectHideFlags: 0

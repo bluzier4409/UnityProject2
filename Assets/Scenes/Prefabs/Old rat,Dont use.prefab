@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 6395868636856399582}
   - component: {fileID: 3283718735922331676}
   m_Layer: 10
-  m_Name: Rat enemy
+  m_Name: Old rat,Dont use
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
