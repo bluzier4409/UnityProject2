@@ -781,7 +781,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.01, y: -0.15, z: -1.462}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4.7478, y: 4.7478, z: 4.7478}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 673985494}
@@ -960,7 +960,6 @@ GameObject:
   - component: {fileID: 794913271}
   - component: {fileID: 794913267}
   - component: {fileID: 794913266}
-  - component: {fileID: 794913265}
   - component: {fileID: 794913272}
   m_Layer: 0
   m_Name: Explosive Rat
@@ -969,20 +968,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &794913265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794913264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  target: {fileID: 673985494}
 --- !u!114 &794913266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,7 +1047,7 @@ Transform:
   m_GameObject: {fileID: 794913264}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.38, y: -7.07, z: -0.01}
+  m_LocalPosition: {x: -20.46, y: -7.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16234,7 +16219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6719067779399972643, guid: cc582101546ed482f999363489e2f488, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.6147947
+      value: 1.9264511
       objectReference: {fileID: 0}
     - target: {fileID: 6719067779399972643, guid: cc582101546ed482f999363489e2f488, type: 3}
       propertyPath: m_LocalScale.y
@@ -16280,6 +16265,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7037288582043476412, guid: cc582101546ed482f999363489e2f488, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 601224755}
     m_RemovedComponents:
     - {fileID: 1431751436364352005, guid: cc582101546ed482f999363489e2f488, type: 3}
     m_RemovedGameObjects:

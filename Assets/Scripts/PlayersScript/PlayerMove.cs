@@ -18,16 +18,10 @@ public class playerMove : MonoBehaviour
    // [SerializeField] private float dodgeSpeed = 21f;
    
     
-    bool north = false;
-    bool northeast = false;
-    bool east = false;
-    bool southeast = false;
-    bool south = false;
-    bool southwest = false;
-    bool west = false;
-    bool northwest = false;
+
     
     bool isMoving = false;
+    public Animator animator;
     
     
 
@@ -39,6 +33,7 @@ public class playerMove : MonoBehaviour
 
     void Update()
     {
+        
         movementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         rb.velocity = movementDirection * movementSpeed;
 
@@ -60,23 +55,65 @@ public class playerMove : MonoBehaviour
     }
 
     void FixedUpdate() {
-        Vector2 basevec = new Vector2(0, 1);
-        float angle = Vector2.SignedAngle(basevec, movementDirection);
+        
+        angle();
+        
 
+        
+    }
 
-        if (movementDirection.x> 0 && !east){
-            Flip();
+    
+
+    public void angle()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            animator.SetBool("moving", true);
+            animator.SetTrigger("north");
         }
-        else if (movementDirection.x < 0 && east){
-            Flip();
+        if (Input.GetKeyDown(KeyCode.W) & Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("moving", true);
+            animator.SetTrigger("northeast");
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            animator.SetBool("moving", true);
+            animator.SetTrigger("east");
+        }
+        if (Input.GetKeyDown(KeyCode.D) & Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("moving", true);
+            animator.SetTrigger("southeast");
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            animator.SetBool("moving", true);
+            animator.SetTrigger("south");
+        }
+        if (Input.GetKeyDown(KeyCode.S) & Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool("moving", true);
+            animator.SetTrigger("southwest");
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            animator.SetBool("moving", true);
+            animator.SetTrigger("west"); 
+        }
+        if (Input.GetKeyDown(KeyCode.A) & Input.GetKey(KeyCode.W))
+        {
+            animator.SetBool("moving", true);
+            animator.SetTrigger("northwest");
         }
     }
+    
 
     void Flip(){
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
-        east = !east;
+     //   east = !east;
     }
 
     void Dodge(){
