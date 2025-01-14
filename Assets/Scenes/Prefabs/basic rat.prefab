@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269439537ef7a4d78afc7205ccc5994b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
 --- !u!1 &1001502159104969250
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +111,6 @@ GameObject:
   - component: {fileID: 196701786954047954}
   - component: {fileID: 8687353850224011662}
   - component: {fileID: 8123108676737888190}
-  - component: {fileID: 862232169281239998}
   m_Layer: 10
   m_Name: basic rat
   m_TagString: Untagged
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc40088534324492ba7548b86b5bb39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &6772916935879260108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,20 +307,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.003914}
   serializedVersion: 2
   m_Radius: 0.110306285
---- !u!114 &862232169281239998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001502159104969250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 007285d42f76a4f6e96daf0adf40639a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 6430796983886819411, guid: cc582101546ed482f999363489e2f488, type: 3}
-  touchingDistance: 2
 --- !u!1 &2042377381496656361
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,9 +24,7 @@ public class playerHealth : MonoBehaviour
     void Update()
     {
         
-       if(health < 1){
-                playerDie();
-            }
+      
 
     }
 
