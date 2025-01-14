@@ -23,7 +23,7 @@ public class ratAttack : MonoBehaviour
 
     void Update()
     {
-        if(this.GetComponent<AiChase>().getTouching() == true){
+        if(GetComponent<AiChase>().getTouching() == true){
             Attack();
         }
         if(Attacking){

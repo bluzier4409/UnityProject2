@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8627536622593385222}
+  m_Father: {fileID: 1134647609473206484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &7163581832148751196
 PolygonCollider2D:
@@ -77,10 +77,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.11451699, y: 0.1578952}
-      - {x: -0.13097876, y: 0.21625666}
-      - {x: -0.13155556, y: -0.058666892}
-      - {x: 0.108767375, y: -0.0096539855}
+    - - {x: -0.09036476, y: 0.17723292}
+      - {x: -0.32287535, y: 0.2127049}
+      - {x: -0.32249102, y: -0.033659697}
+      - {x: -0.0900124, y: 0.0018434776}
   m_UseDelaunayMesh: 0
 --- !u!114 &7036947028252906539
 MonoBehaviour:
@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 196701786954047954}
   - component: {fileID: 8687353850224011662}
   - component: {fileID: 8123108676737888190}
+  - component: {fileID: 862232169281239998}
   m_Layer: 10
   m_Name: basic rat
   m_TagString: Untagged
@@ -130,6 +131,7 @@ Transform:
   m_LocalScale: {x: 17.788002, y: 15.955587, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7075577267869708096}
   - {fileID: 8627536622593385222}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -304,6 +306,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.003914}
   serializedVersion: 2
   m_Radius: 0.110306285
+--- !u!114 &862232169281239998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001502159104969250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007285d42f76a4f6e96daf0adf40639a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6430796983886819411, guid: cc582101546ed482f999363489e2f488, type: 3}
+  touchingDistance: 2
 --- !u!1 &2042377381496656361
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,8 +350,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7075577267869708096}
+  m_Children: []
   m_Father: {fileID: 1134647609473206484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6458268611068384469

@@ -7,12 +7,11 @@ public class AiChase : MonoBehaviour
 {
     public GameObject player;
 
-    public float speed;
-    public float touchingDistance;
+   // public float speed;
+    public float touchingDistance = 1;
     private Rigidbody2D rb;
 
     private float distance;
-    bool facingRight = true;
     void Start()
     {
 
@@ -27,7 +26,7 @@ public class AiChase : MonoBehaviour
         //max was here
        
 
-        if(distance > touchingDistance){
+        /*if(distance > touchingDistance){
                     transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
                      //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
         }
@@ -37,7 +36,7 @@ public class AiChase : MonoBehaviour
         }
         else if (direction.x < 0 && facingRight){
             Flip();
-        }
+        }*/
 
     }
 
@@ -45,12 +44,6 @@ public class AiChase : MonoBehaviour
         return distance <= touchingDistance;
     }
 
-    void Flip(){
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
-        facingRight = !facingRight;
-    }
-
+  
 
 }
