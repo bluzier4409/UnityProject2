@@ -8,6 +8,14 @@ using UnityEngine.UIElements;
 
 public class playerMove : MonoBehaviour
 {
+    private static readonly int North = Animator.StringToHash("north");
+    private static readonly int Northeast = Animator.StringToHash("northeast");
+    private static readonly int East = Animator.StringToHash("east");
+    private static readonly int Southeast = Animator.StringToHash("southeast");
+    private static readonly int South = Animator.StringToHash("south");
+    private static readonly int Southwest = Animator.StringToHash("southwest");
+    private static readonly int West = Animator.StringToHash("west");
+    private static readonly int Northwest = Animator.StringToHash("northwest");
     [SerializeField] private float movementSpeed = 8f;
     private Rigidbody2D rb;
     private Vector2 movementDirection;
@@ -55,57 +63,46 @@ public class playerMove : MonoBehaviour
     }
 
     void FixedUpdate() {
-        
         angle();
-        
-
-        
     }
 
     
 
     public void angle()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        
+        Vector2 basevec = new Vector2(0, 1);
+        
+        
+        if (rb.velocity.magnitude > 0f)
         {
-            animator.SetBool("moving", true);
-            animator.SetTrigger("north");
+            isMoving = true;
+            print("im moving");
+            float moveAngle = Vector2.SignedAngle(basevec, movementDirection);
+            
+            
+
+            if (moveAngle == 0f)
+            {
+                animator.ResetTrigger(-45);
+                animator.ResetTrigger("-90");
+                animator.ResetTrigger("-135");
+                animator.ResetTrigger("180");
+                animator.ResetTrigger("135");
+                animator.ResetTrigger("90");
+                animator.ResetTrigger("45");
+                
+                
+            }
+            
+            float temp = moveAngle;
         }
-        if (Input.GetKeyDown(KeyCode.W) & Input.GetKey(KeyCode.D))
+        else
         {
-            animator.SetBool("moving", true);
-            animator.SetTrigger("northeast");
+            isMoving = false;
+            print("im not moving");
         }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            animator.SetBool("moving", true);
-            animator.SetTrigger("east");
-        }
-        if (Input.GetKeyDown(KeyCode.D) & Input.GetKey(KeyCode.S))
-        {
-            animator.SetBool("moving", true);
-            animator.SetTrigger("southeast");
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            animator.SetBool("moving", true);
-            animator.SetTrigger("south");
-        }
-        if (Input.GetKeyDown(KeyCode.S) & Input.GetKey(KeyCode.A))
-        {
-            animator.SetBool("moving", true);
-            animator.SetTrigger("southwest");
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            animator.SetBool("moving", true);
-            animator.SetTrigger("west"); 
-        }
-        if (Input.GetKeyDown(KeyCode.A) & Input.GetKey(KeyCode.W))
-        {
-            animator.SetBool("moving", true);
-            animator.SetTrigger("northwest");
-        }
+        
     }
     
 
