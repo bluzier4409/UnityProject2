@@ -73,7 +73,7 @@ public class playerHealth : MonoBehaviour
     }
 
    public void setInvulnerable(bool mode){
-        //invulnerable = mode;
+        invulnerable = mode;
         Debug.Log("player is invulnerable: " + invulnerable);
     }
     
