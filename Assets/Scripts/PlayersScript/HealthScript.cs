@@ -57,12 +57,12 @@ public class HealthScript : MonoBehaviour
         
         if (num % 2 == 0) heartNum = num/2;
         else heartNum = (num / 2) + 1;
-        Debug.unityLogger.Log("heartNum " + (heartNum) + " " + num%2 + " " + num);
+        //Debug.unityLogger.Log("heartNum " + (heartNum) + " " + num%2 + " " + num);
 
         
         
-        
-        if (hearts.Length != (num / 2) + 1) {
+            
+        if (hearts.Length != heartNum) {
             createHearts(heartNum);
             
         } ; //check if correct amount of hearts available
@@ -70,7 +70,7 @@ public class HealthScript : MonoBehaviour
 
         for (int i = 0; i < hearts.Length; i++) {
             hearts[i].sprite = sprites[0];
-            Debug.unityLogger.Log("c " + i);
+            //Debug.unityLogger.Log("c " + i);
         }
         
         if (num % 2 != 0) {
@@ -84,8 +84,8 @@ public class HealthScript : MonoBehaviour
     public bool changeHealth(int num) { //change health by positive or negative num
         
         int newHealth = health + num;
-        Debug.unityLogger.Log("new" + (newHealth));
-        Debug.unityLogger.Log("curr" + (health));
+        //Debug.unityLogger.Log("new" + (newHealth));
+        //Debug.unityLogger.Log("curr" + (health));
         if (newHealth < 0) {
             return false;
         }

@@ -10,9 +10,10 @@ public class ratAttack : MonoBehaviour
     private bool Attacking = false;
     private float timeToAttack = 0.8f;
     private float timer = 0f;
-    
 
-
+    public GameObject player;
+    private float distance;
+    private float attackDistance = 3.8f;
 
 
     void Start()
@@ -23,7 +24,10 @@ public class ratAttack : MonoBehaviour
 
     void Update()
     {
-        if(this.GetComponent<AiChase>().getTouching() == true){
+        distance = Vector2.Distance(transform.position, player.transform.position);
+        Debug.Log(distance);
+
+        if(distance <= attackDistance){
             Attack();
         }
         if(Attacking){

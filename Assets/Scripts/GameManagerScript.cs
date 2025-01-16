@@ -5,6 +5,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 
 public class GameManagerScript : MonoBehaviour
@@ -27,7 +28,8 @@ public class GameManagerScript : MonoBehaviour
     {
         gameOverUI.SetActive(true);
         Image panelImage = gameOverUI.GetComponent<Image>();
-        animation(panelImage);
+        StartCoroutine((animation(panelImage)));
+        
 
     }
 
@@ -35,9 +37,10 @@ public class GameManagerScript : MonoBehaviour
 
 
 
-    public void animation(Image imgf)
+    public IEnumerator animation(Image imgf)
     {
-        StartCoroutine(AnimateImage(imgf));
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Title");
     }
 
     private IEnumerator AnimateImage(Image imgf)
@@ -50,11 +53,13 @@ public class GameManagerScript : MonoBehaviour
             // Your animation code here, e.g., modifying imgf.color
 
             iterations++;
-            yield return new WaitForSeconds(0.1f);
         }
 
         Debug.Log("Animation complete after 10 iterations.");
-    }
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Title");
 
+    }
+    
 
 }

@@ -14,7 +14,7 @@ public class bullet : MonoBehaviour
 
    private Rigidbody2D rb;
 
-   private int bulletDammage = 1;
+   [SerializeField] private int bulletDammage = 1;
 
    private void Start() {
     rb = GetComponent<Rigidbody2D>();
@@ -34,6 +34,13 @@ public class bullet : MonoBehaviour
             ObjHealth health = collider.GetComponent<ObjHealth>();
             health.Damage(bulletDammage);
         }
+      else if(collider.GetComponent<playerHealth>() != null)
+      {
+            Debug.Log("playerHit");
+
+            playerHealth pHealth = collider.GetComponent<playerHealth>();
+            pHealth.Damage(bulletDammage);
+      }
     }
 
 
