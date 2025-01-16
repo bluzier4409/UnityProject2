@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/bens copy mainlevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/bens copy mainlevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/PlayerMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player animatons/exterminator man_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player animatons/exterminator man_0.controller" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +103,7 @@
       <workItem from="1736189130733" duration="3274000" />
       <workItem from="1736361569536" duration="4808000" />
       <workItem from="1736532562706" duration="5412000" />
-      <workItem from="1736878140149" duration="5272000" />
+      <workItem from="1736878140149" duration="5563000" />
     </task>
     <servers />
   </component>
