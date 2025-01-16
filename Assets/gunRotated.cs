@@ -8,6 +8,7 @@ using UnityEngine;
 public class gunRotated : MonoBehaviour
 {
     private UnityEngine.Vector2 mousePos;
+    public Camera camera;
     
     void Start()
     {
@@ -16,7 +17,7 @@ public class gunRotated : MonoBehaviour
 
     void Update()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
 
         float angle = MathF.Atan2(mousePos.y - transform.position.y, mousePos.x - 
                                                                      transform.position.x) * Mathf.Rad2Deg - 90f;
