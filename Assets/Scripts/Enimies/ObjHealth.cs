@@ -7,10 +7,12 @@ public class ObjHealth : MonoBehaviour
 
     [SerializeField]private int health = 10;
 
+    private GameObject deadCheck;
+
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -43,5 +45,8 @@ public class ObjHealth : MonoBehaviour
     private void die(){
         Debug.Log("object died");
         Destroy(this.gameObject);
+
+        LVLswap swap = GameObject.Find("swaper").GetComponent<LVLswap>();
+        swap.addToDead();
     }
 }
