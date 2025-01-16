@@ -1,11 +1,23 @@
+
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
+//using UnityEditor.ShaderGraph.Internal;
+//using UnityEditor.Tilemaps;
 using UnityEngine;
 
-public class topdowncontroller : MonoBehaviour
+public class playerMovenew : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    [SerializeField] private float startingMoveSpeed = 8f;
+
+    private Rigidbody2D rb;
+
+    private float dodgeDelay = 0.1f;
+    private float timer = 0f;
+    [SerializeField] private float dodgeSpeed = 30f;
+    private bool dodgeOnCooldown;
+
+    private playerHealth pHealth;
+    
     public SpriteRenderer sr;
    
     public List<Sprite> nSprites;
@@ -19,13 +31,35 @@ public class topdowncontroller : MonoBehaviour
     float idleTime;
     
     Vector2 direction;
+
+
+
+    bool facingRight = false;
     
-    
+
     void Update()
     {
-        flip();
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
         rb.velocity = (direction * walkSpeed);
+        
+        flip();
+
+        if(dodgeOnCooldown){
+            timer += Time.deltaTime;
+
+            if(timer >= dodgeDelay){
+                timer = 0;
+                walkSpeed = 8;
+                dodgeOnCooldown = false;
+                pHealth.setInvulnerable(false);
+
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && dodgeOnCooldown == false){
+            Dodge();
+        }
+        
         if (rb.velocity.magnitude > 0)
         { 
             setSprite();
@@ -35,7 +69,7 @@ public class topdowncontroller : MonoBehaviour
             List<Sprite> idleSprite = GetSpriteDirection();
             sr.sprite = idleSprite[0];
         }
-       
+
     }
     
     void setSprite() 
@@ -53,19 +87,7 @@ public class topdowncontroller : MonoBehaviour
             idleTime = Time.time;
         }
     }
-
-    void flip()
-    {
-        if (!sr.flipX && direction.x < 0)
-        {
-            sr.flipX = true;
-        } else if (sr.flipX && direction.x > 0)
-        {
-            sr.flipX = false;
-        }
-    }
-
-    [ItemCanBeNull]
+    
     List<Sprite> GetSpriteDirection()
     {
         List<Sprite> selectedSprites = null;
@@ -96,5 +118,26 @@ public class topdowncontroller : MonoBehaviour
             selectedSprites = eSprites;
         }
         return selectedSprites;
+    }
+    
+
+    void flip()
+    {
+        if (!sr.flipX && direction.x < 0)
+        {
+            sr.flipX = true;
+        } else if (sr.flipX && direction.x > 0)
+        {
+            sr.flipX = false;
+        }
+    }
+
+    void Dodge(){
+        Debug.Log("Left Shift key was released");
+        
+        walkSpeed = dodgeSpeed;
+        pHealth.setInvulnerable(true);
+        dodgeOnCooldown = true;
+        
     }
 }

@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
 
-public class topdowncontroller : MonoBehaviour
+public class SpriteManager : MonoBehaviour
 {
-    public Rigidbody2D rb;
     public SpriteRenderer sr;
+    public Rigidbody2D rb;
    
     public List<Sprite> nSprites;
     public List<Sprite> neSprites;
@@ -19,13 +18,10 @@ public class topdowncontroller : MonoBehaviour
     float idleTime;
     
     Vector2 direction;
-    
-    
+
     void Update()
     {
         flip();
-        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-        rb.velocity = (direction * walkSpeed);
         if (rb.velocity.magnitude > 0)
         { 
             setSprite();
@@ -35,7 +31,6 @@ public class topdowncontroller : MonoBehaviour
             List<Sprite> idleSprite = GetSpriteDirection();
             sr.sprite = idleSprite[0];
         }
-       
     }
     
     void setSprite() 
@@ -64,8 +59,7 @@ public class topdowncontroller : MonoBehaviour
             sr.flipX = false;
         }
     }
-
-    [ItemCanBeNull]
+    
     List<Sprite> GetSpriteDirection()
     {
         List<Sprite> selectedSprites = null;
