@@ -17,13 +17,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: a84e49cd4ab4247c5b9e47f0a31adfe9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main Level 1.unity
     guid: 6ee082e4e755342d8bb409dcf1d0b010
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/level 2 sk's.unity
     guid: 40cd7103d152d4bd99699f101f866cb2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/bens copy mainlevel.unity
     guid: 7d6bc334af15b41d2890926a41e0fc7d
+  - enabled: 1
+    path: Assets/Scenes/Demo Scenes/DEMO 1.unity
+    guid: ef9303a4970f74a5bbc165d3e208fd53
+  - enabled: 1
+    path: Assets/Scenes/Demo Scenes/DEMO 2.unity
+    guid: 74fef02b86e094d8baa3183aad622b97
   m_configObjects: {}
