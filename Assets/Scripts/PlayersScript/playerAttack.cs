@@ -20,7 +20,7 @@ public class playerAttack : MonoBehaviour
 
     void Start()
     {
-        meleeAttackArea = transform.GetChild(0).gameObject;
+        meleeAttackArea = transform.Find("SwordArea").gameObject;
     }
 
     void Update()
@@ -33,9 +33,7 @@ public class playerAttack : MonoBehaviour
             Shoot();
         }
 
-        if(Attacking){
-            //StartCoroutine(attackWaiter());
-        }
+        
 
         if(Attacking){
             timer += Time.deltaTime;
