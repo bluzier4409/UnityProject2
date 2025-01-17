@@ -7,16 +7,20 @@ public class AttackArea : MonoBehaviour
 {
     private int damage = 2;
     private UnityEngine.Vector2 mousePos;
+    private Camera cam;
 
+    void Start(){
+        
+    }
 
     void Update(){
 
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        /*mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         float angle = Mathf.Atan2(mousePos.y - transform.position.y, mousePos.x - 
         transform.position.x) * Mathf.Rad2Deg - 90f;
 
-        transform.localRotation = UnityEngine.Quaternion.Euler(0,0, angle);
+        transform.localRotation = UnityEngine.Quaternion.Euler(0,0, angle);*/
 
     }
 
