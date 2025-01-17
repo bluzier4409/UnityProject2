@@ -16,6 +16,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enimies/Copy_rotateToPlayer1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayersScript/PlayerMovenew.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sprites/Player animatons/SpriteManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/gunRotated.cs" root0="FORCE_HIGHLIGHTING" />
@@ -108,6 +109,7 @@
       <workItem from="1736532562706" duration="5412000" />
       <workItem from="1736878140149" duration="5563000" />
       <workItem from="1737052611621" duration="5332000" />
+      <workItem from="1737136516536" duration="55000" />
     </task>
     <servers />
   </component>
