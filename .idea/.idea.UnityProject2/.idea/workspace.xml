@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo Scenes/DEMO 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo Scenes/DEMO 2.unity" afterDir="false" />
-    </list>
+    <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +107,7 @@
       <workItem from="1736532562706" duration="5412000" />
       <workItem from="1736878140149" duration="5563000" />
       <workItem from="1737052611621" duration="5332000" />
-      <workItem from="1737136516536" duration="1905000" />
+      <workItem from="1737136516536" duration="1927000" />
     </task>
     <servers />
   </component>
