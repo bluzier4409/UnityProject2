@@ -7,19 +7,19 @@ using UnityEngine.SceneManagement;
 public class LVLswap : MonoBehaviour
 {
 [SerializeField] private int lvlEnemiesNum;
+[SerializeField] private string nextLvlName;
+
 private int numDead;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(numDead >= lvlEnemiesNum){
-            SceneManager.LoadScene (sceneName:"DEMO 2");
+            SceneManager.LoadScene (sceneName:nextLvlName);
         }
     }
 

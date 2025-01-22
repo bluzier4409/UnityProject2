@@ -725,6 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlEnemiesNum: 3
+  nextLvlName: DEMO 1
 --- !u!4 &661119607
 Transform:
   m_ObjectHideFlags: 0
