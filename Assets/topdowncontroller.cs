@@ -1,26 +1,22 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
-using Debug = UnityEngine.Debug;
-using DebugLog = UnityEngine.Debug;
+using JetBrains.Annotations;
+
 
 
 public class topdowncontroller : MonoBehaviour
 {
     public Rigidbody2D rb;
     public SpriteRenderer sr;
+    public ParticleSystem ps;
    
     public List<Sprite> nSprites;
     public List<Sprite> neSprites;
     public List<Sprite> eSprites;
     public List<Sprite> seSprites;
     public List<Sprite> sSprites;
+    
     
     public float walkSpeed;
     public float frameRate;
@@ -66,7 +62,7 @@ public class topdowncontroller : MonoBehaviour
         }
     }
 
-    void flip()
+    public void flip()
     {
         if (!sr.flipX && direction.x < 0)
         {
@@ -87,6 +83,7 @@ public class topdowncontroller : MonoBehaviour
             if (Mathf.Abs(direction.x) > 0)
             {
                 selectedSprites = neSprites;
+                
             }
             else
             {
@@ -112,19 +109,19 @@ public class topdowncontroller : MonoBehaviour
 
     void dodgeroll()
     {
-        print(direction.x);
-        print(direction.y);
-        Vector2 dodgerollDist = new Vector2(2f * Math.Sign(direction.x), 2f * Math.Sign(direction.y));
-        Debug.DrawRay(transform.position, dodgerollDist, Color.red);
+        Vector3 dodgerollDist = new Vector2(3f * Math.Sign(direction.x), 3f * Math.Sign(direction.y));
         if (Input.GetMouseButtonDown(1))
         {
             bool raycast = Physics2D.Raycast(transform.position, dodgerollDist, dodgerollDist.magnitude, wall);
             if (!raycast)
             {
-                transform.position = dodgerollDist.normalized;
+                transform.position = transform.position + dodgerollDist.normalized;
+                ps.Play();
             }
         }
     }
+
+   
 
     void teleport()
     {
