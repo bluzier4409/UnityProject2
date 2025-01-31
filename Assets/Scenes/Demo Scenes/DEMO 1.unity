@@ -677,6 +677,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1142192598}
     - target: {fileID: 8542918159537246796, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542918159537246796, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1367735591}
@@ -721,6 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvlEnemiesNum: 3
+  nextLvlName: DEMO 1
 --- !u!4 &661119607
 Transform:
   m_ObjectHideFlags: 0
