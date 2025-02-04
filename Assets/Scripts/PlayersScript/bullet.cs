@@ -6,7 +6,7 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
    [Range(1, 100)]
-   [SerializeField] private float speed = 15f;
+   [SerializeField] private float speed = 75f;
 
    [Range(1, 10)]
    [SerializeField] private float lifeTime = 3f;

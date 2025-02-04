@@ -1,12 +1,15 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
+using JetBrains.Annotations;
+
+
 
 public class topdowncontroller : MonoBehaviour
 {
     public Rigidbody2D rb;
     public SpriteRenderer sr;
+    public ParticleSystem ps;
    
     public List<Sprite> nSprites;
     public List<Sprite> neSprites;
@@ -14,16 +17,21 @@ public class topdowncontroller : MonoBehaviour
     public List<Sprite> seSprites;
     public List<Sprite> sSprites;
     
+    
     public float walkSpeed;
     public float frameRate;
     float idleTime;
     
     Vector2 direction;
+
+    public LayerMask wall;
     
     
     void Update()
     {
         flip();
+        dodgeroll();
+        teleport();
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
         rb.velocity = (direction * walkSpeed);
         if (rb.velocity.magnitude > 0)
@@ -54,7 +62,7 @@ public class topdowncontroller : MonoBehaviour
         }
     }
 
-    void flip()
+    public void flip()
     {
         if (!sr.flipX && direction.x < 0)
         {
@@ -75,6 +83,7 @@ public class topdowncontroller : MonoBehaviour
             if (Mathf.Abs(direction.x) > 0)
             {
                 selectedSprites = neSprites;
+                
             }
             else
             {
@@ -96,5 +105,30 @@ public class topdowncontroller : MonoBehaviour
             selectedSprites = eSprites;
         }
         return selectedSprites;
+    }
+
+    void dodgeroll()
+    {
+        Vector3 dodgerollDist = new Vector2(3f * Math.Sign(direction.x), 3f * Math.Sign(direction.y));
+        if (Input.GetMouseButtonDown(1))
+        {
+            bool raycast = Physics2D.Raycast(transform.position, dodgerollDist, dodgerollDist.magnitude, wall);
+            if (!raycast)
+            {
+                transform.position = transform.position + dodgerollDist.normalized;
+                ps.Play();
+            }
+        }
+    }
+
+   
+
+    void teleport()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Vector2 pos = Input.mousePosition;
+            transform.position = pos;
+        }
     }
 }
