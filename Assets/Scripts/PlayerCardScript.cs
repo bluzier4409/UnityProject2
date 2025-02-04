@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class PlayerCardScript : Card
 {
@@ -8,6 +10,7 @@ public class PlayerCardScript : Card
 
  //max hand size 3
  private List<Card> _hand = new List<Card>(3);
+ public Image[] cardimage; // 1.Deck 2.Discard 3.Type1
 
 
  public void Draw()
