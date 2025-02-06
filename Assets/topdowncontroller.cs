@@ -21,8 +21,10 @@ public class topdowncontroller : MonoBehaviour
     public float walkSpeed;
     public float frameRate;
     float idleTime;
+    public float dashCD = 2f;
     
     Vector2 direction;
+    private Vector2 tempDirection;
 
     public LayerMask wall;
     
@@ -30,20 +32,26 @@ public class topdowncontroller : MonoBehaviour
     void Update()
     {
         flip();
-        dodgeroll();
+        
         teleport();
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
         rb.velocity = (direction * walkSpeed);
         if (rb.velocity.magnitude > 0)
         { 
+            tempDirection = direction;
             setSprite();
+            if (dashCD >= 2f)
+            {
+                dodgeroll();
+                
+            }
         }
         else
         {
             List<Sprite> idleSprite = GetSpriteDirection();
             sr.sprite = idleSprite[0];
         }
-       
+        dashCD += Time.deltaTime;
     }
     
     void setSprite() 
@@ -78,9 +86,9 @@ public class topdowncontroller : MonoBehaviour
     {
         List<Sprite> selectedSprites = null;
         
-        if (direction.y > 0)
+        if (tempDirection.y > 0)
         {
-            if (Mathf.Abs(direction.x) > 0)
+            if (Mathf.Abs(tempDirection.x) > 0)
             {
                 selectedSprites = neSprites;
                 
@@ -89,9 +97,9 @@ public class topdowncontroller : MonoBehaviour
             {
                 selectedSprites = nSprites;
             }
-        } else if (direction.y < 0)
+        } else if (tempDirection.y < 0)
         {
-            if (Mathf.Abs(direction.x) > 0)
+            if (Mathf.Abs(tempDirection.x) > 0)
             {
                 selectedSprites = seSprites;
             }
@@ -109,14 +117,15 @@ public class topdowncontroller : MonoBehaviour
 
     void dodgeroll()
     {
-        Vector3 dodgerollDist = new Vector2(3f * Math.Sign(direction.x), 3f * Math.Sign(direction.y));
+        Vector3 dodgerollDist = new Vector2(3f * Math.Sign(tempDirection.x), 3f * Math.Sign(tempDirection.y));
         if (Input.GetMouseButtonDown(1))
         {
             bool raycast = Physics2D.Raycast(transform.position, dodgerollDist, dodgerollDist.magnitude, wall);
             if (!raycast)
             {
-                transform.position = transform.position + dodgerollDist.normalized;
+                transform.position += dodgerollDist;
                 ps.Play();
+                dashCD = 0f;
             }
         }
     }
