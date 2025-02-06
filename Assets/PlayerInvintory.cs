@@ -13,4 +13,14 @@ public class PlayerInvintory : MonoBehaviour
     public int GetNumKeysHeld(){
         return numKeysHeld;
     }
+
+    public void useKey(){
+        if (numKeysHeld > 0){
+            numKeysHeld--;
+            Debug.Log("You now have" + numKeysHeld + "keys.");
+        }
+        else{
+            Debug.Log("You have no keys to use");
+        }
+    }
 }
