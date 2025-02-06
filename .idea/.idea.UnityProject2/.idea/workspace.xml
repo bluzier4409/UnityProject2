@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KrishnaPalacio/MINIFANTASY - Dungeon/Prefabs/Camera/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KrishnaPalacio/MINIFANTASY - Dungeon/Prefabs/Camera/Main Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prefabs/mainChar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prefabs/mainChar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/bens copy mainlevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/bens copy mainlevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/particlerotate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/particlerotate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/topdowncontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/topdowncontroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraFollower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CameraFollower.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +118,7 @@
       <workItem from="1738346964900" duration="84000" />
       <workItem from="1738347087630" duration="5202000" />
       <workItem from="1738692245999" duration="5511000" />
+      <workItem from="1738867278571" duration="631000" />
     </task>
     <servers />
   </component>
