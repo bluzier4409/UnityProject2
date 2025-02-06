@@ -10,10 +10,12 @@ public class CameraFollower : MonoBehaviour
    private Vector3 velocity = Vector3.zero;
    
    public Transform target;
+   public Camera camera;
 
    private void Update()
    {
-      Vector3 targetPos = target.position + offset;
+      Vector3 mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
+      Vector3 targetPos = Vector3.Lerp(target.position, mousePos, 0.2f) + offset;
       transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, timeToSmooth);
    }
 }
