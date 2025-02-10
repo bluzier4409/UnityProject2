@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,6 +33,11 @@ public class PlayerCardScript : MonoBehaviour
  {
   _hand.Remove(card);
   _discard.Add(card);
+ }
+
+ public void addCard(Card card)
+ {
+  _deck.Add(card);
  }
 
  public void setSprite(int spriteIndex, int imageIndex) {
@@ -92,6 +98,9 @@ public class PlayerCardScript : MonoBehaviour
 
  public void Update()
  {
+  Console.WriteLine("Player card");
+  String line = Console.ReadLine();
+  
   if (checkHandEmpty()) { Draw(); }
 
   if (checkActive() == 1 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[0]); }
