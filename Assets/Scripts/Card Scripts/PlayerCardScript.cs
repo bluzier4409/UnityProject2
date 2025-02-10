@@ -17,6 +17,7 @@ public class PlayerCardScript : MonoBehaviour
 
  public void Draw()
  {
+    //draws unitll 3 cards in hand
   if (_deck.Count > _hand.Count)
   {
    for (int i = 0; i < _hand.Count; i++)
