@@ -10,7 +10,9 @@ public class PlayerCardScript : MonoBehaviour
  //max hand size 3
  private List<Card> _hand = new List<Card>(3);
  public Image[] cardimage; // 1.Deck 2.Discard 3.Type1
-
+ public Sprite[] cardsprite;
+ 
+ 
 
  public void Draw()
  {
@@ -31,8 +33,10 @@ public class PlayerCardScript : MonoBehaviour
   _hand.Remove(card);
   _discard.Add(card);
  }
- 
- 
+
+ public void setSprite(int spriteIndex, int imageIndex) {
+  cardimage[imageIndex].sprite = cardsprite[spriteIndex];
+ }
 
  public bool checkHandEmpty()
  {
