@@ -22,7 +22,7 @@ public class topdowncontroller : MonoBehaviour
     public float walkSpeed;
     public float frameRate;
     float idleTime;
-    public float dashCD = 2f;
+    public float dashCD;
     
     Vector2 direction;
     private Vector2 tempDirection;
@@ -41,7 +41,7 @@ public class topdowncontroller : MonoBehaviour
         { 
             tempDirection = direction;
             setSprite();
-            if (dashCD >= 2f)
+            if (dashCD >= 1f)
             {
                 dodgeroll();
                 

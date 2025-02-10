@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class PlayerCardScript : Card
+public class PlayerCardScript : MonoBehaviour
 {
  private List<Card> _deck = new List<Card>();
  private List<Card> _discard = new List<Card>();
@@ -37,7 +36,14 @@ public class PlayerCardScript : Card
 
  public bool checkHandEmpty()
  {
-  return false;
+  if (_hand.Count == 0)
+  {
+   return true;
+  }
+  else
+  {
+   return false;
+  }
  }
 
  public void resetActivity()
@@ -73,15 +79,20 @@ public class PlayerCardScript : Card
    return -1;
   }
  }
+
+ public void playCard(Card card)
+ {
+  
+ }
  
 
  public void Update()
  {
   if (checkHandEmpty()) { Draw(); }
 
-  if (checkActive() == 1 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(); }
-  if (checkActive() == 2 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(); }
-  if (checkActive() == 3 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(); }
+  if (checkActive() == 1 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[0]); }
+  if (checkActive() == 2 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[1]); }
+  if (checkActive() == 3 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[2]); }
   
  }
 }

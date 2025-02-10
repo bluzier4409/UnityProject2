@@ -14,7 +14,7 @@ public class MeleeCard : Card
         Name = name;
         Type = type;
         InHand = inHand;
-        Active = active;
+        
         _range = range;
         _damage = damage;
     }

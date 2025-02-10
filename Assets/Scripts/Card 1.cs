@@ -7,7 +7,7 @@ public class Card : MonoBehaviour
     protected string Type { get; set; }
     
     public bool InHand {get; set;}
-    public bool Active {get; set;}
+     bool Active {get; set;}
 
    public Card()
    {
