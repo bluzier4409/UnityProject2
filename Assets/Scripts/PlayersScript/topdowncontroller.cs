@@ -10,6 +10,7 @@ public class topdowncontroller : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer sr;
     public ParticleSystem ps;
+    public Camera cm;
    
     public List<Sprite> nSprites;
     public List<Sprite> neSprites;
@@ -21,7 +22,7 @@ public class topdowncontroller : MonoBehaviour
     public float walkSpeed;
     public float frameRate;
     float idleTime;
-    public float dashCD = 2f;
+    public float dashCD;
     
     Vector2 direction;
     private Vector2 tempDirection;
@@ -40,7 +41,7 @@ public class topdowncontroller : MonoBehaviour
         { 
             tempDirection = direction;
             setSprite();
-            if (dashCD >= 2f)
+            if (dashCD >= 1f)
             {
                 dodgeroll();
                 
@@ -72,6 +73,8 @@ public class topdowncontroller : MonoBehaviour
 
     public void flip()
     {
+      //  Vector2 mousePos = cm.ScreenToWorldPoint(Input.mousePosition);
+     //   float whichScreenHalf = Mathf.Sign(mousePos.x);
         if (!sr.flipX && direction.x < 0)
         {
             sr.flipX = true;

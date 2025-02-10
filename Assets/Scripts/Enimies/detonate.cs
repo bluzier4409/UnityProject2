@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
@@ -20,8 +21,15 @@ public class detonate : MonoBehaviour
     public void explode()
     {
         animator.SetTrigger("boom");
-        Destroy(this.gameObject);
         print("detonated");
+    }
+
+    public void Update()
+    {
+        if (returnDistance() < 2f)
+        {
+            explode();
+        }
     }
 }
  
