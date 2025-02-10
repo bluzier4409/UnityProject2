@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 public class openChest : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Sprite OpenChest;
     void Start()
     {
         
@@ -28,6 +28,8 @@ public class openChest : MonoBehaviour
             if (checkNum >= 1){
                 Debug.Log("Using 1 key");
                 invintory.useKey();
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = OpenChest;
+                giveReward(collider);
                 
             }
             else if (checkNum < 1){
@@ -39,5 +41,10 @@ public class openChest : MonoBehaviour
         
     }
 
+    private void giveReward(Collider2D collider){
+        //impliment giving stuff here, coins just for now
+        PlayerInvintory invintory = collider.GetComponentInChildren<PlayerInvintory>();
+        invintory.giveCoin(35);
+    }
 
 }
