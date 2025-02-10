@@ -6,18 +6,25 @@ using UnityEngine;
 public class particlerotate : MonoBehaviour
 {
     private Vector2 psDirection;
+    private Vector2 tempPsDirection;
+
+    public Rigidbody2D parentRb;
     
     bool isFlipped = false;
     private void Update()
     {
         psDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+        if (parentRb.velocity.magnitude > 0)
+        {
+            tempPsDirection = psDirection;
+        }
         flip();
 
         if (!isFlipped)
         {
-            if (psDirection.y > 0)
+            if (tempPsDirection.y > 0)
             {
-                if (Mathf.Abs(psDirection.x) > 0)
+                if (Mathf.Abs(tempPsDirection.x) > 0)
                 {
                     //ne 
                     transform.rotation = Quaternion.Euler(45, -90, 0);
@@ -27,9 +34,9 @@ public class particlerotate : MonoBehaviour
                     //n
                     transform.rotation = Quaternion.Euler(90, -90, 0);
                 }
-            } else if (psDirection.y < 0)
+            } else if (tempPsDirection.y < 0)
             {
-                if (Mathf.Abs(psDirection.x) > 0)
+                if (Mathf.Abs(tempPsDirection.x) > 0)
                 {
                     transform.rotation = Quaternion.Euler(-45, -90, 0);
                 
@@ -48,9 +55,9 @@ public class particlerotate : MonoBehaviour
         }
         else
         {
-            if (psDirection.y > 0)
+            if (tempPsDirection.y > 0)
             {
-                if (Mathf.Abs(psDirection.x) > 0)
+                if (Mathf.Abs(tempPsDirection.x) > 0)
                 {
                     //ne 
                     transform.rotation = Quaternion.Euler(45, 90, 0);
@@ -60,9 +67,9 @@ public class particlerotate : MonoBehaviour
                     //n
                     transform.rotation = Quaternion.Euler(90, 90, 0);
                 }
-            } else if (psDirection.y < 0)
+            } else if (tempPsDirection.y < 0)
             {
-                if (Mathf.Abs(psDirection.x) > 0)
+                if (Mathf.Abs(tempPsDirection.x) > 0)
                 {
                     transform.rotation = Quaternion.Euler(-45, 90, 0);
                 
