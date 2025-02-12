@@ -128,7 +128,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.4339, y: 2.3768, z: 0}
-  m_LocalScale: {x: 17, y: 16, z: 1}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7075577267869708096}
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc40088534324492ba7548b86b5bb39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 5198202200215758444, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
 --- !u!114 &6772916935879260108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.13
+  radius: 0.17
   height: 0.01
   canMove: 1
   maxSpeed: 6
@@ -251,9 +251,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 180
-  slowdownDistance: 3.5
-  pickNextWaypointDist: 1
-  endReachedDistance: 3.5
+  slowdownDistance: 1.4
+  pickNextWaypointDist: 1.4
+  endReachedDistance: 1.4
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -334,7 +334,7 @@ Transform:
   m_GameObject: {fileID: 2042377381496656361}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0016, y: 0.0021, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
