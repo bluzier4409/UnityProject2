@@ -123,9 +123,16 @@ public class topdowncontroller : MonoBehaviour
         Vector3 dodgerollDist = new Vector2(3f * Math.Sign(tempDirection.x), 3f * Math.Sign(tempDirection.y));
         if (Input.GetMouseButtonDown(1))
         {
-            bool raycast = Physics2D.Raycast(transform.position, dodgerollDist, dodgerollDist.magnitude, wall);
-            if (!raycast)
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dodgerollDist, dodgerollDist.magnitude, wall);
+            if (!hit)
             {
+                transform.position += dodgerollDist;
+                ps.Play();
+                dashCD = 0f;
+            }
+            else
+            {
+                dodgerollDist = new Vector2((hit.distance - 1f) * Math.Sign(tempDirection.x), (hit.distance -1f) * Math.Sign(tempDirection.y));
                 transform.position += dodgerollDist;
                 ps.Play();
                 dashCD = 0f;
