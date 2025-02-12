@@ -1,7 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class Card
 {
     protected string Name { get; set; }
     protected string Type { get; set; }
@@ -39,6 +40,14 @@ public class Card : MonoBehaviour
     {
         return Active;
     }
+    
+    void Awake()
+    {
+        Card sword = new Card("Sword", "Melee", false, false);
+        Card bow = new Card("Bow", "Ranged", false, false);
+        Card potion = new Card("Potion", "Consumable", false, false);
+        Card axe = new Card("Axe", "Melee", false, false);
+    }
 
     
 
@@ -49,7 +58,7 @@ public class Card : MonoBehaviour
 
     public void playCard()
     {
-        print("play card");
+        Debug.Log("Playing Card");
     }
     
     
@@ -57,6 +66,8 @@ public class Card : MonoBehaviour
     {
         return "This " + Type + " " + Name + "'s sprite is "/* + Sprite*/;
     }
+
+  
 }
 
 

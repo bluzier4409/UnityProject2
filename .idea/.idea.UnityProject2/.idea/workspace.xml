@@ -6,13 +6,34 @@
   <component name="ChangeListManager">
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prefabs/mainChar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prefabs/mainChar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/bens copy mainlevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/bens copy mainlevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Card 1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Card 1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeleeCard 1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeleeCard 1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCardScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerCardScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Rat Animators-Animations/explosion rat (3)_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Rat Animators-Animations/explosion rat (3)_0.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/topdowncontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/topdowncontroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/OArielG/2DSimpleUIPack/Sprites/ui-large-buttons-horizontal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/OArielG/2DSimpleUIPack/Sprites/ui-large-buttons-horizontal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/OArielG/2DSimpleUIPack/Sprites/ui-large-buttons-vertical.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/OArielG/2DSimpleUIPack/Sprites/ui-large-buttons-vertical.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/OArielG/2DSimpleUIPack/Sprites/ui-panels.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/OArielG/2DSimpleUIPack/Sprites/ui-panels.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/OArielG/2DSimpleUIPack/Sprites/ui-small-buttons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/OArielG/2DSimpleUIPack/Sprites/ui-small-buttons.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/OArielG/2DSimpleUIPack/Sprites/ui-small-icons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/OArielG/2DSimpleUIPack/Sprites/ui-small-icons.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/Textures/MINIFANTASY - Dungeon/Sprites/Animations/Human/HumanBaseAnimations.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/Textures/MINIFANTASY - Dungeon/Sprites/Animations/Human/HumanBaseAnimations.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/Textures/MINIFANTASY - Dungeon/Sprites/Animations/Orc/OrcBaseAnimations.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/Textures/MINIFANTASY - Dungeon/Sprites/Animations/Orc/OrcBaseAnimations.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/Textures/MINIFANTASY - Dungeon/Sprites/Tileset/FloorTilesExtra.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Permanently Borrowed Files/Textures/MINIFANTASY - Dungeon/Sprites/Tileset/FloorTilesExtra.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Character Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Character Prefabs/mainChar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Character Prefabs/mainChar.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Enemy Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Enemy Prefabs/RangedEnemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Enemy Prefabs/RangedEnemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Enemy Prefabs/basic rat.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Enemy Prefabs/basic rat.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Environment Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Projectiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Projectiles/enemyProjectle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Projectiles/enemyProjectle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Projectiles/playerBullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prefabs/Projectiles/playerBullet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Card Scripts/Card 1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Card Scripts/Card 1.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Card Scripts/PlayerCardScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Card Scripts/PlayerCardScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/zDefunct/Main Camera.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/zDefunct/Main Camera.controller" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +146,7 @@
       <workItem from="1738347087630" duration="5202000" />
       <workItem from="1738692245999" duration="5511000" />
       <workItem from="1738867278571" duration="4628000" />
-      <workItem from="1739210954142" duration="1684000" />
+      <workItem from="1739210954142" duration="3819000" />
     </task>
     <servers />
   </component>
