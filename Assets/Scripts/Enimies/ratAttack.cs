@@ -19,7 +19,7 @@ public class ratAttack : MonoBehaviour
     void Start()
     {
         
-        ratAttacArea = transform.GetChild(0).gameObject;
+        ratAttacArea = transform.GetChild(0).GetChild(0).gameObject;
     }
 
     void Update()

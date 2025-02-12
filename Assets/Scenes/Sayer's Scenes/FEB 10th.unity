@@ -246,6 +246,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 133100617682353372, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
   m_PrefabInstance: {fileID: 1086020041}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &270831103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5198202200215758444, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
+  m_PrefabInstance: {fileID: 1086020041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &792615961
 GameObject:
   m_ObjectHideFlags: 0
@@ -29776,6 +29781,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 29821793747013975, guid: 18541385f3616461f903b9706cd8ebfe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 771879404150507992, guid: 18541385f3616461f903b9706cd8ebfe, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 222171170}
     - target: {fileID: 1001502159104969250, guid: 18541385f3616461f903b9706cd8ebfe, type: 3}
       propertyPath: m_Name
       value: basic rat
@@ -29820,6 +29833,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3283718735922331676, guid: 18541385f3616461f903b9706cd8ebfe, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 270831103}
+    - target: {fileID: 8687353850224011662, guid: 18541385f3616461f903b9706cd8ebfe, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 222171170}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
