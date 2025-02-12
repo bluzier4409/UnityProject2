@@ -40,8 +40,8 @@ public class Card
     {
         return Active;
     }
-    
-    void Awake()
+
+    void awake()
     {
         Card sword = new Card("Sword", "Melee", false, false);
         Card bow = new Card("Bow", "Ranged", false, false);
