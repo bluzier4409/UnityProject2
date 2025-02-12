@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 
 
 
-public class topdowncontroller : MonoBehaviour
+public class PlayersScript : MonoBehaviour
 {
     public Rigidbody2D rb;
     public SpriteRenderer sr;

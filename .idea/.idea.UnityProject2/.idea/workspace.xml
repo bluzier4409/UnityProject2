@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/topdowncontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/topdowncontroller.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,12 +18,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/CameraFollower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Enemy Prefabs/NewBehaviourScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enimies/Copy_rotateToPlayer1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayersScript/PlayerMovenew.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sprites/Player animatons/SpriteManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/gunRotated.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/particlerotate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnityProject2.sln" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -120,7 +119,7 @@
       <workItem from="1738692245999" duration="5511000" />
       <workItem from="1738867278571" duration="4628000" />
       <workItem from="1739210954142" duration="3819000" />
-      <workItem from="1739383816661" duration="1816000" />
+      <workItem from="1739383816661" duration="4074000" />
     </task>
     <servers />
   </component>
