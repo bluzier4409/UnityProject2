@@ -15,9 +15,16 @@ public class PlayerCardScript : MonoBehaviour
  public Image[] cardimage; // 1.Deck 2.Discard 3.Type1
  public Sprite[] cardsprite;
 
-
+public GameObject oneCard;
+public RectTransform canvasToPlace;
     public void Start()
     {
+
+        Instantiate(oneCard, canvasToPlace);
+        Instantiate(oneCard, canvasToPlace);
+        Instantiate(oneCard, canvasToPlace);
+
+       
         Card sword = new Card("Sword", "Melee", false, false);
         _deck.Add(sword);
         Card bow = new Card("Bow", "Ranged", false, false);
@@ -48,20 +55,14 @@ public class PlayerCardScript : MonoBehaviour
     //draws unitll 3 cards in hand
   if (_deck.Count > _hand.Count)
   {
-   List<Card> _tempList = new List<Card>();
+   for (int i = 0; i <= (4-_hand.Count); i++){
+    Card instanceCard = _deck[0];
 
-   for (int i = 0; i < (3-_hand.Count); i++)
-   {
-    Card instanceCard = _deck[i];
-
-    Debug.Log(instanceCard.getName());
-//NEED TO CHANGE, removing cards ends up skiping others due to the for loop! Try adding to temp list, then remove all at once based on name?
-    _tempList.Add(instanceCard);
-   // _deck.Remove(instanceCard);
     _hand.Add(instanceCard);
+    _deck.RemoveAt(0);
     instanceCard.SetHandStatus(true);
 
-     for (int x = _tempList.Count; x > 0; x--){ }
+    Debug.Log("i = " + i);
    }
   }
  }
