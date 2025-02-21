@@ -25,8 +25,7 @@ public class ratAttack : MonoBehaviour
     void Update()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
-        Debug.Log(distance);
-
+        
         if(distance <= attackDistance){
             Attack();
         }
