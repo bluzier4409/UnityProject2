@@ -1,14 +1,19 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using JetBrains.Annotations;
+using Unity.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Card
+public class Card : MonoBehaviour
 {
     protected string Name {get; set;}
     protected string Type { get; set; }
     
     public bool InHand {get; set;}
      bool Active {get; set;}
+     private GameObject physicalCard;
 
 //defult constructor
    public Card()
@@ -20,12 +25,13 @@ public class Card
    }
 
 //set constructor
-    public Card(string name, string type, bool inHand, bool active)
+    public Card(string name, string type, bool inHand, bool active ,GameObject physical)
     {
         Name = name;
         Type = type;
         InHand = inHand;
         Active = active;
+        physicalCard = physical;
     }
 
     public void SetHandStatus(bool activity)
@@ -45,10 +51,7 @@ public class Card
 
     void Awake()
     {
-        Card sword = new Card("Sword", "Melee", false, false);
-        Card bow = new Card("Bow", "Ranged", false, false);
-        Card potion = new Card("Potion", "Consumable", false, false);
-        Card axe = new Card("Axe", "Melee", false, false);
+        
     }
 
     
@@ -73,6 +76,9 @@ public class Card
         return Name;
   }
   
+  public GameObject GetGameObject(){
+    return this.physicalCard;
+  }
 
 }
 

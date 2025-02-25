@@ -12,26 +12,21 @@ public class PlayerCardScript : MonoBehaviour
 
  //max hand size 3
  private List<Card> _hand = new List<Card>(3);
- public Image[] cardimage; // 1.Deck 2.Discard 3.Type1
- public Sprite[] cardsprite;
+ public GameObject[] cardPrefabs; // 1.Deck 2.Discard 3.Type1
 
-public GameObject oneCard;
-public RectTransform canvasToPlace;
+public RectTransform handPlace;
+public RectTransform deckPlace;
+public RectTransform discardPlace;
+
     public void Start()
     {
-
-        Instantiate(oneCard, canvasToPlace);
-        Instantiate(oneCard, canvasToPlace);
-        Instantiate(oneCard, canvasToPlace);
-
-       
-        Card sword = new Card("Sword", "Melee", false, false);
+        Card sword = new Card("Sword", "Melee", false, false, cardPrefabs[0]);
         _deck.Add(sword);
-        Card bow = new Card("Bow", "Ranged", false, false);
+        Card bow = new Card("Bow", "Ranged", false, false, cardPrefabs[1]);
         _deck.Add(bow);
-        Card potion = new Card("Potion", "Consumable", false, false);
+        Card potion = new Card("Potion", "Consumable", false, false, cardPrefabs[2]);
         _deck.Add(potion);
-        Card axe = new Card("Axe", "Melee", false, false);
+        Card axe = new Card("Axe", "Melee", false, false, cardPrefabs[3]);
         _deck.Add(axe);
 
         int deckNum = _deck.Count;
@@ -50,8 +45,7 @@ public RectTransform canvasToPlace;
         }
     }
 
-    public void Draw()
- {
+    public void Draw(){
     //draws unitll 3 cards in hand
   if (_deck.Count > _hand.Count)
   {
@@ -78,9 +72,9 @@ public RectTransform canvasToPlace;
   _deck.Add(card);
  }
 
- public void setSprite(int spriteIndex, int imageIndex) {
+ /*public void setSprite(int spriteIndex, int imageIndex) {
   cardimage[imageIndex].sprite = cardsprite[spriteIndex];
- }
+ }*/
 
  public bool checkHandEmpty()
  {
@@ -131,6 +125,14 @@ public RectTransform canvasToPlace;
  public void playCard(Card card)
  {
   
+ }
+
+ public void updateCardsShown(){
+    //instanciate in hand and discard
+    //for each card in hand, instanciate
+    foreach(Card card in _hand){
+        Instantiate(card.GetGameObject, handPlace);
+    }
  }
  
 
