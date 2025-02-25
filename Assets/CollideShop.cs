@@ -15,6 +15,7 @@ public class CollideShop : MonoBehaviour {
             if (pressEScript != null) {
                 // Call a function from the ShowHidePressE script
                 pressEScript.Show();
+                pressEScript.SetPlayerInRange(true);
                 Debug.Log("Found");
                 // or you can call any other function you need from ShowHidePressE
             } else {
@@ -38,6 +39,7 @@ public class CollideShop : MonoBehaviour {
             if (pressEScript != null) {
                 // Hide the "PressE" when leaving the shop area
                 pressEScript.Hide();
+                pressEScript.SetPlayerInRange(false);
             }
         }
     }
