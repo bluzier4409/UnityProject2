@@ -14,25 +14,38 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
     public bool Attackable { get; set; }
 
     public Rigidbody2D bullet;
+
+    public SpriteRenderer sr;
     
     // Idle Variable
-    public float RandomMovementRange = 5f;
-    public float RandomMovementSpeed = 1f;
+  
     
     //State Machine Vars
+
+    [SerializeField] private EnemyIdleSO IdleBase;
+    [SerializeField] private EnemyChaseSO ChaseBase;
+    [SerializeField] private EnemyAttackSO AttackBase;
+    
+    public EnemyIdleSO IdleBaseInstance { get; set; }
+    public EnemyChaseSO ChaseBaseInstance { get; set; }
+    public EnemyAttackSO AttackBaseInstance { get; set; }
     
     public EnemyStateMachine StateMachine { get; set; }
     public IdleState IdleState { get; set; }
     public ChaseState ChaseState { get; set; }
     public AttackState AttackState { get; set; }
+    
 
     void Awake()
     {
+        IdleBaseInstance = Instantiate(IdleBase);
+        ChaseBaseInstance = Instantiate(ChaseBase);
+        AttackBaseInstance = Instantiate(AttackBase);
+        
         StateMachine = new EnemyStateMachine();
         IdleState = new IdleState(this, StateMachine);
         ChaseState = new ChaseState(this, StateMachine);
         AttackState = new AttackState(this, StateMachine);
-        
     }
 
     void Start()
@@ -40,6 +53,10 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
         CurrentHealth = MaxHealth;
         
         rb = GetComponent<Rigidbody2D>();
+
+        IdleBaseInstance.Initialize(gameObject, this);
+        ChaseBaseInstance.Initialize(gameObject, this);
+        AttackBaseInstance.Initialize(gameObject, this);
         
         StateMachine.StartState(IdleState);
     }
@@ -76,17 +93,17 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
 
     public void Flip(Vector2 velocity)
     {
-        if (isFacingRight && velocity.x < 0f)
+        if (isFacingRight && velocity.x > 0f)
         {
-            Vector3 rotator = new Vector3(transform.rotation.x, 100f, transform.rotation.z);
-            transform.rotation = Quaternion.Euler(rotator);
+            sr.flipX = false;
             isFacingRight = !isFacingRight;
         }
-        else if (!isFacingRight && velocity.x > 0f)
+        else if (!isFacingRight && velocity.x < 0f)
 
         {
-            Vector3 rotator = new Vector3(transform.rotation.x, 0f, transform.rotation.z);
-            transform.rotation = Quaternion.Euler(rotator);
+            sr.flipX = true;
+           // Vector3 rotator = new Vector3(transform.rotation.x, 0f, transform.rotation.z);
+            //transform.rotation = Quaternion.Euler(rotator);
             isFacingRight = !isFacingRight;
         }
     }
