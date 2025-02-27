@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Card
 {
-    protected string Name { get; set; }
+    protected string Name {get; set;}
     protected string Type { get; set; }
     
     public bool InHand {get; set;}
      bool Active {get; set;}
 
+//defult constructor
    public Card()
    {
        Name = string.Empty;
@@ -18,6 +19,7 @@ public class Card
        Active = false;
    }
 
+//set constructor
     public Card(string name, string type, bool inHand, bool active)
     {
         Name = name;
@@ -41,7 +43,7 @@ public class Card
         return Active;
     }
 
-    void awake()
+    void Awake()
     {
         Card sword = new Card("Sword", "Melee", false, false);
         Card bow = new Card("Bow", "Ranged", false, false);
@@ -67,7 +69,11 @@ public class Card
         return "This " + Type + " " + Name + "'s sprite is "/* + Sprite*/;
     }
 
+  public String getName(){
+        return Name;
+  }
   
+
 }
 
 

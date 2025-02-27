@@ -19,13 +19,13 @@ public class ratAttack : MonoBehaviour
     void Start()
     {
         
-        ratAttacArea = transform.GetChild(0).gameObject;
+        ratAttacArea = transform.GetChild(0).GetChild(0).gameObject;
     }
 
     void Update()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
-        
+
         if(distance <= attackDistance){
             Attack();
         }

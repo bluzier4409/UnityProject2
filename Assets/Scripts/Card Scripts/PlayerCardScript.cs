@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,20 +14,55 @@ public class PlayerCardScript : MonoBehaviour
  private List<Card> _hand = new List<Card>(3);
  public Image[] cardimage; // 1.Deck 2.Discard 3.Type1
  public Sprite[] cardsprite;
- 
- 
 
- public void Draw()
+public GameObject oneCard;
+public RectTransform canvasToPlace;
+    public void Start()
+    {
+
+        Instantiate(oneCard, canvasToPlace);
+        Instantiate(oneCard, canvasToPlace);
+        Instantiate(oneCard, canvasToPlace);
+
+       
+        Card sword = new Card("Sword", "Melee", false, false);
+        _deck.Add(sword);
+        Card bow = new Card("Bow", "Ranged", false, false);
+        _deck.Add(bow);
+        Card potion = new Card("Potion", "Consumable", false, false);
+        _deck.Add(potion);
+        Card axe = new Card("Axe", "Melee", false, false);
+        _deck.Add(axe);
+
+        int deckNum = _deck.Count;
+        for (int x = _deck.Count; x > 0; x--){  
+        Debug.Log(_deck[x-1].getName()+ " in deck");
+        }
+
+        Debug.Log(_hand.Count + " hand count");
+
+        Draw();
+
+        Debug.Log(_hand.Count + " hand count");
+
+        for (int y = _hand.Count; y > 0; y--){  
+        Debug.Log(_hand[y-1].getName()+ " in hand");
+        }
+    }
+
+    public void Draw()
  {
     //draws unitll 3 cards in hand
   if (_deck.Count > _hand.Count)
   {
-   for (int i = 0; i < _hand.Count; i++)
-   {
-    Card instanceCard = _deck[i];
-    _deck.Remove(instanceCard);
+   for (int i = 0; i <= (4-_hand.Count); i++){
+    Card instanceCard = _deck[0];
+
     _hand.Add(instanceCard);
+    _deck.RemoveAt(0);
     instanceCard.SetHandStatus(true);
+
+    Debug.Log("i = " + i);
    }
   }
  }
