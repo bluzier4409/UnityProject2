@@ -10642,7 +10642,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1241123428}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -10825,9 +10825,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c36c4ee36bc445fbbc6a85cf162880e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardimage:
-  - {fileID: 3698102231567720832, guid: 305e9750dbdbc4740b2de1ff3e07eae9, type: 3}
+  cardPrefabs:
   - {fileID: 3698102231567720832, guid: b27df15fa803e4b9d861aee548e7820a, type: 3}
+  - {fileID: 3698102231567720832, guid: 305e9750dbdbc4740b2de1ff3e07eae9, type: 3}
   - {fileID: 3698102231567720832, guid: f272a3d8f42b846e384706b7f7d171fe, type: 3}
   - {fileID: 3698102231567720832, guid: ad8f66d74a04743988eba3845fa9e449, type: 3}
   handPlace: {fileID: 2048701658}
@@ -11061,6 +11061,7 @@ GameObject:
   - component: {fileID: 1241123427}
   - component: {fileID: 1241123426}
   - component: {fileID: 1241123425}
+  - component: {fileID: 1241123430}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -11200,6 +11201,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1241123430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241123424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60ac762cd6324e17a2ceae4f0b79f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1333737596
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,6 +43,8 @@ public RectTransform discardPlace;
         for (int y = _hand.Count; y > 0; y--){  
         Debug.Log(_hand[y-1].getName()+ " in hand");
         }
+
+        updateCardsShown();
     }
 
     public void Draw(){
@@ -131,7 +133,7 @@ public RectTransform discardPlace;
     //instanciate in hand and discard
     //for each card in hand, instanciate
     foreach(Card card in _hand){
-        Instantiate(card.GetGameObject, handPlace);
+        Instantiate(card.GetGameObject(), handPlace);
     }
  }
  
