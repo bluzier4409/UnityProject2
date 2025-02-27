@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/topdowncontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/topdowncontroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Base/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Base/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Enemy Types/BrownRat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Enemy Types/BrownRat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/AttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/ChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/ChaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/IdleState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,12 +22,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/CameraFollower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Test/Interfaces/ITrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Test/Trigger Checks/AggroCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enimies/Copy_rotateToPlayer1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayersScript/PlayerMovenew.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sprites/Player animatons/SpriteManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/gunRotated.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/particlerotate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnityProject2.sln" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -45,6 +49,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -120,7 +125,11 @@
       <workItem from="1738692245999" duration="5511000" />
       <workItem from="1738867278571" duration="4628000" />
       <workItem from="1739210954142" duration="3819000" />
-      <workItem from="1739383816661" duration="1816000" />
+      <workItem from="1739383816661" duration="4074000" />
+      <workItem from="1739990634037" duration="4218000" />
+      <workItem from="1740161365033" duration="5300000" />
+      <workItem from="1740506857466" duration="5149000" />
+      <workItem from="1740681399028" duration="1395000" />
     </task>
     <servers />
   </component>

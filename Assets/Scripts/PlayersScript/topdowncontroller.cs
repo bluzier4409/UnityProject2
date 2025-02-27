@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 
 
 
-public class topdowncontroller : MonoBehaviour
+public class PlayersScript : MonoBehaviour
 {
     public Rigidbody2D rb;
     public SpriteRenderer sr;
@@ -132,7 +132,7 @@ public class topdowncontroller : MonoBehaviour
             }
             else
             {
-                dodgerollDist = new Vector2((hit.distance - 1f) * Math.Sign(tempDirection.x), (hit.distance -1f) * Math.Sign(tempDirection.y));
+                dodgerollDist = new Vector2((hit.distance - 1.5f) * Math.Sign(tempDirection.x), (hit.distance -1.5f) * Math.Sign(tempDirection.y));
                 transform.position += dodgerollDist;
                 ps.Play();
                 dashCD = 0f;
