@@ -13,7 +13,7 @@ public class rayCastFromCamera : MonoBehaviour
     {
         cam = Camera.main;
     }
-
+//doesnt work :(
     void Update()
     {
         //draw ray
