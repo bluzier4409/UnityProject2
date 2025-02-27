@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
     public bool Aggro { get; set; }
     public bool Attackable { get; set; }
 
-    public Rigidbody2D bullet;
+    
 
     public SpriteRenderer sr;
     

@@ -6,12 +6,71 @@
   <component name="ChangeListManager">
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KrishnaPalacio.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KrishnaPalacio/MINIFANTASY - Dungeon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KrishnaPalacio/MINIFANTASY - Dungeon/Tile Palettes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/enemyProjectle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/enemyProjectle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/playerBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/playerBullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Base/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Base/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Enemy Types/BrownRat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Enemy Types/BrownRat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/AttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/ChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/ChaseState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Base.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Base/Enemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Base/Enemy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Attack.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Attack/Attack Logic Scriptable Objects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Attack/Attack Logic Scriptable Objects/Attack - Melee.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Attack/Attack Logic Scriptable Objects/Attack - Melee.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Attack/Attack Logic Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackMeleeAttack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackMeleeAttack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackSO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackSO.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Chase.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Chase/Chase Logic Scriptable Objects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Chase/Chase Logic Scriptable Objects/Chase - Direct.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Chase/Chase Logic Scriptable Objects/Chase - Direct.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Chase/Chase Logic Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Chase/Chase Logic Scripts/EnemyChaseDirect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Chase/Chase Logic Scripts/EnemyChaseDirect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Chase/Chase Logic Scripts/EnemyChaseSO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Chase/Chase Logic Scripts/EnemyChaseSO.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Idle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Idle/Idle Logic Scriptable Objects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Idle/Idle Logic Scriptable Objects/Idle - Wander.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Idle/Idle Logic Scriptable Objects/Idle - Wander.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Idle/Idle Logic Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleSO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleSO.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleWander.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleWander.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Enemy Types.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Enemy Types/BrownRat.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Enemy Types/BrownRat.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Interfaces.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Interfaces/IDamage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Interfaces/IDamage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Interfaces/IMove.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Interfaces/IMove.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Interfaces/ITrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Interfaces/ITrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/AttackState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/AttackState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/ChaseState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/ChaseState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/IdleState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/Concrete States/IdleState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/EnemyState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/EnemyState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/EnemyStateMachine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/State Machine/EnemyStateMachine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Trigger Checks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Trigger Checks/AggroCheck.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Trigger Checks/AggroCheck.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Trigger Checks/AttackableCheck.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Test/Trigger Checks/AttackableCheck.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +188,7 @@
       <workItem from="1739990634037" duration="4218000" />
       <workItem from="1740161365033" duration="5300000" />
       <workItem from="1740506857466" duration="5149000" />
-      <workItem from="1740681399028" duration="1395000" />
+      <workItem from="1740681399028" duration="4886000" />
     </task>
     <servers />
   </component>

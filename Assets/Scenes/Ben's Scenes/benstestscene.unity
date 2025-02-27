@@ -35370,11 +35370,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 100
-  bullet: {fileID: 3628080305059040542, guid: 5e5aa3a1463804a8f92d1562d0887ce8, type: 3}
   sr: {fileID: 1453079095}
-  IdleBase: {fileID: 0}
-  ChaseBase: {fileID: 0}
-  AttackBase: {fileID: 0}
+  IdleBase: {fileID: 11400000, guid: f995509c2076b49279f98167a30f1a2b, type: 2}
+  ChaseBase: {fileID: 11400000, guid: 1e32ff0fa224a4402b3e0dee89536d54, type: 2}
+  AttackBase: {fileID: 11400000, guid: f197276bd40144061b7e8d7e8d7a0336, type: 2}
 --- !u!4 &1618286187
 Transform:
   m_ObjectHideFlags: 0
