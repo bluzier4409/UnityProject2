@@ -28,6 +28,8 @@ public RectTransform discardPlace;
         _deck.Add(potion);
         Card axe = new Card("Axe", "Melee", false, false, cardPrefabs[3]);
         _deck.Add(axe);
+        Card gun = new Card("gun", "Ranged", false, false, cardPrefabs[4]);
+        _deck.Add(gun);
 
         int deckNum = _deck.Count;
         for (int x = _deck.Count; x > 0; x--){  
@@ -44,10 +46,10 @@ public RectTransform discardPlace;
         Debug.Log(_hand[y-1].getName()+ " in hand");
         }
 
-        updateCardsShown();
+        //discardCard(_hand[0]);
     }
 
-    public void Draw(){
+public void Draw(){
     //draws unitll 3 cards in hand
   if (_deck.Count > _hand.Count)
   {
@@ -61,12 +63,14 @@ public RectTransform discardPlace;
     Debug.Log("i = " + i);
    }
   }
- }
+    updateCardsShown();
+}
 
  public void discardCard(Card card)
  {
   _hand.Remove(card);
   _discard.Add(card);
+    updateCardsShown();
  }
 
  public void addCard(Card card)
@@ -129,17 +133,46 @@ public RectTransform discardPlace;
   
  }
 
+ public void deckEmpty(){
+    //add discard to deck
+    //shuffle deck method
+ }
+
+ public void shuffle(){
+    
+ }
+
  public void updateCardsShown(){
     //instanciate in hand and discard
     //for each card in hand, instanciate
+    foreach(Transform child in handPlace.transform)
+    {
+        Destroy(child.gameObject);
+    }
+    foreach(Transform child in discardPlace.transform)
+    {
+        Destroy(child.gameObject);
+    }
+    
     foreach(Card card in _hand){
+        
         Instantiate(card.GetGameObject(), handPlace);
     }
+
+    int discardTopNum = _discard.Count - 1;
+    Instantiate(_discard[discardTopNum].GetGameObject(), discardPlace);
  }
  
 
  public void Update()
  {
+        if(Input.GetKeyDown(KeyCode.P)){
+            discardCard(_hand[0]);
+        }
+        if(Input.GetKeyDown(KeyCode.L)){
+            Draw();
+        }
+
   Console.WriteLine("Player card");
   String line = Console.ReadLine();
   

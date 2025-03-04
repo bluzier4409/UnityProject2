@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IndicateSelectedCard : MonoBehaviour
+public class indicateSelectedCard : MonoBehaviour
 {
-    // Start is called before the first frame update
+   public GameObject layout;
+   private Transform cardToMove;
     void Start()
     {
         
@@ -14,20 +15,24 @@ public class IndicateSelectedCard : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Alpha1)){
-            Indicate(1);
+            StartCoroutine(indicate(0));
         }
         else if(Input.GetKeyDown(KeyCode.Alpha2)){
-            Indicate(2);
+            StartCoroutine(indicate(1));
         }
         else if(Input.GetKeyDown(KeyCode.Alpha3)){
-            Indicate(3);
+            StartCoroutine(indicate(2));
         }
     }
 
-    private void Indicate(int keyNum){
-        //set grid layout inactive
-        //refer to child object
-        //move child object back up
-        //turn back on
+    IEnumerator indicate(int keyNum){
+        cardToMove = layout.gameObject.transform.GetChild(keyNum);
+        cardToMove.Translate(0, (float)0.5, 0);
+        yield return new WaitForSeconds(2);
+        goBackDown(keyNum);
+    }
+    private void goBackDown(int keyNum){
+        cardToMove = layout.gameObject.transform.GetChild(keyNum);
+        cardToMove.Translate(0, (float)-0.5, 0);
     }
 }
