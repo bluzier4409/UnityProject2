@@ -5,12 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Attack - Ranged", menuName = "Enemy Logic/Attack Logic/Ranged Attack")]
 public class EnemyAttackRangedAttack : EnemyAttackSO
 {
-    [SerializeField] public Rigidbody2D bullet;
+    [SerializeField] public Rigidbody2D bullets;
     [SerializeField] private float timer;
     [SerializeField] private float timeToAttack = 0.2f;
     [SerializeField] private float exitTimer;
-    [SerializeField] private float exitTime = 0.2f;
-    [SerializeField] private float distanceToCountExit = 3f;
+    [SerializeField] private float exitTime = 3f;
+    [SerializeField] private float distanceToCountExit = 10f;
     [SerializeField] public float bulletSpeed = 10f;
     public override void Initialize(GameObject gameObject, Enemy enemy)
     {
@@ -22,14 +22,12 @@ public class EnemyAttackRangedAttack : EnemyAttackSO
         base.EnterLogic();
         
         
-        enemy.AttackBaseInstance.EnterLogic();
     }
 
     public override void ExitLogic()
     {
         base.ExitLogic();
         
-        enemy.AttackBaseInstance.ExitLogic();
     }
 
     public override void FrameUpdateLogic()
@@ -42,43 +40,41 @@ public class EnemyAttackRangedAttack : EnemyAttackSO
         {
             timer = 0f;
             
-             Vector2 direction = (transform.position - enemy.transform.position).normalized;
-            
-             bullet = GameObject.Instantiate(bullet, enemy.transform.position, Quaternion.identity);
+             Vector2 direction = -(transform.position - playerTransform.position).normalized;
+             
+             Rigidbody2D bullet = GameObject.Instantiate(bullets, transform.position, Quaternion.identity);
              bullet.velocity = direction * bulletSpeed;
-         }
+             Debug.Log(direction);
+        }
 
-         if (Vector2.Distance(transform.position, enemy.transform.position) > distanceToCountExit)
-         {
-          exitTimer += Time.deltaTime;
-          if (exitTimer > exitTime)
-          {
-              enemy.StateMachine.ChageState(enemy.ChaseState);
-         }
-          }
-          else
-          {
-              exitTimer = 0f;
-           }
+        if (Vector2.Distance(transform.position, playerTransform.position) > distanceToCountExit)
+        {
+            exitTimer += Time.deltaTime;
+            if (exitTimer > exitTime)
+            {
+                enemy.StateMachine.ChageState(enemy.ChaseState);
+            }
+        }
+        else
+        {
+            exitTimer = 0f;
+        }
         
         
-         timer += Time.deltaTime;
-         
-         enemy.AttackBaseInstance.FrameUpdateLogic();
+        timer += Time.deltaTime;
+        
     }
 
     public override void PhysicsLogic()
     {
         base.PhysicsLogic();
         
-        enemy.ChaseBaseInstance.PhysicsLogic();
     }
 
     public override void AnimationTriggerLogic(Enemy.AnimationTrigger trigger)
     {
         base.AnimationTriggerLogic(trigger);
         
-        enemy.AttackBaseInstance.AnimationTriggerLogic(trigger);
     }
 
     public override void ResetValues()
