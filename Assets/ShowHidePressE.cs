@@ -35,9 +35,13 @@ public class ShowHidePressE : MonoBehaviour {
             purchaseUI.SetActive(true);
             // You can add whatever logic you want here, like triggering a shop interaction
         }
+        //if (!isPlayerInRange) purchaseUI.SetActive(false);
     }
     
     public void SetPlayerInRange(bool inRange) {
         isPlayerInRange = inRange;
+        Debug.Log("Player In Range: " + isPlayerInRange);
+        if(inRange == false) pressEObject.SetActive(false);
+        
     }
 }
