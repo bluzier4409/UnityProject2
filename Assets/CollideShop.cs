@@ -39,6 +39,7 @@ public class CollideShop : MonoBehaviour {
             if (pressEScript != null) {
                 // Hide the "PressE" when leaving the shop area
                 pressEScript.Hide();
+                Debug.Log("OORange");
                 pressEScript.SetPlayerInRange(false);
             }
         }
