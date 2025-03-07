@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/enemyProjectle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/enemyProjectle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scriptable Objects/Attack - Melee.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scriptable Objects/Attack - Melee.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scriptable Objects/Attack - Ranged.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scriptable Objects/Attack - Ranged.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackMeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackMeleeAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackSO.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +127,7 @@
       <workItem from="1740506857466" duration="5149000" />
       <workItem from="1740681399028" duration="4886000" />
       <workItem from="1741111720530" duration="5429000" />
-      <workItem from="1741371181339" duration="402000" />
+      <workItem from="1741371181339" duration="3985000" />
     </task>
     <servers />
   </component>

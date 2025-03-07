@@ -12,6 +12,9 @@ public class EnemyAttackMeleeAttack : EnemyAttackSO
     [SerializeField] private float exitTimer;
     [SerializeField] private float exitTime = 0.2f;
     [SerializeField] private float distanceToCountExit = 3f;
+    [SerializeField] private CircleCollider2D attackTrigger;
+    [SerializeField] private int damage;
+   
     public override void Initialize(GameObject gameObject, Enemy enemy)
     {
         base.Initialize(gameObject, enemy);
@@ -20,6 +23,15 @@ public class EnemyAttackMeleeAttack : EnemyAttackSO
     public override void EnterLogic()
     {
         base.EnterLogic();
+        
+       
+        
+        
+      
+        // circleColliders = GetComponentsInChildren<CircleCollider2D>();
+       // foreach(CircleCollider2D circleCollider in circleColliders)
+       //    attackTrigger.Equals(circleCollider);
+        
         
     }
 
@@ -33,14 +45,18 @@ public class EnemyAttackMeleeAttack : EnemyAttackSO
     {
         base.FrameUpdateLogic();
 
+        enemy.Move(Vector2.zero);
+        
+
         if (timer > timeToAttack)
         {
             timer = 0f;
-            
-            
+
+            playerHealth health = target.GetComponent<playerHealth>();
+            health.Damage(damage);
         }
         
-        if (Vector2.Distance(transform.position, enemy.transform.position) > distanceToCountExit)
+        if (Vector2.Distance(transform.position, playerTransform.position) > distanceToCountExit)
         {
                 
             exitTimer += Time.deltaTime;
@@ -72,5 +88,14 @@ public class EnemyAttackMeleeAttack : EnemyAttackSO
     public override void ResetValues()
     {
         base.ResetValues();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collide)
+    {
+        if (collide.GetComponent<playerHealth>() != null)
+        {
+            playerHealth health = collide.GetComponent<playerHealth>();
+            health.Damage(damage);
+        }
     }
 }

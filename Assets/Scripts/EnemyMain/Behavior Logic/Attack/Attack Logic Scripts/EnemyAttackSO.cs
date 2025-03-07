@@ -7,6 +7,7 @@ public class EnemyAttackSO : ScriptableObject
     protected Enemy enemy;
     protected Transform transform;
     protected GameObject gameObject;  
+    protected GameObject target;
    
     protected Transform playerTransform;
 
@@ -17,6 +18,7 @@ public class EnemyAttackSO : ScriptableObject
         this.enemy = enemy;
          
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        target = GameObject.FindGameObjectWithTag("Player");
     }
    
     public virtual void EnterLogic() {}
