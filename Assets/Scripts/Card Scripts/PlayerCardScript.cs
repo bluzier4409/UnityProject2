@@ -12,27 +12,24 @@ public class PlayerCardScript : MonoBehaviour
 
  //max hand size 3
  private List<Card> _hand = new List<Card>(3);
- public Image[] cardimage; // 1.Deck 2.Discard 3.Type1
- public Sprite[] cardsprite;
+ public GameObject[] cardPrefabs; // 1.Deck 2.Discard 3.Type1
 
-public GameObject oneCard;
-public RectTransform canvasToPlace;
+public RectTransform handPlace;
+public RectTransform deckPlace;
+public RectTransform discardPlace;
+
     public void Start()
     {
-
-        Instantiate(oneCard, canvasToPlace);
-        Instantiate(oneCard, canvasToPlace);
-        Instantiate(oneCard, canvasToPlace);
-
-       
-        Card sword = new Card("Sword", "Melee", false, false);
+        Card sword = new Card("Sword", "Melee", false, false, cardPrefabs[0]);
         _deck.Add(sword);
-        Card bow = new Card("Bow", "Ranged", false, false);
+        Card bow = new Card("Bow", "Ranged", false, false, cardPrefabs[1]);
         _deck.Add(bow);
-        Card potion = new Card("Potion", "Consumable", false, false);
+        Card potion = new Card("Potion", "Consumable", false, false, cardPrefabs[2]);
         _deck.Add(potion);
-        Card axe = new Card("Axe", "Melee", false, false);
+        Card axe = new Card("Axe", "Melee", false, false, cardPrefabs[3]);
         _deck.Add(axe);
+        Card gun = new Card("gun", "Ranged", false, false, cardPrefabs[4]);
+        _deck.Add(gun);
 
         int deckNum = _deck.Count;
         for (int x = _deck.Count; x > 0; x--){  
@@ -48,10 +45,11 @@ public RectTransform canvasToPlace;
         for (int y = _hand.Count; y > 0; y--){  
         Debug.Log(_hand[y-1].getName()+ " in hand");
         }
+
+        //discardCard(_hand[0]);
     }
 
-    public void Draw()
- {
+public void Draw(){
     //draws unitll 3 cards in hand
   if (_deck.Count > _hand.Count)
   {
@@ -65,12 +63,14 @@ public RectTransform canvasToPlace;
     Debug.Log("i = " + i);
    }
   }
- }
+    updateCardsShown();
+}
 
  public void discardCard(Card card)
  {
   _hand.Remove(card);
   _discard.Add(card);
+    updateCardsShown();
  }
 
  public void addCard(Card card)
@@ -78,9 +78,9 @@ public RectTransform canvasToPlace;
   _deck.Add(card);
  }
 
- public void setSprite(int spriteIndex, int imageIndex) {
+ /*public void setSprite(int spriteIndex, int imageIndex) {
   cardimage[imageIndex].sprite = cardsprite[spriteIndex];
- }
+ }*/
 
  public bool checkHandEmpty()
  {
@@ -132,10 +132,47 @@ public RectTransform canvasToPlace;
  {
   
  }
+
+ public void deckEmpty(){
+    //add discard to deck
+    //shuffle deck method
+ }
+
+ public void shuffle(){
+    
+ }
+
+ public void updateCardsShown(){
+    //instanciate in hand and discard
+    //for each card in hand, instanciate
+    foreach(Transform child in handPlace.transform)
+    {
+        Destroy(child.gameObject);
+    }
+    foreach(Transform child in discardPlace.transform)
+    {
+        Destroy(child.gameObject);
+    }
+    
+    foreach(Card card in _hand){
+        
+        Instantiate(card.GetGameObject(), handPlace);
+    }
+
+    int discardTopNum = _discard.Count - 1;
+    Instantiate(_discard[discardTopNum].GetGameObject(), discardPlace);
+ }
  
 
  public void Update()
  {
+        if(Input.GetKeyDown(KeyCode.P)){
+            discardCard(_hand[0]);
+        }
+        if(Input.GetKeyDown(KeyCode.L)){
+            Draw();
+        }
+
   Console.WriteLine("Player card");
   String line = Console.ReadLine();
   

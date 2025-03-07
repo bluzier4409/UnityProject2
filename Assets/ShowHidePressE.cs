@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ShowHidePressE : MonoBehaviour {
     public GameObject pressEObject;  // Reference to the PressE object
+    public GameObject purchaseUI;  // Reference to the PressE object
     private bool isPlayerInRange = false; // Whether the player is in range to press E
     private void Start() {
         // Initially hide the object when the game starts
@@ -31,12 +32,16 @@ public class ShowHidePressE : MonoBehaviour {
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E)) {
             // Do something when "E" is pressed while in range (e.g., interact with the shop)
             Debug.Log("E key pressed! Interacting with the shop...");
-            
+            purchaseUI.SetActive(true);
             // You can add whatever logic you want here, like triggering a shop interaction
         }
+        //if (!isPlayerInRange) purchaseUI.SetActive(false);
     }
     
     public void SetPlayerInRange(bool inRange) {
         isPlayerInRange = inRange;
+        Debug.Log("Player In Range: " + isPlayerInRange);
+        if(inRange == false) pressEObject.SetActive(false);
+        
     }
 }
