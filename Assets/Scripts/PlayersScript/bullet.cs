@@ -21,11 +21,11 @@ public class bullet : MonoBehaviour
    }
 
    private void FixedUpdate(){
-    rb.velocity = transform.up * speed;
+    //rb.velocity = transform.up * speed;
    }
 
     private void OnTriggerEnter2D(Collider2D collider){
-      Destroy(this.gameObject);
+      //Destroy(this.gameObject);
       if(collider.GetComponent<ObjHealth>() != null)
         {
             Debug.Log("hit");
