@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d30857ab05b42638275db349031c94, type: 3}
   m_Name: Attack - Melee
   m_EditorClassIdentifier: 
+  timer: 0
+  timeToAttack: 1
+  exitTimer: 0
+  exitTime: 0.2
+  distanceToCountExit: 3

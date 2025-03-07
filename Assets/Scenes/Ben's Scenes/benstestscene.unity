@@ -11372,7 +11372,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.1
 --- !u!114 &815750287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35373,7 +35373,7 @@ MonoBehaviour:
   sr: {fileID: 1453079095}
   IdleBase: {fileID: 11400000, guid: f995509c2076b49279f98167a30f1a2b, type: 2}
   ChaseBase: {fileID: 11400000, guid: 1e32ff0fa224a4402b3e0dee89536d54, type: 2}
-  AttackBase: {fileID: 11400000, guid: f197276bd40144061b7e8d7e8d7a0336, type: 2}
+  AttackBase: {fileID: 11400000, guid: 1096e8c49684c477d9cc881ad462eca4, type: 2}
 --- !u!4 &1618286187
 Transform:
   m_ObjectHideFlags: 0

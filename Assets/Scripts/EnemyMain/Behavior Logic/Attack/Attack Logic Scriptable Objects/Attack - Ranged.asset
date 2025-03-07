@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c516e36cf714b849e0d29180a67eac, type: 3}
   m_Name: Attack - Ranged
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullets: {fileID: 3628080305059040542, guid: 5e5aa3a1463804a8f92d1562d0887ce8, type: 3}
   timer: 0
-  timeToAttack: 0.2
+  timeToAttack: 1.5
   exitTimer: 0
-  exitTime: 0.2
-  distanceToCountExit: 3
-  bulletSpeed: 10
+  exitTime: 2
+  distanceToCountExit: 5
+  bulletSpeed: 30

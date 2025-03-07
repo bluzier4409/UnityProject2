@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Attack - Melee", menuName = "Enemy Logic/Attack Logic/Melee Attack")]
 public class EnemyAttackMeleeAttack : EnemyAttackSO
 {
     [SerializeField] private float timer;
-    [SerializeField] private float timeToAttack = 0.5f;
+    [SerializeField] private float timeToAttack = 1f;
     [SerializeField] private float exitTimer;
     [SerializeField] private float exitTime = 0.2f;
     [SerializeField] private float distanceToCountExit = 3f;
@@ -41,13 +42,6 @@ public class EnemyAttackMeleeAttack : EnemyAttackSO
         
         if (Vector2.Distance(transform.position, enemy.transform.position) > distanceToCountExit)
         {
-                Collider2D collide = Physics2D.OverlapCircle(transform.position, 0.3f, LayerMask.GetMask("Player"));
-
-                if (collide.GetComponent<playerHealth>() != null)
-                {
-                    playerHealth health = collide.GetComponent<playerHealth>(); 
-                    health.Damage(10);
-                }
                 
             exitTimer += Time.deltaTime;
             if (exitTimer > exitTime)
