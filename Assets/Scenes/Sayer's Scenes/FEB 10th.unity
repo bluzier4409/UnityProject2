@@ -10769,6 +10769,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8499954745604242561, guid: b5b69a54c8bc44abe82968f4dd97fe5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.279541
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10832,6 +10836,7 @@ MonoBehaviour:
   - {fileID: 3698102231567720832, guid: 305e9750dbdbc4740b2de1ff3e07eae9, type: 3}
   - {fileID: 3698102231567720832, guid: f272a3d8f42b846e384706b7f7d171fe, type: 3}
   - {fileID: 3698102231567720832, guid: ad8f66d74a04743988eba3845fa9e449, type: 3}
+  - {fileID: 3698102231567720832, guid: b27df15fa803e4b9d861aee548e7820a, type: 3}
   - {fileID: 3698102231567720832, guid: b27df15fa803e4b9d861aee548e7820a, type: 3}
   handPlace: {fileID: 2048701658}
   deckPlace: {fileID: 310196702}

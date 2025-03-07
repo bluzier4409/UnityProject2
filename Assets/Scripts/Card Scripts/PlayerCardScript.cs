@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,40 +31,39 @@ public RectTransform discardPlace;
         _deck.Add(axe);
         Card gun = new Card("gun", "Ranged", false, false, cardPrefabs[4]);
         _deck.Add(gun);
+        Card bomb = new Card("bomb", "Ranged", false, false, cardPrefabs[5]);
+        _deck.Add(bomb);
 
-        int deckNum = _deck.Count;
-        for (int x = _deck.Count; x > 0; x--){  
-        Debug.Log(_deck[x-1].getName()+ " in deck");
-        }
+        
 
-        Debug.Log(_hand.Count + " hand count");
 
         Draw();
 
-        Debug.Log(_hand.Count + " hand count");
 
-        for (int y = _hand.Count; y > 0; y--){  
-        Debug.Log(_hand[y-1].getName()+ " in hand");
-        }
+        
 
         //discardCard(_hand[0]);
     }
 
 public void Draw(){
-    //draws unitll 3 cards in hand
-  if (_deck.Count > _hand.Count)
-  {
-   for (int i = 0; i <= (4-_hand.Count); i++){
-    Card instanceCard = _deck[0];
-
-    _hand.Add(instanceCard);
+//draws unitll 3 cards in hand
+  if (_hand.Count == 0 && _deck.Count >= 3){
+    for (int i = 0; i < 3; i++){
+    _hand.Add(_deck[0]);
     _deck.RemoveAt(0);
-    instanceCard.SetHandStatus(true);
-
-    Debug.Log("i = " + i);
+    //instanceCard.SetHandStatus(true);
+    }
+   foreach (Card card in _deck){    
+        Debug.Log("Draw just happened, cards in DECK are " + card.getName());
+    }
+    foreach (Card card4 in _hand){    
+        Debug.Log("Draw just happened, cards in HAND are " + card4.getName());
+    }
+   updateCardsShown();
+   if (_deck.Count == 0){
+    deckEmpty();
    }
   }
-    updateCardsShown();
 }
 
  public void discardCard(Card card)
@@ -71,6 +71,16 @@ public void Draw(){
   _hand.Remove(card);
   _discard.Add(card);
     updateCardsShown();
+    foreach (Card card1 in _deck){    
+        Debug.Log("Discard just happened, cards in DECK are " + card1.getName());
+    }
+    foreach (Card card2 in _discard){    
+        Debug.Log("Discard just happened, cards in DISCARD are " + card2.getName());
+    }
+    foreach (Card card5 in _hand){    
+        Debug.Log("Discard just happened, cards in HAND are " + card5.getName());
+    }
+    Debug.Log("END OF DISCARD");
  }
 
  public void addCard(Card card)
@@ -135,12 +145,37 @@ public void Draw(){
 
  public void deckEmpty(){
     //add discard to deck
+    foreach (Card card in _discard.ToArray()){
+        _deck.Add(card);
+        _discard.Remove(card);
+    }
     //shuffle deck method
+    reshuffle(_deck);
+    
+    updateCardsShown();
+
+    foreach (Card card1 in _deck){    
+        Debug.Log("DeckEmpty just happened, cards in DECK are " + card1.getName());
+    }
+    foreach (Card card2 in _discard){    
+        Debug.Log("DeckEmpty just happened, cards in DISCARD are " + card2.getName());
+    }
+    foreach (Card card5 in _hand){    
+        Debug.Log("DeckEmpty just happened, cards in HAND are " + card5.getName());
+    }
+    Debug.Log("END OF DeckEmpty");
  }
 
- public void shuffle(){
-    
- }
+ void reshuffle(List<Card> texts)
+    {
+        for (int t = 0; t < texts.Count; t++ )
+        {
+            Card tmp = texts[t];
+            int r = UnityEngine.Random.Range(t, texts.Count);
+            texts[t] = texts[r];
+            texts[r] = tmp;
+        }
+    }
 
  public void updateCardsShown(){
     //instanciate in hand and discard
@@ -160,7 +195,9 @@ public void Draw(){
     }
 
     int discardTopNum = _discard.Count - 1;
-    Instantiate(_discard[discardTopNum].GetGameObject(), discardPlace);
+    if (_discard.Count > 0){
+        Instantiate(_discard[discardTopNum].GetGameObject(), discardPlace);
+        }
  }
  
 
@@ -172,11 +209,14 @@ public void Draw(){
         if(Input.GetKeyDown(KeyCode.L)){
             Draw();
         }
+        if(Input.GetKeyDown(KeyCode.M)){
+            //deckEmpty();
+        }
 
   Console.WriteLine("Player card");
   String line = Console.ReadLine();
   
-  if (checkHandEmpty()) { Draw(); }
+  //if (checkHandEmpty()) { Draw(); }
 
   if (checkActive() == 1 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[0]); }
   if (checkActive() == 2 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[1]); }
