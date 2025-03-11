@@ -51,7 +51,6 @@ public void Draw(){
     for (int i = 0; i < 3; i++){
     _hand.Add(_deck[0]);
     _deck.RemoveAt(0);
-    //instanceCard.SetHandStatus(true);
     }
    foreach (Card card in _deck){    
         Debug.Log("Draw just happened, cards in DECK are " + card.getName());
@@ -63,6 +62,7 @@ public void Draw(){
    if (_deck.Count == 0){
     deckEmpty();
    }
+   foreach(Card card9 in _hand){card9.SetHandStatus(true);}
   }
 }
 
@@ -118,19 +118,33 @@ public void Draw(){
   {
    resetActivity();
    _hand[0].SetActiveStatus(true);
-   return 0;
+   foreach(Card card in _hand){
+    Debug.Log(card.getName() + " is active: " + card.GetActiveStatus());
+   }    
+   Debug.Log("DONE1");
+
+   return 1;
   }
-  if (Input.GetKeyDown(KeyCode.Alpha2))
+  else if (Input.GetKeyDown(KeyCode.Alpha2))
   {
    resetActivity();
    _hand[1].SetActiveStatus(true);
-   return 1;
+   foreach(Card card in _hand){
+    Debug.Log(card.getName() + " is active: " + card.GetActiveStatus());
+   }
+   Debug.Log("DONE2");
+   return 2;
   }
-  if (Input.GetKeyDown(KeyCode.Alpha3))
+  else if (Input.GetKeyDown(KeyCode.Alpha3))
   {
    resetActivity();
    _hand[2].SetActiveStatus(true);
-   return 2;
+   foreach(Card card in _hand){
+    Debug.Log(card.getName() + " is active: " + card.GetActiveStatus());
+   }
+    Debug.Log("DONE3");
+
+   return 3;
   }
   else
   {
@@ -199,6 +213,10 @@ public void Draw(){
         Instantiate(_discard[discardTopNum].GetGameObject(), discardPlace);
         }
  }
+
+ public List<Card> getHand(){
+    return _hand;
+ }
  
 
  public void Update()
@@ -219,8 +237,8 @@ public void Draw(){
   //if (checkHandEmpty()) { Draw(); }
 
   if (checkActive() == 1 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[0]); }
-  if (checkActive() == 2 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[1]); }
-  if (checkActive() == 3 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[2]); }
+  else if (checkActive() == 2 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[1]); }
+  else if (checkActive() == 3 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[2]); }
   
  }
 }

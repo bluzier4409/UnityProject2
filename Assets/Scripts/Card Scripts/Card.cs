@@ -11,7 +11,7 @@ public class Card : MonoBehaviour
     protected string Name {get; set;}
     protected string Type { get; set; }
     
-    public bool InHand {get; set;}
+    private bool InHand {get; set;}
      bool Active {get; set;}
      private GameObject physicalCard;
 
@@ -37,6 +37,10 @@ public class Card : MonoBehaviour
     public void SetHandStatus(bool activity)
     {
         InHand = activity;
+    }
+
+    public bool getHandStatus(){
+        return InHand;
     }
 
     public Card GetCard()
