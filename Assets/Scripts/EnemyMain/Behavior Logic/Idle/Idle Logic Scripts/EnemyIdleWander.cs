@@ -7,9 +7,12 @@ public class EnemyIdleWander : EnemyIdleSO
 {
     [SerializeField] public float RandomMovementRange = 5f;
     [SerializeField] public float RandomMovementSpeed = 1f;
+    [SerializeField] public LayerMask wal;
     
     private Vector3 targetPos;
     private Vector3 direction;
+    
+    RaycastHit2D hit;
     
     public override void Initialize(GameObject gameObject, Enemy enemy)
     {
@@ -20,7 +23,10 @@ public class EnemyIdleWander : EnemyIdleSO
     {
         base.EnterLogic();
         
-        targetPos = GetRandomPoint();
+        
+           targetPos = GetValidRandomPoint();
+           direction = (targetPos - enemy.transform.position).normalized;
+           
     }
 
     public override void ExitLogic()
@@ -34,10 +40,11 @@ public class EnemyIdleWander : EnemyIdleSO
         
         direction = (targetPos - enemy.transform.position).normalized;
         enemy.Move(direction * RandomMovementSpeed);
-
+            
+      
         if ((enemy.transform.position - targetPos).sqrMagnitude < 0.01f)
         {
-            targetPos = GetRandomPoint();
+            targetPos = GetValidRandomPoint();
         }
     }
 
@@ -55,9 +62,30 @@ public class EnemyIdleWander : EnemyIdleSO
     {
         base.ResetValues();
     }
-    
+
     private Vector3 GetRandomPoint()
     {
         return enemy.transform.position + (Vector3)UnityEngine.Random.insideUnitCircle * RandomMovementRange;
     }
+
+    private Vector3 GetValidRandomPoint()
+    {
+        targetPos = GetRandomPoint();
+        hit = Physics2D.Raycast(enemy.transform.position, direction, (targetPos - enemy.transform.position).magnitude, wal);
+
+        if (hit)
+        {
+            while (hit)
+            {
+                targetPos = GetRandomPoint();
+                hit = Physics2D.Raycast(enemy.transform.position, direction, (targetPos - enemy.transform.position).magnitude, wal);
+            } 
+            return targetPos;
+        }
+        else
+        {
+            return targetPos;
+        }
+    }
+    
 }
