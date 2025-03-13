@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CollideShop : MonoBehaviour {
+    Transform theTransform  = null;
     private void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("Collided With Shop");
         GameObject collidedObject = other.gameObject;
         Transform pressETransform = collidedObject.transform.Find("PressE");
-    
+        theTransform=pressETransform;
         if (pressETransform != null) {
             // Get the ShowHidePressE script attached to the PressE object
             ShowHidePressE pressEScript = pressETransform.GetComponent<ShowHidePressE>();
@@ -27,14 +28,19 @@ public class CollideShop : MonoBehaviour {
     }
     
     private void OnTriggerExit2D(Collider2D other) {
+        Debug.Log("TriggerExit");
         GameObject collidedObject = other.gameObject;
+        Transform pressETransform = collidedObject.transform.Find("PressE");
+
+        ShowHidePressE pressEScript = theTransform.GetComponent<ShowHidePressE>();
+        pressEScript.Hide();
 
         // Find the PressE object within the collided object (which should be the player prefab)
-        Transform pressETransform = collidedObject.transform.Find("PressE");
+        
 
         if (pressETransform != null) {
             // Get the ShowHidePressE script attached to PressE
-            ShowHidePressE pressEScript = pressETransform.GetComponent<ShowHidePressE>();
+            //ShowHidePressE pressEScript = pressETransform.GetComponent<ShowHidePressE>();
 
             if (pressEScript != null) {
                 // Hide the "PressE" when leaving the shop area
