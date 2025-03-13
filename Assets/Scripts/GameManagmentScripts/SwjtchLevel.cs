@@ -20,6 +20,6 @@ public class SwjtchLevel : MonoBehaviour
     public void nextLevel() {
         
         
-        SceneManager.LoadScene (sceneName:"level 2 sk's");
+        SceneManager.LoadScene (sceneName:"DEMO 2");
     }
 }
