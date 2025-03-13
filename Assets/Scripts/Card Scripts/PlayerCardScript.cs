@@ -64,13 +64,17 @@ public void Draw(){
    }
    foreach(Card card9 in _hand){card9.SetHandStatus(true);}
   }
+  printWhatsActive();
 }
 
  public void discardCard(Card card)
  {
   _hand.Remove(card);
   _discard.Add(card);
+  card.SetActiveStatus(false);
+  foreach (Card card3 in _hand){card.SetActiveStatus(false);}
     updateCardsShown();
+    printWhatsActive();
     foreach (Card card1 in _deck){    
         Debug.Log("Discard just happened, cards in DECK are " + card1.getName());
     }
@@ -104,24 +108,40 @@ public void Draw(){
   }
  }
 
+
  public void resetActivity()
  {
+    indicateSelectedCard indicateScript = this.GetComponent<indicateSelectedCard>();
+    int x = 0;
+    
   foreach (Card card in _hand)
   {
+    
+    if(card.GetActiveStatus() == true){
+        indicateScript.goBackDown(x);
+    }
+    x = x+1;
    card.SetActiveStatus(false);
   }
  }
 
+ private void printWhatsActive(){
+    foreach(Card card in _hand){
+    Debug.Log(card.getName() + " is active: " + card.GetActiveStatus());
+   }    
+   Debug.Log("DONE1");
+ }
+
  public int checkActive()
  {
+    indicateSelectedCard indicateScript = this.GetComponent<indicateSelectedCard>();
+
   if (Input.GetKeyDown(KeyCode.Alpha1))
   {
    resetActivity();
    _hand[0].SetActiveStatus(true);
-   foreach(Card card in _hand){
-    Debug.Log(card.getName() + " is active: " + card.GetActiveStatus());
-   }    
-   Debug.Log("DONE1");
+   indicateScript.indicate(0);
+   printWhatsActive();
 
    return 1;
   }
@@ -129,21 +149,16 @@ public void Draw(){
   {
    resetActivity();
    _hand[1].SetActiveStatus(true);
-   foreach(Card card in _hand){
-    Debug.Log(card.getName() + " is active: " + card.GetActiveStatus());
-   }
-   Debug.Log("DONE2");
+      indicateScript.indicate(1);
+   printWhatsActive();
    return 2;
   }
   else if (Input.GetKeyDown(KeyCode.Alpha3))
   {
    resetActivity();
    _hand[2].SetActiveStatus(true);
-   foreach(Card card in _hand){
-    Debug.Log(card.getName() + " is active: " + card.GetActiveStatus());
-   }
-    Debug.Log("DONE3");
-
+    indicateScript.indicate(2);
+   printWhatsActive();
    return 3;
   }
   else

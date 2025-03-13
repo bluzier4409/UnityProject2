@@ -13,7 +13,7 @@ public class MeleeCard : Card
     {
         Name = name;
         Type = type;
-        InHand = inHand;
+        //InHand = inHand;
         
         _range = range;
         _damage = damage;

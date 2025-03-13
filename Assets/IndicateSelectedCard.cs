@@ -20,24 +20,29 @@ public class indicateSelectedCard : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.Alpha1)){
-            indicate(0);
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha2)){
-            indicate(1);
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha3)){
-            indicate(2);
-        }
     }
 
-    private void indicate(int keyNum){
-        if (.getHand()[keyNum].GetActiveStatus == true){}
+    /*private void indicate(int keyNum){
+        PlayerCardScript allCards = this.GetComponent<PlayerCardScript>();
+        List<Card> tempHand = allCards.getHand();
+        foreach(Card card in tempHand){
+            if (card.GetActiveStatus() == true){
+                
+                }
+                else{
+                    card
+                }
+            }
+            
+        
+        //goBackDown(keyNum);
+    }*/
+
+    public void indicate(int keyNum){
         cardToMove = layout.gameObject.transform.GetChild(keyNum);
         cardToMove.Translate(0, (float)0.5, 0);
-        goBackDown(keyNum);
     }
-    private void goBackDown(int keyNum){
+    public void goBackDown(int keyNum){
         cardToMove = layout.gameObject.transform.GetChild(keyNum);
         cardToMove.Translate(0, (float)-0.5, 0);
     }

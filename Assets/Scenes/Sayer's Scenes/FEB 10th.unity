@@ -10881,6 +10881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layout: {fileID: 2048701657}
+  manager: {fileID: 0}
 --- !u!1001 &1033168412
 PrefabInstance:
   m_ObjectHideFlags: 0
