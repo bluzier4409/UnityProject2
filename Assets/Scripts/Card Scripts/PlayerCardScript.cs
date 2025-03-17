@@ -33,6 +33,12 @@ public RectTransform discardPlace;
         _deck.Add(gun);
         Card bomb = new Card("bomb", "Ranged", false, false, cardPrefabs[5]);
         _deck.Add(bomb);
+        Card lasar = new Card("lasar", "Ranged", false, false, cardPrefabs[1]);
+        _deck.Add(lasar);
+
+        _deck.Add(axe);
+
+       
 
         
 
@@ -41,13 +47,13 @@ public RectTransform discardPlace;
 
 
         
-
-        //discardCard(_hand[0]);
     }
 
 public void Draw(){
 //draws unitll 3 cards in hand
+    if(_deck.Count < 3){deckEmpty();}
   if (_hand.Count == 0 && _deck.Count >= 3){
+    resetActivity();
     for (int i = 0; i < 3; i++){
     _hand.Add(_deck[0]);
     _deck.RemoveAt(0);
@@ -59,20 +65,20 @@ public void Draw(){
         Debug.Log("Draw just happened, cards in HAND are " + card4.getName());
     }
    updateCardsShown();
-   if (_deck.Count == 0){
-    deckEmpty();
-   }
+   
    foreach(Card card9 in _hand){card9.SetHandStatus(true);}
   }
+  foreach(Card card10 in _hand){card10.SetActiveStatus(false);}
   printWhatsActive();
 }
 
  public void discardCard(Card card)
  {
+    foreach (Card card3 in _hand){resetActivity();}
   _hand.Remove(card);
   _discard.Add(card);
   card.SetActiveStatus(false);
-  foreach (Card card3 in _hand){card.SetActiveStatus(false);}
+  
     updateCardsShown();
     printWhatsActive();
     foreach (Card card1 in _deck){    
@@ -119,6 +125,7 @@ public void Draw(){
     
     if(card.GetActiveStatus() == true){
         indicateScript.goBackDown(x);
+        card.SetActiveStatus(false);
     }
     x = x+1;
    card.SetActiveStatus(false);
@@ -126,10 +133,10 @@ public void Draw(){
  }
 
  private void printWhatsActive(){
-    foreach(Card card in _hand){
+  /*  foreach(Card card in _hand){
     Debug.Log(card.getName() + " is active: " + card.GetActiveStatus());
    }    
-   Debug.Log("DONE1");
+   Debug.Log("DONE1");*/
  }
 
  public int checkActive()
@@ -138,26 +145,43 @@ public void Draw(){
 
   if (Input.GetKeyDown(KeyCode.Alpha1))
   {
+    if (_hand[0].GetActiveStatus() == true)
+    {indicateScript.goBackDown(0);   
+    _hand[0].SetActiveStatus(false);
+    }
+    else{
    resetActivity();
    _hand[0].SetActiveStatus(true);
    indicateScript.indicate(0);
-   printWhatsActive();
-
+    }
+    printWhatsActive();
    return 1;
   }
   else if (Input.GetKeyDown(KeyCode.Alpha2))
   {
+    if (_hand[1].GetActiveStatus() == true)
+    {indicateScript.goBackDown(1);   
+    _hand[1].SetActiveStatus(false);
+    }
+    else {
    resetActivity();
    _hand[1].SetActiveStatus(true);
-      indicateScript.indicate(1);
-   printWhatsActive();
+    indicateScript.indicate(1);
+    }
+    printWhatsActive();
    return 2;
   }
   else if (Input.GetKeyDown(KeyCode.Alpha3))
   {
+    if (_hand[2].GetActiveStatus() == true)
+    {indicateScript.goBackDown(2);   
+    _hand[2].SetActiveStatus(false);
+    }
+    else{
    resetActivity();
    _hand[2].SetActiveStatus(true);
     indicateScript.indicate(2);
+    }
    printWhatsActive();
    return 3;
   }
@@ -173,6 +197,7 @@ public void Draw(){
  }
 
  public void deckEmpty(){
+    
     //add discard to deck
     foreach (Card card in _discard.ToArray()){
         _deck.Add(card);
@@ -180,6 +205,9 @@ public void Draw(){
     }
     //shuffle deck method
     reshuffle(_deck);
+
+   
+    
     
     updateCardsShown();
 
