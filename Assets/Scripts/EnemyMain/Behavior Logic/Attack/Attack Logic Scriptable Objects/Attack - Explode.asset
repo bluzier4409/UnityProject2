@@ -9,12 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18d30857ab05b42638275db349031c94, type: 3}
-  m_Name: Attack - Melee
+  m_Script: {fileID: 11500000, guid: bebbc8edbfa824fcc9f1f50e82b77e92, type: 3}
+  m_Name: Attack - Explode
   m_EditorClassIdentifier: 
-  timer: 0
-  timeToAttack: 1
-  exitTimer: 0
-  exitTime: 0.2
-  distanceToCountExit: 3
-  damage: 10

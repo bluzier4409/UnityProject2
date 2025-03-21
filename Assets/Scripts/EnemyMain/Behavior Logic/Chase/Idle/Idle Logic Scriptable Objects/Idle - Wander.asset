@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RandomMovementRange: 5
   RandomMovementSpeed: 1
+  wal:
+    serializedVersion: 2
+    m_Bits: 64

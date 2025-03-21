@@ -7,9 +7,21 @@
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleWander.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleWander.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/flipflop.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/flipflop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Base/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Base/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scriptable Objects/Attack - Melee.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scriptable Objects/Attack - Melee.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackMeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackMeleeAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Chase/Chase Logic Scripts/EnemyChaseDirect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Chase/Chase Logic Scripts/EnemyChaseDirect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scriptable Objects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scriptable Objects/Idle - Wander.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scriptable Objects/Idle - Wander.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleSO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleSO.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleWander.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleWander.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/topdowncontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/topdowncontroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/mouse money-1.png.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/mouse money-1.png.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +33,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AStar/Node.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackExplodeAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enimies/Copy_rotateToPlayer1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayersScript/PlayerMovenew.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sprites/Player animatons/SpriteManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,7 +59,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;RoslynSettingsId&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -130,6 +143,8 @@
       <workItem from="1741111720530" duration="5429000" />
       <workItem from="1741371181339" duration="4260000" />
       <workItem from="1741713225102" duration="5205000" />
+      <workItem from="1741887824089" duration="4711000" />
+      <workItem from="1742231135496" duration="5631000" />
     </task>
     <servers />
   </component>

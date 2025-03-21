@@ -12,7 +12,6 @@ public class EnemyAttackMeleeAttack : EnemyAttackSO
     [SerializeField] private float exitTimer;
     [SerializeField] private float exitTime = 0.2f;
     [SerializeField] private float distanceToCountExit = 3f;
-    [SerializeField] private CircleCollider2D attackTrigger;
     [SerializeField] private int damage;
    
     public override void Initialize(GameObject gameObject, Enemy enemy)
@@ -51,9 +50,8 @@ public class EnemyAttackMeleeAttack : EnemyAttackSO
         if (timer > timeToAttack)
         {
             timer = 0f;
-
-            playerHealth health = target.GetComponent<playerHealth>();
-            health.Damage(damage);
+            
+            
         }
         
         if (Vector2.Distance(transform.position, playerTransform.position) > distanceToCountExit)

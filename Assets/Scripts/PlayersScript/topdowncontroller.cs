@@ -84,6 +84,7 @@ public class PlayersScript : MonoBehaviour
         }
     }
 
+  
     [ItemCanBeNull]
     List<Sprite> GetSpriteDirection()
     {

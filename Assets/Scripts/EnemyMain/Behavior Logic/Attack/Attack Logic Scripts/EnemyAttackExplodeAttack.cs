@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
-[CreateAssetMenu(fileName = "Chase - Direct", menuName = "Enemy Logic/Chase Logic/Direct")]
-public class EnemyChaseDirect : EnemyChaseSO
+
+
+[CreateAssetMenu(fileName = "Attack - Explode", menuName = "Enemy Logic/Attack Logic/Explode Attack")]
+public class EnemyAttackExplodeAttack : EnemyAttackSO
 {
-    private float speed = 5f;
+    [SerializeField] CircleCollider2D attackRange;
     public override void Initialize(GameObject gameObject, Enemy enemy)
     {
         base.Initialize(gameObject, enemy);
@@ -14,6 +16,7 @@ public class EnemyChaseDirect : EnemyChaseSO
     public override void EnterLogic()
     {
         base.EnterLogic();
+        enemy.ExplodeAttack();
     }
 
     public override void ExitLogic()
@@ -25,10 +28,10 @@ public class EnemyChaseDirect : EnemyChaseSO
     {
         base.FrameUpdateLogic();
         
-        Vector2 direction = (playerTransform.position - enemy.transform.position).normalized;
+        enemy.Move(Vector2.zero);
         
-        enemy.Move(direction * speed);
-
+        Destroy(this.gameObject);
+        
     }
 
     public override void PhysicsLogic()
@@ -45,4 +48,9 @@ public class EnemyChaseDirect : EnemyChaseSO
     {
         base.ResetValues();
     }
+
+    //IEnumerator explodeAnimation()
+    //{
+        
+    //}
 }

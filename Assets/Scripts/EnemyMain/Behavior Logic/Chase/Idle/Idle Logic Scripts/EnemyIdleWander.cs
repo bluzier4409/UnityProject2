@@ -62,30 +62,23 @@ public class EnemyIdleWander : EnemyIdleSO
     {
         base.ResetValues();
     }
+    
+    private Vector3 GetValidRandomPoint()
+    {
+        CheckHit();
+        if (hit) {while (hit) {CheckHit();} return targetPos;} else {return targetPos;}
+    }
 
     private Vector3 GetRandomPoint()
     {
         return enemy.transform.position + (Vector3)UnityEngine.Random.insideUnitCircle * RandomMovementRange;
     }
 
-    private Vector3 GetValidRandomPoint()
+    private void CheckHit()
     {
         targetPos = GetRandomPoint();
-        hit = Physics2D.Raycast(enemy.transform.position, direction, (targetPos - enemy.transform.position).magnitude, wal);
-
-        if (hit)
-        {
-            while (hit)
-            {
-                targetPos = GetRandomPoint();
-                hit = Physics2D.Raycast(enemy.transform.position, direction, (targetPos - enemy.transform.position).magnitude, wal);
-            } 
-            return targetPos;
-        }
-        else
-        {
-            return targetPos;
-        }
+        direction = (targetPos - enemy.transform.position).normalized;
+        hit = Physics2D.Raycast(enemy.transform.position, direction, (targetPos - enemy.transform.position).magnitude, wal); 
     }
     
 }

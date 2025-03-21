@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
 {
     [field: SerializeField] public float MaxHealth { get; set; } = 100f;
+
+    [SerializeField] private GameObject target;
     
     public float CurrentHealth { get; set; }
     public Rigidbody2D rb { get; set; }
@@ -12,6 +15,8 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
     
     public bool Aggro { get; set; }
     public bool Attackable { get; set; }
+
+    private CircleCollider2D circleCollider2D;
 
     
 
@@ -46,6 +51,7 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
         IdleState = new IdleState(this, StateMachine);
         ChaseState = new ChaseState(this, StateMachine);
         AttackState = new AttackState(this, StateMachine);
+        
     }
 
     void Start()
@@ -80,6 +86,10 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
         }
     }
 
+    
+    
+    
+
     public void Die()
     {
         Destroy(gameObject);
@@ -90,6 +100,23 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
         rb.velocity = velocity;
         Flip(velocity);
     }
+
+    public void ExplodeAttack()
+    {
+        Debug.Log("this is happening");
+        if (Attackable)
+        {
+            if (target.GetComponent<playerHealth>() != null)
+            {
+                Debug.Log("this is occuring");
+                playerHealth health;
+                health = target.GetComponent<playerHealth>();
+                health.Damage(5);
+            }
+        }
+    }
+    
+    
 
     public void Flip(Vector2 velocity)
     {
