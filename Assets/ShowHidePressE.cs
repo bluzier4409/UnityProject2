@@ -24,6 +24,7 @@ public class ShowHidePressE : MonoBehaviour {
     public void Hide() {
         if (pressEObject != null) {
             pressEObject.SetActive(false);  // Make the object invisible
+            purchaseUI.SetActive(false);
         }
     }
     
