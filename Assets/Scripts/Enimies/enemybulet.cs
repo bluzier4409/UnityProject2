@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class enemybulet : MonoBehaviour
 {
    [Range(1, 100)]
    [SerializeField] private float speed = 75f;
@@ -21,20 +21,14 @@ public class bullet : MonoBehaviour
    }
 
    private void FixedUpdate(){
-    rb.velocity = transform.up * speed;
+    //rb.velocity = transform.up * speed;
    }
 
-    private void OnTriggerEnter2D(Collider2D collider){
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+     Destroy(this.gameObject);
       
-      if(collider.GetComponent<ObjHealth>() != null)
-        {
-            Debug.Log("hit");
-
-            ObjHealth health = collider.GetComponent<ObjHealth>();
-            health.Damage(bulletDammage);
-            
-        }
-      else if(collider.GetComponent<playerHealth>() != null)
+      if(collider.GetComponent<playerHealth>() != null)
       {
             Debug.Log("playerHit");
 
@@ -42,6 +36,6 @@ public class bullet : MonoBehaviour
             pHealth.Damage(bulletDammage);
       }
       
-      Destroy(this.gameObject);
+      
     }
 }
