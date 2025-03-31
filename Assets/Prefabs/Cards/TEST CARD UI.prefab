@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 915438999025525049}
   - component: {fileID: 8358798784487317784}
   m_Layer: 0
-  m_Name: NEW CARD
+  m_Name: TEST CARD UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5c29a9dd34c1a4e2eadd37e7e8c7e43c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ef33d8794ab64d9fbb55379f5a2db04, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

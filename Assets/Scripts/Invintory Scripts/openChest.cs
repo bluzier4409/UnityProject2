@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 public class openChest : MonoBehaviour
 {
     public Sprite OpenChest;
+    public Sprite emptyChest;
     void Start()
     {
         
