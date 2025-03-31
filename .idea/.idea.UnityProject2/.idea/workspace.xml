@@ -7,21 +7,7 @@
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ben's Scenes/benstestscene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Base/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Base/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scriptable Objects/Attack - Melee.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scriptable Objects/Attack - Melee.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackMeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Attack/Attack Logic Scripts/EnemyAttackMeleeAttack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Chase/Chase Logic Scripts/EnemyChaseDirect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Chase/Chase Logic Scripts/EnemyChaseDirect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scriptable Objects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scriptable Objects/Idle - Wander.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scriptable Objects/Idle - Wander.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleWander.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Idle/Idle Logic Scripts/EnemyIdleWander.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/topdowncontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/topdowncontroller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/mouse money-1.png.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/mouse money-1.png.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +131,7 @@
       <workItem from="1741713225102" duration="5205000" />
       <workItem from="1741887824089" duration="4711000" />
       <workItem from="1742231135496" duration="5631000" />
+      <workItem from="1742574161558" duration="2478000" />
     </task>
     <servers />
   </component>
