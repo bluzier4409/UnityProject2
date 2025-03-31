@@ -51,7 +51,9 @@ public RectTransform discardPlace;
 
 public void Draw(){
 //draws unitll 3 cards in hand
-    if(_deck.Count < 3){deckEmpty();}
+    if(_hand.Count == 0){
+        if(_deck.Count < 3){deckEmpty();}
+        }
   if (_hand.Count == 0 && _deck.Count >= 3){
     resetActivity();
     for (int i = 0; i < 3; i++){

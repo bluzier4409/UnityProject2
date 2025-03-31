@@ -24,6 +24,13 @@ public class ShowHidePressE : MonoBehaviour {
     public void Hide() {
         if (pressEObject != null) {
             pressEObject.SetActive(false);  // Make the object invisible
+           //purchaseUI.SetActive(false);
+        }
+    }
+    
+    public void HidePurchase() {
+        if (pressEObject != null) {
+            //pressEObject.SetActive(false);  // Make the object invisible
             purchaseUI.SetActive(false);
         }
     }
@@ -42,7 +49,14 @@ public class ShowHidePressE : MonoBehaviour {
     public void SetPlayerInRange(bool inRange) {
         isPlayerInRange = inRange;
         Debug.Log("Player In Range: " + isPlayerInRange);
-        if(inRange == false) pressEObject.SetActive(false);
+        if (inRange == false) {
+            pressEObject.SetActive(false);
+            purchaseUI.SetActive(false);
+            Debug.Log("Setting False From PressE");
+        }
+
+        
+        
         
     }
 }
