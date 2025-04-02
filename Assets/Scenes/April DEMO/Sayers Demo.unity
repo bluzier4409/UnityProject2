@@ -23462,6 +23462,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2913584246895879, guid: b5b69a54c8bc44abe82968f4dd97fe5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2f7631edc4a344fa3975f2226a620489, type: 3}
+    - target: {fileID: 917846256882953022, guid: b5b69a54c8bc44abe82968f4dd97fe5d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 84.2161
+      objectReference: {fileID: 0}
+    - target: {fileID: 917846256882953022, guid: b5b69a54c8bc44abe82968f4dd97fe5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 49.7961
+      objectReference: {fileID: 0}
+    - target: {fileID: 917846256882953022, guid: b5b69a54c8bc44abe82968f4dd97fe5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -52.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 917846256882953022, guid: b5b69a54c8bc44abe82968f4dd97fe5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007494942621472348, guid: b5b69a54c8bc44abe82968f4dd97fe5d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 51.5192
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007494942621472348, guid: b5b69a54c8bc44abe82968f4dd97fe5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 68.7774
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007494942621472348, guid: b5b69a54c8bc44abe82968f4dd97fe5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 31.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007494942621472348, guid: b5b69a54c8bc44abe82968f4dd97fe5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00000091922
+      objectReference: {fileID: 0}
     - target: {fileID: 4818603757020926999, guid: b5b69a54c8bc44abe82968f4dd97fe5d, type: 3}
       propertyPath: m_Name
       value: death can invintory
