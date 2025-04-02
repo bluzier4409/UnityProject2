@@ -25,6 +25,8 @@ public class bullet : MonoBehaviour
    }
 
     private void OnTriggerEnter2D(Collider2D collider){
+        
+        Destroy(this.gameObject);
       
       if(collider.GetComponent<ObjHealth>() != null)
         {
@@ -34,14 +36,14 @@ public class bullet : MonoBehaviour
             health.Damage(bulletDammage);
             
         }
-      else if(collider.GetComponent<playerHealth>() != null)
-      {
-            Debug.Log("playerHit");
+    //  else if(collider.GetComponent<playerHealth>() != null)
+     // {
+     //       Debug.Log("playerHit");
 
-            playerHealth pHealth = collider.GetComponent<playerHealth>();
-            pHealth.Damage(bulletDammage);
-      }
+    //        playerHealth pHealth = collider.GetComponent<playerHealth>();
+   //         pHealth.Damage(bulletDammage);
+   //   }
       
-      Destroy(this.gameObject);
+      
     }
 }
