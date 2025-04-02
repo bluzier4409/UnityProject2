@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6019154404588640102}
   - component: {fileID: 3628080305059040542}
   - component: {fileID: 3896665797250538918}
-  - component: {fileID: 5985610188615882177}
+  - component: {fileID: 698490855576546736}
   m_Layer: 8
   m_Name: enemyProjectle
   m_TagString: Untagged
@@ -95,7 +95,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698235667843136800}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -126,7 +126,7 @@ CapsuleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 6903
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -149,7 +149,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1.9999999}
   m_Direction: 0
---- !u!114 &5985610188615882177
+--- !u!114 &698490855576546736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,9 +158,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 698235667843136800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69c9edbd90f98474ab24bb1e5c734b05, type: 3}
+  m_Script: {fileID: 11500000, guid: d98c894f5ac454e16b77f67ec499e908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 75
   lifeTime: 3
   bulletDammage: 1

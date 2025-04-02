@@ -116,6 +116,19 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
         }
     }
     
+    public void RangeAttack()
+    {
+            if (target.GetComponent<playerHealth>() != null)
+            {
+                Debug.Log("this is occuring");
+                playerHealth health;
+                health = target.GetComponent<playerHealth>();
+                health.Damage(1);
+            }
+    }
+    
+    
+    
     
 
     public void Flip(Vector2 velocity)
