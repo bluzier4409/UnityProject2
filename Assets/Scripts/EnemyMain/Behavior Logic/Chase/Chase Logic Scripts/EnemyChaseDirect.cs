@@ -26,7 +26,6 @@ public class EnemyChaseDirect : EnemyChaseSO
         base.FrameUpdateLogic();
         
         Vector2 direction = (playerTransform.position - enemy.transform.position).normalized;
-            
         
         enemy.Move(direction * speed);
 

@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enimies/ObjHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enimies/ObjHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/enemyProjectle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/enemyProjectle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Chase/Chase Logic Scripts/EnemyChaseDirect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyMain/Behavior Logic/Chase/Chase Logic Scripts/EnemyChaseDirect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enimies/enemybulet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enimies/enemybulet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/gunRotated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/gunRotated.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +136,7 @@
       <workItem from="1742231135496" duration="5631000" />
       <workItem from="1742574161558" duration="2478000" />
       <workItem from="1743441599639" duration="4674000" />
-      <workItem from="1743616594888" duration="879000" />
+      <workItem from="1743616594888" duration="3136000" />
     </task>
     <servers />
   </component>
