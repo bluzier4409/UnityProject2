@@ -46,9 +46,7 @@ public class ObjHealth : MonoBehaviour
     private void die(){
         Debug.Log("object died");
         Destroy(this.gameObject);
-        SceneManager.LoadScene (sceneName:"DEMO 2");
 
-        LVLswap swap = GameObject.Find("swaper").GetComponent<LVLswap>();
-        swap.addToDead();
+  
     }
 }
