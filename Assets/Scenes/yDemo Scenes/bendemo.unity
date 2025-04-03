@@ -407,10 +407,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 8055
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1408
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -12373,7 +12373,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -12392,7 +12392,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.1
+  m_Radius: 2
 --- !u!114 &815750287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17361,6 +17361,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 133100617682353372, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 133100617682353372, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 133100617682353372, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 133100617682353372, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -17404,14 +17416,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2971464941383128318, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5198202200215758444, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
       propertyPath: m_Name
       value: mainChar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524945954581690935, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524945954581690935, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7580382188340916096, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
       propertyPath: cm
       value: 
       objectReference: {fileID: 1241123428}
+    - target: {fileID: 7733520736674704026, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733520736674704026, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7898357713987308309, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
       propertyPath: camera
       value: 
@@ -17421,8 +17453,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7905279074447327641, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 640
+      objectReference: {fileID: 0}
+    - target: {fileID: 7905279074447327641, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
-      value: 4294967295
+      value: 1344
       objectReference: {fileID: 0}
     - target: {fileID: 8542918159537246796, guid: 7d6c8a3f113c74940a56c62aede3eba7, type: 3}
       propertyPath: gameManager
@@ -35544,10 +35580,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 8055
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1408
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -35580,7 +35616,7 @@ GameObject:
   - component: {fileID: 1618286185}
   - component: {fileID: 1618286189}
   - component: {fileID: 1618286188}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35674,10 +35710,10 @@ CapsuleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -35843,7 +35879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1923691549
 Rigidbody2D:
   serializedVersion: 4
@@ -36172,7 +36208,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -36447,6 +36483,7 @@ TilemapCollider2D:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1241123429}
   - {fileID: 1086020041}
   - {fileID: 408802810}
   - {fileID: 1214312262}
@@ -36454,7 +36491,6 @@ SceneRoots:
   - {fileID: 528787981}
   - {fileID: 794913268}
   - {fileID: 426498114}
-  - {fileID: 1241123429}
   - {fileID: 792615963}
   - {fileID: 1413325362}
   - {fileID: 1718296087}
