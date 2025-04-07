@@ -35,7 +35,7 @@ public class ShowHidePressE : MonoBehaviour {
         }
     }
     
-    private void Update() {
+    /*private void Update() {
         // Check if the player is in range and presses the "E" key
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E)) {
             // Do something when "E" is pressed while in range (e.g., interact with the shop)
@@ -44,9 +44,9 @@ public class ShowHidePressE : MonoBehaviour {
             // You can add whatever logic you want here, like triggering a shop interaction
         }
         //if (!isPlayerInRange) purchaseUI.SetActive(false);
-    }
+    }*/
     
-    public void SetPlayerInRange(bool inRange) {
+    /*public void SetPlayerInRange(bool inRange) {
         isPlayerInRange = inRange;
         Debug.Log("Player In Range: " + isPlayerInRange);
         if (inRange == false) {
@@ -58,5 +58,49 @@ public class ShowHidePressE : MonoBehaviour {
         
         
         
+    }*/
+
+   
+
+
+
+    public void ShowPressE() {
+        if (pressEObject != null) {
+            pressEObject.SetActive(true);
+        }
     }
+
+    public void HidePressE() {
+        if (pressEObject != null) {
+            pressEObject.SetActive(false);
+        }
+    }
+
+    public void ShowPurchaseUI() {
+        if (purchaseUI != null) {
+            purchaseUI.SetActive(true);
+        }
+    }
+
+    public void HidePurchaseUI() {
+        if (purchaseUI != null) {
+            purchaseUI.SetActive(false);
+        }
+    }
+
+    private void Update() {
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E)) {
+            ShowPurchaseUI();
+        }
+    }
+
+    public void SetPlayerInRange(bool inRange) {
+        isPlayerInRange = inRange;
+        
+        if (!inRange) {
+            HidePressE();
+            HidePurchaseUI();
+        }
+    }
+
 }

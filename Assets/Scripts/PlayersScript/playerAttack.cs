@@ -11,6 +11,13 @@ public class playerAttack : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
 
+    [SerializeField] private GameObject purchaseUI; 
+    [SerializeField] private GameObject purchaseUI2; 
+
+
+
+
+
 //melee vars
     private GameObject meleeAttackArea = default;
     private bool Attacking = false;
@@ -53,7 +60,12 @@ public class playerAttack : MonoBehaviour
    }
 
    private void Shoot(){
-    Instantiate(bulletPrefab,firingPoint.position, firingPoint.rotation);
+    // Prevent shooting if the shop UI is open
+    if (purchaseUI != null && (purchaseUI.activeSelf || purchaseUI2.activeSelf)) {
+        //Debug.Log("Cannot shoot while shop is open!");
+        return;
+    }
+    Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
    }
 
    /*IEnumerator attackWaiter(){

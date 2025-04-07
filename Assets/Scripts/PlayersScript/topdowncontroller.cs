@@ -18,7 +18,8 @@ public class PlayersScript : MonoBehaviour
     public List<Sprite> seSprites;
     public List<Sprite> sSprites;
     
-    
+    [SerializeField] private GameObject purchaseUI; 
+
     public float walkSpeed;
     public float frameRate;
     float idleTime;
@@ -32,6 +33,10 @@ public class PlayersScript : MonoBehaviour
     
     void Update()
     {
+        if (purchaseUI != null && (purchaseUI.activeSelf)) {
+//            Debug.Log("Cannot move while shop is open!");
+        return;
+    }
         flip();
         
         teleport();
