@@ -8,6 +8,9 @@ using UnityEngine.UI;
 
 public class PlayerCardScript : MonoBehaviour
 {
+
+public Text numCardsText;
+
  private List<Card> _deck = new List<Card>();
  private List<Card> _discard = new List<Card>();
 
@@ -21,6 +24,9 @@ public RectTransform discardPlace;
 
     public void Start()
     {
+        numCardsText.text = _deck.Count.ToString();
+
+
         Card sword = new Card("Sword", "Melee", false, false, cardPrefabs[0]);
         _deck.Add(sword);
         Card bow = new Card("Bow", "Ranged", false, false, cardPrefabs[1]);
@@ -195,7 +201,20 @@ public void Draw(){
 
  public void playCard(Card card)
  {
-  
+  Debug.Log("Playing card: "+ card.ToString());
+ }
+
+ public int whatIsActive(){
+    if (_hand[0].GetActiveStatus() == true){
+        return 0;
+    }
+    else if (_hand[1].GetActiveStatus() == true){
+        return 1;
+    }
+    else if (_hand[2].GetActiveStatus() == true){
+        return 2;
+    }
+    else return -1;
  }
 
  public void deckEmpty(){
@@ -266,6 +285,9 @@ public void Draw(){
 
  public void Update()
  {
+    
+    numCardsText.text = _deck.Count.ToString();
+
         if(Input.GetKeyDown(KeyCode.P)){
             discardCard(_hand[0]);
         }

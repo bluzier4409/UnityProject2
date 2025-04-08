@@ -30,12 +30,15 @@ public class PlayerInvintory : MonoBehaviour
     public void giveKey(){
         numKeysHeld++;
         Debug.Log("You now have "+ numKeysHeld+" keys.");
+        UpdateUI();
     }
 
-        public void giveKey(int num){
+    public void giveKey(int num){
         numKeysHeld += num;
         UpdateUI();
         Debug.Log("You now have " + numKeysHeld + " keys.");
+        UpdateUI();
+
     }
     public int GetNumKeysHeld(){
         return numKeysHeld;
@@ -50,6 +53,8 @@ public class PlayerInvintory : MonoBehaviour
     public void giveCoin(int amount){
         numCoinsHeld += amount;
         Debug.Log("You now have "+ numCoinsHeld+" keys.");
+                UpdateUI();
+
     }
     public int getnumCoinsHeld(){
         return numCoinsHeld;
@@ -60,6 +65,8 @@ public class PlayerInvintory : MonoBehaviour
         keyText.text = numKeysHeld.ToString();
         coinsText.text = num.ToString();
         Debug.Log("Setcoin" + num);
+                UpdateUI();
+
     }
 
     public void useKey(){
@@ -70,5 +77,7 @@ public class PlayerInvintory : MonoBehaviour
         else{
             Debug.Log("You have no keys to use");
         }
+                UpdateUI();
+
     }
 }
