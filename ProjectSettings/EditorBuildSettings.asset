@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Sayers Scene copy.unity
     guid: 06f264bdf6e724ac782fc66cdd69372a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/yDemo Scenes/Title.unity
     guid: a84e49cd4ab4247c5b9e47f0a31adfe9
   - enabled: 0
@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Ben's Scenes/benstestscene.unity
     guid: 7d6bc334af15b41d2890926a41e0fc7d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/yDemo Scenes/DEMO 1.unity
     guid: ef9303a4970f74a5bbc165d3e208fd53
   - enabled: 1
