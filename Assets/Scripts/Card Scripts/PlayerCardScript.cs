@@ -285,8 +285,9 @@ public void Draw(){
 
  public void Update()
  {
-    
+
     numCardsText.text = _deck.Count.ToString();
+    checkActive();
 
         if(Input.GetKeyDown(KeyCode.P)){
             discardCard(_hand[0]);
@@ -303,9 +304,9 @@ public void Draw(){
   
   //if (checkHandEmpty()) { Draw(); }
 
-  if (checkActive() == 1 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[0]); }
-  else if (checkActive() == 2 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[1]); }
-  else if (checkActive() == 3 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[2]); }
+  if (whatIsActive() == 0 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[0]); }
+  else if (whatIsActive() == 1 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[1]); }
+  else if (whatIsActive() == 2 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[2]); }
   
  }
 }
