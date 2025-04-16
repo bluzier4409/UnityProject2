@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6019154404588640102}
   - component: {fileID: 3628080305059040542}
   - component: {fileID: 3896665797250538918}
-  - component: {fileID: 5985610188615882177}
+  - component: {fileID: 3521460661041847989}
   m_Layer: 7
-  m_Name: playerBullet
+  m_Name: ricochet bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1.9999999}
   m_Direction: 0
---- !u!114 &5985610188615882177
+--- !u!114 &3521460661041847989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,9 +158,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 698235667843136800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69c9edbd90f98474ab24bb1e5c734b05, type: 3}
+  m_Script: {fileID: 11500000, guid: 81e95871d52f6460fbab17d280307df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 16.7
+  speed: 15
   lifeTime: 3
   bulletDammage: 1

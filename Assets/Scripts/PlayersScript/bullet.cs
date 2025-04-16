@@ -24,9 +24,9 @@ public class bullet : MonoBehaviour
     rb.velocity = transform.up * speed;
    }
 
-    private void OnTriggerEnter2D(Collider2D collider){
-        
-        Destroy(this.gameObject);
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+     
       
       if(collider.GetComponent<ObjHealth>() != null)
         {
@@ -36,13 +36,12 @@ public class bullet : MonoBehaviour
             health.Damage(bulletDammage);
             
         }
-    //  else if(collider.GetComponent<playerHealth>() != null)
-     // {
-     //       Debug.Log("playerHit");
 
-    //        playerHealth pHealth = collider.GetComponent<playerHealth>();
-   //         pHealth.Damage(bulletDammage);
-   //   }
+        if (collider.IsTouchingLayers(LayerMask.GetMask("walls")))
+        {
+            Debug.Log("hit");
+        }
+    
       
       
     }
