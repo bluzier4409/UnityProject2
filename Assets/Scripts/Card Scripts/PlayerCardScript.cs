@@ -25,7 +25,7 @@ public RectTransform deckPlace;
 public RectTransform discardPlace;
 public Camera cam;
 
-    public void Start()
+    public void Awake()
     {
         numCardsText.text = _deck.Count.ToString();
 
@@ -212,7 +212,7 @@ public void Draw(){
    Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
  }
 
- public int whatIsActive(){
+ public int whatIsActive() {
     if (_hand[0].GetActiveStatus() == true){
         return 0;
     }
