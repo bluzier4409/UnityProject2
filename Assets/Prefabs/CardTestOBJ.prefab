@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c36c4ee36bc445fbbc6a85cf162880e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numCardsText: {fileID: 0}
   cardPrefabs:
   - {fileID: 3698102231567720832, guid: 2284425daec5140c984566b3d3733873, type: 3}
   - {fileID: 3698102231567720832, guid: 305e9750dbdbc4740b2de1ff3e07eae9, type: 3}
@@ -53,9 +54,13 @@ MonoBehaviour:
   - {fileID: 3698102231567720832, guid: ad8f66d74a04743988eba3845fa9e449, type: 3}
   - {fileID: 3698102231567720832, guid: b27df15fa803e4b9d861aee548e7820a, type: 3}
   - {fileID: 3698102231567720832, guid: b27df15fa803e4b9d861aee548e7820a, type: 3}
+  - {fileID: 3698102231567720832, guid: c7af15040444d4f60b2d2d6b926cd905, type: 3}
+  cardAbilitiesPrefabs:
+  - {fileID: 3262003762390626205, guid: d18e4858c8c49458999d85fe88f1ef9f, type: 3}
   handPlace: {fileID: 0}
   deckPlace: {fileID: 0}
   discardPlace: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!114 &7655944219863538688
 MonoBehaviour:
   m_ObjectHideFlags: 0

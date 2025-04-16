@@ -54,7 +54,7 @@ public Camera cam;
 
         Draw();
         
-        checkActive();
+        
 
 
         
