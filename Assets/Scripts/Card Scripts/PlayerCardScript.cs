@@ -18,16 +18,19 @@ public Text numCardsText;
  private List<Card> _hand = new List<Card>(3);
  public GameObject[] cardPrefabs; // 1.Deck 2.Discard 3.Type1
 
+ public GameObject[] cardAbilitiesPrefabs;
+
 public RectTransform handPlace;
 public RectTransform deckPlace;
 public RectTransform discardPlace;
+public Camera cam;
 
     public void Start()
     {
         numCardsText.text = _deck.Count.ToString();
 
 
-        Card sword = new Card("Sword", "Melee", false, false, cardPrefabs[0]);
+        Card sword = new Card("Sword", "Melee", false, false, cardPrefabs[0], cardAbilitiesPrefabs[0]);
         _deck.Add(sword);
         Card bow = new Card("Bow", "Ranged", false, false, cardPrefabs[1]);
         _deck.Add(bow);
@@ -202,6 +205,9 @@ public void Draw(){
  public void playCard(Card card)
  {
   Debug.Log("Playing card: "+ card.ToString());
+
+   Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+   Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
  }
 
  public int whatIsActive(){

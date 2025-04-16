@@ -14,6 +14,7 @@ public class Card : MonoBehaviour
     private bool InHand {get; set;}
      bool Active {get; set;}
      private GameObject physicalCard;
+     private GameObject abilityPrefab;
 
 //defult constructor
    public Card()
@@ -32,6 +33,16 @@ public class Card : MonoBehaviour
         InHand = inHand;
         Active = active;
         physicalCard = physical;
+    }
+
+    public Card(string name, string type, bool inHand, bool active ,GameObject physical, GameObject placedObj)
+    {
+        Name = name;
+        Type = type;
+        InHand = inHand;
+        Active = active;
+        physicalCard = physical;
+        abilityPrefab = placedObj;
     }
 
     public void SetHandStatus(bool activity)
@@ -82,6 +93,10 @@ public class Card : MonoBehaviour
   
   public GameObject GetGameObject(){
     return this.physicalCard;
+  }
+
+  public GameObject GetAbilityObject(){
+    return this.abilityPrefab;
   }
 
 }
