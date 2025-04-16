@@ -52,7 +52,7 @@ public class PlayerInvintory : MonoBehaviour
 
     public void giveCoin(int amount){
         numCoinsHeld += amount;
-        Debug.Log("You now have "+ numCoinsHeld+" keys.");
+        Debug.Log("You now have "+ numCoinsHeld+" coin.");
                 UpdateUI();
 
     }
