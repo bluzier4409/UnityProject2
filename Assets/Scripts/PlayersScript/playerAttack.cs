@@ -13,6 +13,7 @@ public class playerAttack : MonoBehaviour
 
     [SerializeField] private GameObject purchaseUI; 
     [SerializeField] private GameObject purchaseUI2; 
+    [SerializeField] private GameObject cardSystem;
 
 
 
@@ -63,6 +64,9 @@ public class playerAttack : MonoBehaviour
     // Prevent shooting if the shop UI is open
     if (purchaseUI != null && (purchaseUI.activeSelf || purchaseUI2.activeSelf)) {
         //Debug.Log("Cannot shoot while shop is open!");
+        return;
+    }
+    if (cardSystem.GetComponent<PlayerCardScript>().whatIsActive() >= 0){
         return;
     }
     Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);

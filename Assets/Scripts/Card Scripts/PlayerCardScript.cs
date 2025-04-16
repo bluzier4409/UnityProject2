@@ -53,6 +53,8 @@ public Camera cam;
 
 
         Draw();
+        
+        checkActive();
 
 
         
@@ -206,7 +208,7 @@ public void Draw(){
  {
   Debug.Log("Playing card: "+ card.ToString());
 
-   Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+   Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
    Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
  }
 
