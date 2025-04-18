@@ -208,18 +208,20 @@ public void Draw(){
  {
   Debug.Log("Playing card: "+ card.ToString());
 
+  discardCard(card);
+
    Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
    Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
  }
 
- public int whatIsActive() {
-    if (_hand[0].GetActiveStatus() == true){
+ public int whatIsActive(){
+    if (_hand.Count >= 1 && _hand[0].GetActiveStatus() == true){
         return 0;
     }
-    else if (_hand[1].GetActiveStatus() == true){
+    else if (_hand.Count >= 2 && _hand[1].GetActiveStatus() == true){
         return 1;
     }
-    else if (_hand[2].GetActiveStatus() == true){
+    else if (_hand.Count >= 3 && _hand[2].GetActiveStatus() == true){
         return 2;
     }
     else return -1;
