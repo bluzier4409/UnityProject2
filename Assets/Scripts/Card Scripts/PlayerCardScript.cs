@@ -30,22 +30,22 @@ public Camera cam;
         numCardsText.text = _deck.Count.ToString();
 
 
-        Card sword = new Card("Sword", "Melee", false, false, cardPrefabs[0], cardAbilitiesPrefabs[0]);
-        _deck.Add(sword);
-        Card bow = new Card("Bow", "Ranged", false, false, cardPrefabs[1]);
-        _deck.Add(bow);
-        Card potion = new Card("Potion", "Consumable", false, false, cardPrefabs[2]);
-        _deck.Add(potion);
-        Card axe = new Card("Axe", "Melee", false, false, cardPrefabs[3]);
-        _deck.Add(axe);
-        Card gun = new Card("gun", "Ranged", false, false, cardPrefabs[4]);
-        _deck.Add(gun);
-        Card bomb = new Card("bomb", "Ranged", false, false, cardPrefabs[5]);
-        _deck.Add(bomb);
-        Card lasar = new Card("lasar", "Ranged", false, false, cardPrefabs[1]);
-        _deck.Add(lasar);
+        Card A = new Card("A", "Melee", false, false, cardPrefabs[0], cardAbilitiesPrefabs[0]);
+        _deck.Add(A);
+        Card B = new Card("B", "Ranged", false, false, cardPrefabs[1]);
+        _deck.Add(B);
+        Card C = new Card("C", "Consumable", false, false, cardPrefabs[2]);
+        _deck.Add(C);
+        Card D = new Card("D", "Melee", false, false, cardPrefabs[3]);
+        _deck.Add(D);
+        Card E = new Card("E", "Ranged", false, false, cardPrefabs[4]);
+        _deck.Add(E);
+        Card F = new Card("F", "Ranged", false, false, cardPrefabs[5]);
+        _deck.Add(F);
+        Card G = new Card("G", "Ranged", false, false, cardPrefabs[1]);
+        _deck.Add(G);
 
-        _deck.Add(axe);
+        _deck.Add(G);
 
        
 
@@ -88,8 +88,9 @@ public void Draw(){
  public void discardCard(Card card)
  {
     foreach (Card card3 in _hand){resetActivity();}
-  _hand.Remove(card);
   _discard.Add(card);
+  _hand.Remove(card);
+  
   card.SetActiveStatus(false);
   
     updateCardsShown();
@@ -300,7 +301,7 @@ public void Draw(){
     checkActive();
 
         if(Input.GetKeyDown(KeyCode.P)){
-            discardCard(_hand[0]);
+            discardCard(_hand[1]);
         }
         if(Input.GetKeyDown(KeyCode.L)){
             Draw();
