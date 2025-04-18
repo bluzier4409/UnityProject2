@@ -85,27 +85,61 @@ public void Draw(){
   printWhatsActive();
 }
 
- public void discardCard(Card card)
- {
-    foreach (Card card3 in _hand){resetActivity();}
-  _discard.Add(card);
-  _hand.Remove(card);
-  
-  card.SetActiveStatus(false);
-  
-    updateCardsShown();
-    printWhatsActive();
-    foreach (Card card1 in _deck){    
-        Debug.Log("Discard just happened, cards in DECK are " + card1.getName());
+public void discardCard(Card card)
+{
+    // Ensure the card exists in the hand before proceeding
+    if (!_hand.Contains(card))
+    {
+        Debug.LogWarning("Card not found in hand!");
+        return;
     }
-    foreach (Card card2 in _discard){    
-        Debug.Log("Discard just happened, cards in DISCARD are " + card2.getName());
+
+    // Log the card that will be discarded
+    Debug.Log("Discarding card: " + card.getName());
+
+    // Remove the card from the hand list (direct removal)
+    bool removed = _hand.Remove(card);
+
+    // Check if the card was actually removed
+    if (removed)
+    {
+        Debug.Log("Card removed from hand successfully.");
     }
-    foreach (Card card5 in _hand){    
-        Debug.Log("Discard just happened, cards in HAND are " + card5.getName());
+    else
+    {
+        Debug.LogError("Failed to remove card from hand.");
     }
+
+    // Add the card to the discard pile
+    _discard.Add(card);
+
+    // Ensure the card is deactivated (if needed)
+    card.SetActiveStatus(false);
+
+    // Debugging: log the updated states of all the lists
+    Debug.Log("Updated Deck: ");
+    foreach (Card deckCard in _deck)
+    {
+        Debug.Log(deckCard.getName());
+    }
+
+    Debug.Log("Updated Discard Pile: ");
+    foreach (Card discardCard in _discard)
+    {
+        Debug.Log(discardCard.getName());
+    }
+
+    Debug.Log("Updated Hand: ");
+    foreach (Card handCard in _hand)
+    {
+        Debug.Log(handCard.getName());
+    }
+
     Debug.Log("END OF DISCARD");
- }
+}
+
+
+
 
  public void addCard(Card card)
  {
