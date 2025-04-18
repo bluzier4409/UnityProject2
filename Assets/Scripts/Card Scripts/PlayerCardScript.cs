@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.Collections;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +26,11 @@ public RectTransform deckPlace;
 public RectTransform discardPlace;
 public Camera cam;
 
+public playerAttack atk;
+
+[SerializeField] public GameObject player;
+[SerializeField] public GameObject ricochetBullet;
+
     public void Awake()
     {
         numCardsText.text = _deck.Count.ToString();
@@ -44,6 +50,8 @@ public Camera cam;
         _deck.Add(bomb);
         Card lasar = new Card("lasar", "Ranged", false, false, cardPrefabs[1]);
         _deck.Add(lasar);
+        Card RicochetBullet = new Card("Ricochet Bullet", "Bullet Replacer", false, false, cardPrefabs[6], ricochetBullet, 5f);
+        _deck.Add(RicochetBullet);
 
         _deck.Add(axe);
 
@@ -210,8 +218,27 @@ public void Draw(){
 
   discardCard(card);
 
-   Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-   Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
+   
+
+   if (card.getType().Equals("Bullet Replacer"))
+   {
+       Debug.Log("I replace bullets");
+       if (card.GetAbilityObject() != null)
+       {
+           playerAttack hello = player.GetComponent<playerAttack>();
+           hello.setBulletType(card.GetAbilityObject());
+       }
+       else
+       {
+           Debug.Log("I no replace bullets");
+       }
+       
+   }
+   else
+   {
+       Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+       Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
+   }
  }
 
  public int whatIsActive(){

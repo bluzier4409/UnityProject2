@@ -54,6 +54,12 @@ public class playerAttack : MonoBehaviour
         }
         
     }
+
+    public void setBulletType(GameObject bullet)
+    {
+        bulletPrefab = bullet;
+        Debug.Log("Bullet Type: ");
+    }
    
    private void meleeAttack(){
         Attacking = true;

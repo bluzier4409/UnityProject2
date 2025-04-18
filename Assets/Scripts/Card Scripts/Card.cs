@@ -10,6 +10,8 @@ public class Card : MonoBehaviour
 {
     protected string Name {get; set;}
     protected string Type { get; set; }
+
+    protected float Lifespan;
     
     private bool InHand {get; set;}
      bool Active {get; set;}
@@ -44,6 +46,19 @@ public class Card : MonoBehaviour
         physicalCard = physical;
         abilityPrefab = placedObj;
     }
+    
+    public Card(string name, string type, bool inHand, bool active ,GameObject physical, GameObject bulletObj, float lifespan)
+    {
+        Name = name;
+        Type = type;
+        InHand = inHand;
+        Active = active;
+        physicalCard = physical;
+        abilityPrefab = bulletObj;
+        Lifespan = lifespan;
+    }
+
+  
 
     public void SetHandStatus(bool activity)
     {
@@ -62,6 +77,11 @@ public class Card : MonoBehaviour
     public bool GetActiveStatus()
     {
         return Active;
+    }
+
+    public String getType()
+    {
+        return Type;
     }
 
     void Awake()
