@@ -89,6 +89,11 @@ public class Card : MonoBehaviour
         
     }
 
+    public float getLifespan()
+    {
+        return Lifespan;
+    }
+
     
 
     public void SetActiveStatus(bool activity)

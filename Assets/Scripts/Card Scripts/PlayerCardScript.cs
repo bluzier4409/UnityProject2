@@ -217,28 +217,26 @@ public void Draw(){
   Debug.Log("Playing card: "+ card.ToString());
 
   discardCard(card);
+  if (card.getType().Equals("Bullet Replacer"))
+  {
+      playBulletReplacer(card);
+  }
+  else
+  {
+      Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+      Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
+  }
+  
+ }
 
-   
-
-   if (card.getType().Equals("Bullet Replacer"))
-   {
-       Debug.Log("I replace bullets");
-       if (card.GetAbilityObject() != null)
-       {
-           playerAttack hello = player.GetComponent<playerAttack>();
-           hello.setBulletType(card.GetAbilityObject());
-       }
-       else
-       {
-           Debug.Log("I no replace bullets");
-       }
-       
-   }
-   else
-   {
-       Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-       Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
-   }
+ public void playBulletReplacer(Card card)
+ {
+     if (card.GetAbilityObject() != null)
+     {
+         playerAttack attack = player.GetComponent<playerAttack>();
+         GameObject ogBullet = attack.getBulletType();
+         StartCoroutine(ReplaceBullet(attack, ogBullet, card.GetAbilityObject(), card.getLifespan()));
+     }
  }
 
  public int whatIsActive(){
@@ -293,8 +291,8 @@ public void Draw(){
     }
 
  public void updateCardsShown(){
-    //instanciate in hand and discard
-    //for each card in hand, instanciate
+    //instantiate in hand and discard
+    //for each card in hand, instantiate
     foreach(Transform child in handPlace.transform)
     {
         Destroy(child.gameObject);
@@ -304,8 +302,8 @@ public void Draw(){
         Destroy(child.gameObject);
     }
     
-    foreach(Card card in _hand){
-        
+    foreach(Card card in _hand)
+    {
         Instantiate(card.GetGameObject(), handPlace);
     }
 
@@ -345,6 +343,15 @@ public void Draw(){
   else if (whatIsActive() == 1 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[1]); }
   else if (whatIsActive() == 2 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[2]); }
   
+ }
+
+ private IEnumerator<WaitForSeconds> ReplaceBullet(playerAttack attack, GameObject originalbullet, GameObject newbullet, float duration)
+ {
+     attack.setBulletType(newbullet);
+     
+     yield return new WaitForSeconds(duration);
+     
+     attack.setBulletType(originalbullet);
  }
 }
 
