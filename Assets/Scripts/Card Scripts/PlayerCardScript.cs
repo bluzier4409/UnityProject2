@@ -16,7 +16,7 @@ public Text numCardsText;
  private List<Card> _discard = new List<Card>();
 
  //max hand size 3
- private List<Card> _hand = new List<Card>(3);
+ private List<Card> _hand = new List<Card>();
  public GameObject[] cardPrefabs; // 1.Deck 2.Discard 3.Type1
 
  public GameObject[] cardAbilitiesPrefabs;
@@ -36,24 +36,24 @@ public playerAttack atk;
         numCardsText.text = _deck.Count.ToString();
 
 
-        Card sword = new Card("Sword", "Melee", false, false, cardPrefabs[0], cardAbilitiesPrefabs[0]);
-        _deck.Add(sword);
-        Card bow = new Card("Bow", "Ranged", false, false, cardPrefabs[1]);
-        _deck.Add(bow);
-        Card potion = new Card("Potion", "Consumable", false, false, cardPrefabs[2]);
-        _deck.Add(potion);
-        Card axe = new Card("Axe", "Melee", false, false, cardPrefabs[3]);
-        _deck.Add(axe);
-        Card gun = new Card("gun", "Ranged", false, false, cardPrefabs[4]);
-        _deck.Add(gun);
-        Card bomb = new Card("bomb", "Ranged", false, false, cardPrefabs[5]);
-        _deck.Add(bomb);
-        Card lasar = new Card("lasar", "Ranged", false, false, cardPrefabs[1]);
-        _deck.Add(lasar);
+        Card A = new Card("A", "Melee", false, false, cardPrefabs[0], cardAbilitiesPrefabs[0]);
+        _deck.Add(A);
+        Card B = new Card("B", "Ranged", false, false, cardPrefabs[1]);
+        _deck.Add(B);
+        Card C = new Card("C", "Consumable", false, false, cardPrefabs[2]);
+        _deck.Add(C);
+        _deck.Add(D);
+        Card D = new Card("D", "Melee", false, false, cardPrefabs[3]);
+        _deck.Add(F);
+        Card G = new Card("G", "Ranged", false, false, cardPrefabs[1]);
+        Card E = new Card("E", "Ranged", false, false, cardPrefabs[4]);
+        _deck.Add(E);
+        Card F = new Card("F", "Ranged", false, false, cardPrefabs[5]);
+        _deck.Add(G);
         Card RicochetBullet = new Card("Ricochet Bullet", "Bullet Replacer", false, false, cardPrefabs[6], ricochetBullet, 5f);
         _deck.Add(RicochetBullet);
 
-        _deck.Add(axe);
+        _deck.Add(G);
 
        
 
@@ -68,51 +68,92 @@ public playerAttack atk;
         
     }
 
-public void Draw(){
-//draws unitll 3 cards in hand
-    if(_hand.Count == 0){
-        if(_deck.Count < 3){deckEmpty();}
+public void Draw()
+{
+    // Draw until hand has 3 cards or deck is empty
+    if (_hand.Count == 0)
+    {
+        if (_deck.Count < 3)
+        {
+            deckEmpty();  // If deck is empty, reshuffle the discard pile back into the deck
         }
-  if (_hand.Count == 0 && _deck.Count >= 3){
-    resetActivity();
-    for (int i = 0; i < 3; i++){
-    _hand.Add(_deck[0]);
-    _deck.RemoveAt(0);
+
+        // Draw 3 cards from the deck to the hand
+        for (int i = 0; i < 3; i++)
+        {
+            if (_deck.Count > 0)
+            {
+                Card drawnCard = _deck[0];
+                _deck.RemoveAt(0);  // Remove the card from the deck
+                _hand.Add(drawnCard);  // Add the card to the hand
+            }
+        }
+
+        Debug.Log("Hand after drawing cards:");
+        foreach (Card card in _hand)
+        {
+            Debug.Log(card.getName());
+        }
+
+        updateCardsShown();  // Update the UI (or internal tracking) of cards
     }
-   foreach (Card card in _deck){    
-        Debug.Log("Draw just happened, cards in DECK are " + card.getName());
-    }
-    foreach (Card card4 in _hand){    
-        Debug.Log("Draw just happened, cards in HAND are " + card4.getName());
-    }
-   updateCardsShown();
-   
-   foreach(Card card9 in _hand){card9.SetHandStatus(true);}
-  }
-  foreach(Card card10 in _hand){card10.SetActiveStatus(false);}
-  printWhatsActive();
 }
 
- public void discardCard(Card card)
- {
-    foreach (Card card3 in _hand){resetActivity();}
-  _hand.Remove(card);
-  _discard.Add(card);
-  card.SetActiveStatus(false);
-  
-    updateCardsShown();
-    printWhatsActive();
-    foreach (Card card1 in _deck){    
-        Debug.Log("Discard just happened, cards in DECK are " + card1.getName());
+
+public void discardCard(Card card)
+{
+    if (!_hand.Contains(card))
+    {
+        Debug.LogWarning("Card not found in hand!");
+        return;
     }
-    foreach (Card card2 in _discard){    
-        Debug.Log("Discard just happened, cards in DISCARD are " + card2.getName());
+
+    Debug.Log("Discarding card: " + card.getName());
+
+    bool removed = _hand.Remove(card);
+
+    if (removed)
+    {
+        Debug.Log("Card removed from hand successfully.");
     }
-    foreach (Card card5 in _hand){    
-        Debug.Log("Discard just happened, cards in HAND are " + card5.getName());
+    else
+    {
+        Debug.LogError("Failed to remove card from hand.");
     }
+
+    // Add to discard pile
+    _discard.Add(card);
+
+    card.SetActiveStatus(false);
+
+    // After discarding, if the hand is empty, draw new cards
+    if (_hand.Count == 0)
+    {
+        Debug.Log("Hand is empty, drawing new cards...");
+        Draw(); // Call Draw() to refill the hand from the deck
+    }
+
+    // Debugging: Log the updated lists
+    Debug.Log("Updated Hand: ");
+    foreach (Card handCard in _hand)
+    {
+        Debug.Log(handCard.getName());
+    }
+
+    Debug.Log("Updated Discard Pile: ");
+    foreach (Card discardCard in _discard)
+    {
+        Debug.Log(discardCard.getName());
+    }
+
     Debug.Log("END OF DISCARD");
- }
+}
+
+
+
+
+
+
 
  public void addCard(Card card)
  {
@@ -252,43 +293,45 @@ public void Draw(){
     else return -1;
  }
 
- public void deckEmpty(){
-    
-    //add discard to deck
-    foreach (Card card in _discard.ToArray()){
+ public void deckEmpty()
+{
+    // Move all cards from discard pile to deck
+    foreach (Card card in _discard.ToArray())
+    {
         _deck.Add(card);
         _discard.Remove(card);
     }
-    //shuffle deck method
+
+    // Shuffle the deck
     reshuffle(_deck);
 
-   
-    
-    
-    updateCardsShown();
-
-    foreach (Card card1 in _deck){    
-        Debug.Log("DeckEmpty just happened, cards in DECK are " + card1.getName());
-    }
-    foreach (Card card2 in _discard){    
-        Debug.Log("DeckEmpty just happened, cards in DISCARD are " + card2.getName());
-    }
-    foreach (Card card5 in _hand){    
-        Debug.Log("DeckEmpty just happened, cards in HAND are " + card5.getName());
-    }
-    Debug.Log("END OF DeckEmpty");
- }
-
- void reshuffle(List<Card> texts)
+    // Log the deck and discard pile
+    Debug.Log("Deck after emptying:");
+    foreach (Card card in _deck)
     {
-        for (int t = 0; t < texts.Count; t++ )
-        {
-            Card tmp = texts[t];
-            int r = UnityEngine.Random.Range(t, texts.Count);
-            texts[t] = texts[r];
-            texts[r] = tmp;
-        }
+        Debug.Log(card.getName());
     }
+
+    Debug.Log("Discard Pile after moving cards to deck:");
+    foreach (Card card in _discard)
+    {
+        Debug.Log(card.getName());
+    }
+
+    updateCardsShown();  // Update the UI or internal tracking
+}
+
+void reshuffle(List<Card> deck)
+{
+    for (int i = 0; i < deck.Count; i++)
+    {
+        Card tmp = deck[i];
+        int r = UnityEngine.Random.Range(i, deck.Count);
+        deck[i] = deck[r];
+        deck[r] = tmp;
+    }
+}
+
 
  public void updateCardsShown(){
     //instantiate in hand and discard
@@ -325,7 +368,7 @@ public void Draw(){
     checkActive();
 
         if(Input.GetKeyDown(KeyCode.P)){
-            discardCard(_hand[0]);
+            discardCard(_hand[1]);
         }
         if(Input.GetKeyDown(KeyCode.L)){
             Draw();
