@@ -332,6 +332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ranged_rat
       objectReference: {fileID: 0}
+    - target: {fileID: 6576316213144249181, guid: acbaa0b0fad434feaa826336e5531dd3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9067246743817838155, guid: acbaa0b0fad434feaa826336e5531dd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.14
@@ -787,74 +791,6 @@ Transform:
   - {fileID: 2049340175}
   - {fileID: 1565887532}
   - {fileID: 1754620161}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1214312259
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1214312262}
-  - component: {fileID: 1214312261}
-  - component: {fileID: 1214312260}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1214312260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214312259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1214312261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214312259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &1214312262
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214312259}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1241123424
@@ -19402,6 +19338,14 @@ PrefabInstance:
       propertyPath: numCardsText
       value: 
       objectReference: {fileID: 1668948927}
+    - target: {fileID: 5629552251165745223, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
+      propertyPath: cardPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3698102231567720832, guid: b27df15fa803e4b9d861aee548e7820a, type: 3}
+    - target: {fileID: 5629552251165745223, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
+      propertyPath: cardPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 3698102231567720832, guid: 2284425daec5140c984566b3d3733873, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19413,7 +19357,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1086020041}
   - {fileID: 1137593631}
-  - {fileID: 1214312262}
   - {fileID: 2011692623}
   - {fileID: 1241123429}
   - {fileID: 792615963}
