@@ -15,6 +15,9 @@ public Text numCardsText;
  private List<Card> _deck = new List<Card>();
  private List<Card> _discard = new List<Card>();
 
+  private List<Card> _tempList = new List<Card>();
+
+
  //max hand size 3
  private List<Card> _hand = new List<Card>();
  public GameObject[] cardPrefabs; // 1.Deck 2.Discard 3.Type1
@@ -109,31 +112,30 @@ public void discardCard(Card card)
     }
 
     Debug.Log("Discarding card: " + card.getName());
+        
+    Card K = new Card("K", "Ranged", false, false, cardPrefabs[5]);
 
+//find index next class
     bool removed = _hand.Remove(card);
+    _tempList.Add(card);
 
-    if (removed)
-    {
+    if (removed){
         Debug.Log("Card removed from hand successfully.");
     }
-    else
-    {
+    else{
         Debug.LogError("Failed to remove card from hand.");
     }
+    
 
-    // Add to discard pile
     _discard.Add(card);
+//card.SetActiveStatus(false);
 
-    card.SetActiveStatus(false);
-
-    // After discarding, if the hand is empty, draw new cards
     if (_hand.Count == 0)
     {
         Debug.Log("Hand is empty, drawing new cards...");
-        Draw(); // Call Draw() to refill the hand from the deck
+        Draw(); 
     }
 
-    // Debugging: Log the updated lists
     Debug.Log("Updated Hand: ");
     foreach (Card handCard in _hand)
     {
@@ -145,7 +147,13 @@ public void discardCard(Card card)
     {
         Debug.Log(discardCard.getName());
     }
+    Debug.Log("Updated Temp Pile: ");
+    foreach (Card tempCard in _tempList)
+    {
+        Debug.Log(tempCard.getName());
+    }
 
+//updateCardsShown();
     Debug.Log("END OF DISCARD");
 }
 
@@ -258,14 +266,15 @@ public void discardCard(Card card)
   Debug.Log("Playing card: "+ card.ToString());
 
   discardCard(card);
+
   if (card.getType().Equals("Bullet Replacer"))
   {
       playBulletReplacer(card);
   }
   else
   {
-      Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-      Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
+      //Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+      //Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
   }
   
  }
