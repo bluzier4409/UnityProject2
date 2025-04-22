@@ -78,7 +78,9 @@ public class playerAttack : MonoBehaviour
         return;
     }
     if (cardSystem.GetComponent<PlayerCardScript>().whatIsActive() >= 0){
+        Debug.Log("return idk why");
         return;
+        
     }
     Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
    }
