@@ -272,6 +272,11 @@ _hand.RemoveAt(whereInHandNum);
  public void playCard(int placeInHandNum)
  {
 
+    if(placeInHandNum > _hand.Count-1){
+        Debug.Log("you dont have a card there");
+        return;
+    }
+
     Card card = _hand[placeInHandNum];
   Debug.Log("Playing card: "+ card.ToString());
 
@@ -286,10 +291,8 @@ _hand.RemoveAt(whereInHandNum);
   if (card.getType().Equals("Teleport"))
   {
       playTeleport(card);
-  } 
-  
-      //Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-      //Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
+      Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+      Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
   
  }
 
