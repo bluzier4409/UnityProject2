@@ -39,8 +39,8 @@ public playerAttack atk;
         numCardsText.text = _deck.Count.ToString();
 
 
-        Card A = new Card("A", "Melee", false, false, cardPrefabs[0], cardAbilitiesPrefabs[0]);
-        _deck.Add(A);
+        Card Bomb = new Card("Bomb", "PlaceObj", false, false, cardPrefabs[0], cardAbilitiesPrefabs[0]);
+        _deck.Add(Bomb);
         Card B = new Card("B", "Ranged", false, false, cardPrefabs[1]);
         _deck.Add(B);
         Card C = new Card("C", "Consumable", false, false, cardPrefabs[2]);
@@ -283,17 +283,23 @@ _hand.RemoveAt(whereInHandNum);
   discardCard(placeInHandNum);
   
 
-  if (card.getType().Equals("Bullet Replacer"))
-  {
-      playBulletReplacer(card);
-  } 
-  
-  if (card.getType().Equals("Teleport"))
-  {
-      playTeleport(card);
-      Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-      Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
-  
+        if (card.getType().Equals("Bullet Replacer"))
+        {
+            playBulletReplacer(card);
+        } 
+        
+        if (card.getType().Equals("Teleport"))
+        {
+            playTeleport(card);
+            
+        }
+
+        if (card.getType().Equals("PlaceObj")) 
+        { 
+        Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
+        }
+   
  }
 
  public void playBulletReplacer(Card card)
