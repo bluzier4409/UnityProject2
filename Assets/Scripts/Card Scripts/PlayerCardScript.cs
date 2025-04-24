@@ -103,9 +103,9 @@ public void Draw()
 }
 
 
-public void discardCard(Card card)
+public void discardCard(int whereInHandNum)
 {
-    if (!_hand.Contains(card))
+    /*if (!_hand.Contains(card))
     {
         Debug.LogWarning("Card not found in hand!");
         return;
@@ -127,8 +127,17 @@ public void discardCard(Card card)
     }
     
 
-    _discard.Add(card);
-//card.SetActiveStatus(false);
+    _discard.Add(card);*/
+
+
+Debug.Log("Discarding card: " + _hand[whereInHandNum].getName());
+
+_hand[whereInHandNum].SetActiveStatus(false);
+
+_discard.Add(_hand[whereInHandNum]);
+_hand.RemoveAt(whereInHandNum);
+
+
 
     if (_hand.Count == 0)
     {
@@ -147,13 +156,10 @@ public void discardCard(Card card)
     {
         Debug.Log(discardCard.getName());
     }
-    Debug.Log("Updated Temp Pile: ");
-    foreach (Card tempCard in _tempList)
-    {
-        Debug.Log(tempCard.getName());
-    }
+    
 
-//updateCardsShown();
+    updateCardsShown();
+    
     Debug.Log("END OF DISCARD");
 }
 
@@ -261,11 +267,13 @@ public void discardCard(Card card)
   }
  }
 
- public void playCard(Card card)
+ public void playCard(int placeInHandNum)
  {
+
+    Card card = _hand[placeInHandNum];
   Debug.Log("Playing card: "+ card.ToString());
 
-  discardCard(card);
+  discardCard(placeInHandNum);
 
   if (card.getType().Equals("Bullet Replacer"))
   {
@@ -377,7 +385,7 @@ void reshuffle(List<Card> deck)
     checkActive();
 
         if(Input.GetKeyDown(KeyCode.P)){
-            discardCard(_hand[1]);
+            discardCard(1);
         }
         if(Input.GetKeyDown(KeyCode.L)){
             Draw();
@@ -391,9 +399,9 @@ void reshuffle(List<Card> deck)
   
   //if (checkHandEmpty()) { Draw(); }
 
-  if (whatIsActive() == 0 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[0]); }
-  else if (whatIsActive() == 1 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[1]); }
-  else if (whatIsActive() == 2 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(_hand[2]); }
+  if (whatIsActive() == 0 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(0); }
+  else if (whatIsActive() == 1 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(1); }
+  else if (whatIsActive() == 2 && Input.GetKeyDown(KeyCode.Mouse0)) { playCard(2); }
   
  }
 
