@@ -35888,6 +35888,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2402047724313034164, guid: 29ee988665b374fba98be9cf8cef5ca5, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2477559274905965772, guid: 29ee988665b374fba98be9cf8cef5ca5, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132439095090267091, guid: 29ee988665b374fba98be9cf8cef5ca5, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5735109558371333319, guid: 29ee988665b374fba98be9cf8cef5ca5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.2
@@ -35932,9 +35944,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 561652466}
+    - target: {fileID: 7957370090821484152, guid: 29ee988665b374fba98be9cf8cef5ca5, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8574300374600036699, guid: 29ee988665b374fba98be9cf8cef5ca5, type: 3}
       propertyPath: m_Name
       value: explode_rat
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574300374600036699, guid: 29ee988665b374fba98be9cf8cef5ca5, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005209055721034933, guid: 29ee988665b374fba98be9cf8cef5ca5, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35949,6 +35973,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 756666765857839479, guid: acbaa0b0fad434feaa826336e5531dd3, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359316222755979600, guid: acbaa0b0fad434feaa826336e5531dd3, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 6576316213144249181, guid: acbaa0b0fad434feaa826336e5531dd3, type: 3}
       propertyPath: m_Name
       value: ranged_rat

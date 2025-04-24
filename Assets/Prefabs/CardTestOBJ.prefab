@@ -53,14 +53,19 @@ MonoBehaviour:
   - {fileID: 3698102231567720832, guid: f272a3d8f42b846e384706b7f7d171fe, type: 3}
   - {fileID: 3698102231567720832, guid: ad8f66d74a04743988eba3845fa9e449, type: 3}
   - {fileID: 3698102231567720832, guid: b27df15fa803e4b9d861aee548e7820a, type: 3}
-  - {fileID: 3698102231567720832, guid: b27df15fa803e4b9d861aee548e7820a, type: 3}
-  - {fileID: 3698102231567720832, guid: c7af15040444d4f60b2d2d6b926cd905, type: 3}
+  - {fileID: 3698102231567720832, guid: bacb6c3911f13403ba43f48d8bdd6ed7, type: 3}
+  - {fileID: 0}
+  - {fileID: 3279372359176138938, guid: 5130bd02331684e6a9b09eb81d028901, type: 3}
   cardAbilitiesPrefabs:
   - {fileID: 3262003762390626205, guid: d18e4858c8c49458999d85fe88f1ef9f, type: 3}
   handPlace: {fileID: 0}
   deckPlace: {fileID: 0}
   discardPlace: {fileID: 0}
   cam: {fileID: 0}
+  atk: {fileID: 0}
+  player: {fileID: 0}
+  ricochetBullet: {fileID: 698235667843136800, guid: e5a2da9698e0447608dc6908a59b15ca, type: 3}
+  camera: {fileID: 0}
 --- !u!114 &7655944219863538688
 MonoBehaviour:
   m_ObjectHideFlags: 0
