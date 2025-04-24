@@ -28,6 +28,13 @@ public class Card : MonoBehaviour
    }
 
 //set constructor
+    public Card(string name, string type, bool inHand, bool active)
+    {
+        Name = name;
+        Type = type;
+        InHand = inHand;
+        Active = active;
+    }
     public Card(string name, string type, bool inHand, bool active ,GameObject physical)
     {
         Name = name;
@@ -57,6 +64,8 @@ public class Card : MonoBehaviour
         abilityPrefab = bulletObj;
         Lifespan = lifespan;
     }
+    
+    
 
   
 

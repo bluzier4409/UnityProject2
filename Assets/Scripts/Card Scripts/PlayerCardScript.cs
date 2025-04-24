@@ -33,7 +33,7 @@ public playerAttack atk;
 
 [SerializeField] public GameObject player;
 [SerializeField] public GameObject ricochetBullet;
-
+[SerializeField] public Camera camera;
     public void Awake()
     {
         numCardsText.text = _deck.Count.ToString();
@@ -55,6 +55,8 @@ public playerAttack atk;
         _deck.Add(G);
         Card RicochetBullet = new Card("Ricochet Bullet", "Bullet Replacer", false, false, cardPrefabs[6], ricochetBullet, 5f);
         _deck.Add(RicochetBullet);
+        Card teleportCard = new Card("Teleport", "Teleport", false, false, cardPrefabs[7]);
+        _deck.Add(teleportCard);
 
         _deck.Add(G);
 
@@ -274,16 +276,20 @@ _hand.RemoveAt(whereInHandNum);
   Debug.Log("Playing card: "+ card.ToString());
 
   discardCard(placeInHandNum);
+  
 
   if (card.getType().Equals("Bullet Replacer"))
   {
       playBulletReplacer(card);
-  }
-  else
+  } 
+  
+  if (card.getType().Equals("Teleport"))
   {
+      playTeleport(card);
+  } 
+  
       //Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
       //Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
-  }
   
  }
 
@@ -295,6 +301,12 @@ _hand.RemoveAt(whereInHandNum);
          GameObject ogBullet = attack.getBulletType();
          StartCoroutine(ReplaceBullet(attack, ogBullet, card.GetAbilityObject(), card.getLifespan()));
      }
+ }
+
+ public void playTeleport(Card card)
+ {
+     Vector3 mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
+     player.transform.position = mousePos;
  }
 
  public int whatIsActive(){
