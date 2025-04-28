@@ -19323,6 +19323,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1241123428}
     - target: {fileID: 5629552251165745223, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1241123428}
+    - target: {fileID: 5629552251165745223, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1086020042}
+    - target: {fileID: 5629552251165745223, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
       propertyPath: deckPlace
       value: 
       objectReference: {fileID: 310196702}
@@ -19346,6 +19354,10 @@ PrefabInstance:
       propertyPath: cardPrefabs.Array.data[4]
       value: 
       objectReference: {fileID: 3698102231567720832, guid: 2284425daec5140c984566b3d3733873, type: 3}
+    - target: {fileID: 5629552251165745223, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
+      propertyPath: cardPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 662858008816615849, guid: be654dc3574da447e877f829f55402ff, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
