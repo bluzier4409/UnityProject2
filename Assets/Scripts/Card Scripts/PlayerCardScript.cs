@@ -33,6 +33,7 @@ public playerAttack atk;
 
 [SerializeField] public GameObject player;
 [SerializeField] public GameObject ricochetBullet;
+[SerializeField] public GameObject iceBullet;
 [SerializeField] public Camera camera;
     public void Awake()
     {
@@ -50,7 +51,7 @@ public playerAttack atk;
         Card G = new Card("G", "Ranged", false, false, cardPrefabs[1]);
         Card E = new Card("E", "Ranged", false, false, cardPrefabs[4]);
         _deck.Add(E);
-        Card F = new Card("F", "Ranged", false, false, cardPrefabs[5]);
+        Card F = new Card("IceBullet", "Bullet Replacer", false, false, cardPrefabs[5], iceBullet, 2f);
         _deck.Add(F);
         _deck.Add(G);
         Card RicochetBullet = new Card("Ricochet Bullet", "Bullet Replacer", false, false, cardPrefabs[6], ricochetBullet, 5f);
@@ -286,15 +287,22 @@ _hand.RemoveAt(whereInHandNum);
   if (card.getType().Equals("Bullet Replacer"))
   {
       playBulletReplacer(card);
-  } 
-  
+  }
+
+  if (card.getType().Equals("Single Bullet Replacer"))
+  {
+      Debug.Log("over here");
+  }
+
   if (card.getType().Equals("Teleport"))
   {
       playTeleport(card);
       Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-      Instantiate(card.GetAbilityObject(),mousePos,Quaternion.identity);
-  
+      Instantiate(card.GetAbilityObject(), mousePos, Quaternion.identity);
+  }
  }
+
+ 
 
  public void playBulletReplacer(Card card)
  {

@@ -30,7 +30,8 @@ public class ricochetbullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-      Destroy(gameObject);
+        Destroy(gameObject);
+        
       if(collider.GetComponent<ObjHealth>() != null)
         {
             Debug.Log("hit");

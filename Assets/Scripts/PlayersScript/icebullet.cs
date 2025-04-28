@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class icebullet : MonoBehaviour
 {
    [Range(1, 100)]
    [SerializeField] private float speed = 75f;
 
    [Range(1, 10)]
    [SerializeField] private float lifeTime = 3f;
+   [SerializeField] private float freezeTime = 3f;
 
    private Rigidbody2D rb;
 
@@ -29,8 +30,9 @@ public class bullet : MonoBehaviour
         Debug.Log("OAIOJDAIOFSDIOFOIJSDFIJ");
       if(collider.GetComponent<ObjHealth>() != null)
         {
+            
             Debug.Log("hit");
-
+            StartCoroutine(FreezeForSeconds(collider, freezeTime));
             ObjHealth health = collider.GetComponent<ObjHealth>();
             health.Damage(bulletDammage);
             
@@ -43,5 +45,16 @@ public class bullet : MonoBehaviour
     
       
       
+    }
+
+    private IEnumerator<WaitForSeconds> FreezeForSeconds(Collider2D collidedObj, float freezeTime)
+    {
+        Rigidbody2D frozenRb = collidedObj.GetComponent<Rigidbody2D>();
+
+        frozenRb.constraints = RigidbodyConstraints2D.FreezePosition;
+        
+        yield return new WaitForSeconds(freezeTime);
+        
+        frozenRb.constraints = ~RigidbodyConstraints2D.FreezePosition;
     }
 }
