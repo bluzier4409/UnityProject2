@@ -939,7 +939,7 @@ Transform:
   m_GameObject: {fileID: 1241123424}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13888964, y: -1.5101209, z: 4.656651}
+  m_LocalPosition: {x: 14.51, y: -14.9, z: 4.656651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19358,6 +19358,10 @@ PrefabInstance:
       propertyPath: cardPrefabs.Array.data[6]
       value: 
       objectReference: {fileID: 662858008816615849, guid: be654dc3574da447e877f829f55402ff, type: 3}
+    - target: {fileID: 5629552251165745223, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
+      propertyPath: cardAbilitiesPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 7055585975719631963, guid: a84c4b8ae645c4bdab0598e818eb761c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
