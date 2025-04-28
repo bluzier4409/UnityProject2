@@ -17,7 +17,6 @@ public class bullet : MonoBehaviour
 
    private void Start() {
     rb = GetComponent<Rigidbody2D>();
-    Destroy(gameObject, lifeTime);
    }
 
    private void FixedUpdate(){
@@ -26,8 +25,8 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-     
-      
+        Destroy(this.gameObject);
+        Debug.Log("OAIOJDAIOFSDIOFOIJSDFIJ");
       if(collider.GetComponent<ObjHealth>() != null)
         {
             Debug.Log("hit");

@@ -29,7 +29,7 @@ public class ObjHealth : MonoBehaviour
         }
 
         this.health -= amount;
-
+        Debug.Log("damage " +  health.ToString());
         if(health < 1){
             die();
         }
