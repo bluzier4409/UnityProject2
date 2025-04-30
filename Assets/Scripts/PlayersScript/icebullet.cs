@@ -24,37 +24,28 @@ public class icebullet : MonoBehaviour
     rb.velocity = transform.up * speed;
    }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    public void OnTriggerEnter2D(Collider2D collider)
     {
-        Destroy(this.gameObject);
-        Debug.Log("OAIOJDAIOFSDIOFOIJSDFIJ");
-      if(collider.GetComponent<ObjHealth>() != null)
+        
+        if (collider.GetComponent<ObjHealth>() != null)
         {
-            
+            rb.velocity = Vector2.zero;
+            Rigidbody2D frozenRb = collider.GetComponent<Rigidbody2D>();
             Debug.Log("hit");
-            StartCoroutine(FreezeForSeconds(collider, freezeTime));
+         
             ObjHealth health = collider.GetComponent<ObjHealth>();
             health.Damage(bulletDammage);
-            
         }
+        else Destroy(gameObject); 
 
         if (collider.IsTouchingLayers(LayerMask.GetMask("walls")))
         {
             Debug.Log("hit");
+            Destroy(gameObject);
         }
-    
-      
+        
       
     }
 
-    private IEnumerator<WaitForSeconds> FreezeForSeconds(Collider2D collidedObj, float freezeTime)
-    {
-        Rigidbody2D frozenRb = collidedObj.GetComponent<Rigidbody2D>();
-
-        frozenRb.constraints = RigidbodyConstraints2D.FreezePosition;
-        
-        yield return new WaitForSeconds(freezeTime);
-        
-        frozenRb.constraints = ~RigidbodyConstraints2D.FreezePosition;
-    }
+   
 }

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Walls
+  - ice
   layers:
   - Default
   - TransparentFX

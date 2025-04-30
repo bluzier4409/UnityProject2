@@ -51,7 +51,7 @@ public playerAttack atk;
         Card G = new Card("G", "Ranged", false, false, cardPrefabs[1]);
         Card E = new Card("E", "Ranged", false, false, cardPrefabs[4]);
         _deck.Add(E);
-        Card F = new Card("IceBullet", "Bullet Replacer", false, false, cardPrefabs[5], iceBullet, 2f);
+        Card F = new Card("IceBullet", "Bullet Replacer", false, false, cardPrefabs[5], iceBullet, 10f);
         _deck.Add(F);
         _deck.Add(G);
         Card RicochetBullet = new Card("Ricochet Bullet", "Bullet Replacer", false, false, cardPrefabs[6], ricochetBullet, 5f);
@@ -314,6 +314,7 @@ _hand.RemoveAt(whereInHandNum);
          StartCoroutine(ReplaceBullet(attack, ogBullet, card.GetAbilityObject(), card.getLifespan()));
      }
  }
+ 
 
  public void playTeleport(Card card)
  {
@@ -437,6 +438,8 @@ void reshuffle(List<Card> deck)
      
      attack.setBulletType(originalbullet);
  }
+ 
+ 
 }
 
 

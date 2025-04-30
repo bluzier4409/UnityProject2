@@ -35,7 +35,7 @@ public class ricochetbullet : MonoBehaviour
       if(collider.GetComponent<ObjHealth>() != null)
         {
             Debug.Log("hit");
-
+            
             ObjHealth health = collider.GetComponent<ObjHealth>();
             if (lifeSpan <= lifeSpan - 1)
             {
