@@ -30,9 +30,10 @@ public class icebullet : MonoBehaviour
         Debug.Log("OAIOJDAIOFSDIOFOIJSDFIJ");
       if(collider.GetComponent<ObjHealth>() != null)
         {
-            
+            Rigidbody2D frozenRb = collider.GetComponent<Rigidbody2D>();
             Debug.Log("hit");
-            StartCoroutine(FreezeForSeconds(collider, freezeTime));
+            StartCoroutine(FreezeForSeconds(frozenRb, freezeTime));
+            
             ObjHealth health = collider.GetComponent<ObjHealth>();
             health.Damage(bulletDammage);
             
@@ -47,14 +48,12 @@ public class icebullet : MonoBehaviour
       
     }
 
-    private IEnumerator<WaitForSeconds> FreezeForSeconds(Collider2D collidedObj, float freezeTime)
+    private IEnumerator<WaitForSeconds> FreezeForSeconds(Rigidbody2D frozenRb, float freezeTime)
     {
-        Rigidbody2D frozenRb = collidedObj.GetComponent<Rigidbody2D>();
-
         frozenRb.constraints = RigidbodyConstraints2D.FreezePosition;
-        
+        Debug.Log("frozenRb");
         yield return new WaitForSeconds(freezeTime);
-        
-        frozenRb.constraints = ~RigidbodyConstraints2D.FreezePosition;
+        frozenRb.constraints = RigidbodyConstraints2D.None;
+        frozenRb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }

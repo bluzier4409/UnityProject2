@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2063898206244920981}
   - component: {fileID: 4926092331747061954}
   - component: {fileID: 8293297901354443137}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Aggro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 669118434397956293}
   - component: {fileID: 8096598963934332911}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2188195910906102221}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Triggers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 5383018176957307551}
   - component: {fileID: 4132439095090267091}
   - component: {fileID: 3891860813923961015}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: explode_rat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ CapsuleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 4618058064301857201}
   - component: {fileID: 3601492713335320508}
   - component: {fileID: 8861792143871835519}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
