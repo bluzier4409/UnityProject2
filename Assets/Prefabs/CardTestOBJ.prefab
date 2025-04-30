@@ -53,8 +53,8 @@ MonoBehaviour:
   - {fileID: 3698102231567720832, guid: f272a3d8f42b846e384706b7f7d171fe, type: 3}
   - {fileID: 3698102231567720832, guid: ad8f66d74a04743988eba3845fa9e449, type: 3}
   - {fileID: 3698102231567720832, guid: 2284425daec5140c984566b3d3733873, type: 3}
-  - {fileID: 3698102231567720832, guid: bacb6c3911f13403ba43f48d8bdd6ed7, type: 3}
-  - {fileID: 662858008816615849, guid: be654dc3574da447e877f829f55402ff, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 3279372359176138938, guid: 5130bd02331684e6a9b09eb81d028901, type: 3}
   cardAbilitiesPrefabs:
   - {fileID: 7055585975719631963, guid: a84c4b8ae645c4bdab0598e818eb761c, type: 3}
@@ -65,7 +65,7 @@ MonoBehaviour:
   atk: {fileID: 0}
   player: {fileID: 0}
   ricochetBullet: {fileID: 698235667843136800, guid: e5a2da9698e0447608dc6908a59b15ca, type: 3}
-  iceBullet: {fileID: 0}
+  iceBullet: {fileID: 698235667843136800, guid: 896d7ab035c4a400f90eb72bac0b57f4, type: 3}
   camera: {fileID: 0}
 --- !u!114 &7655944219863538688
 MonoBehaviour:
