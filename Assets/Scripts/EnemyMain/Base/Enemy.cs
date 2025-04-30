@@ -126,6 +126,14 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
                 health.Damage(1);
             }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("ice"))
+        {
+            StartCoroutine(FreezeForSeconds(rb, 3f));
+        }
+    }
     
     
     
@@ -169,5 +177,15 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
     public void SetAttackable(bool attackable)
     {
        Attackable = attackable;
+    }
+    
+    private IEnumerator<WaitForSeconds> FreezeForSeconds(Rigidbody2D frozenRb, float freezeTime)
+    {
+        frozenRb.constraints = RigidbodyConstraints2D.FreezePosition;
+        
+        yield return new WaitForSeconds(freezeTime);
+        
+        frozenRb.constraints = RigidbodyConstraints2D.None;
+        frozenRb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }

@@ -314,6 +314,7 @@ _hand.RemoveAt(whereInHandNum);
          StartCoroutine(ReplaceBullet(attack, ogBullet, card.GetAbilityObject(), card.getLifespan()));
      }
  }
+ 
 
  public void playTeleport(Card card)
  {
@@ -437,6 +438,8 @@ void reshuffle(List<Card> deck)
      
      attack.setBulletType(originalbullet);
  }
+ 
+ 
 }
 
 
