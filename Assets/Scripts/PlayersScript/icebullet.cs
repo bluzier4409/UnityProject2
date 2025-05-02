@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -26,6 +27,7 @@ public class icebullet : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
+        Destroy(gameObject);
         
         if (collider.GetComponent<ObjHealth>() != null)
         {
@@ -42,6 +44,8 @@ public class icebullet : MonoBehaviour
         {
             Debug.Log("hit");
             Destroy(gameObject);
+            
+            
         }
         
       
