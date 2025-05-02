@@ -248,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 100
   target: {fileID: 0}
+  explosionPrefabAfterDeath: {fileID: 5934127664534293935, guid: 8d0e7f52d84b24586af4dd9936a05c42, type: 3}
   sr: {fileID: 8096598963934332911}
   IdleBase: {fileID: 11400000, guid: f995509c2076b49279f98167a30f1a2b, type: 2}
   ChaseBase: {fileID: 11400000, guid: 1e32ff0fa224a4402b3e0dee89536d54, type: 2}
@@ -327,6 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  spriteRend: {fileID: 8096598963934332911}
 --- !u!1 &9005209055721034933
 GameObject:
   m_ObjectHideFlags: 0

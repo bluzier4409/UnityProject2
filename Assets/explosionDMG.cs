@@ -7,7 +7,8 @@ public class explosionDMG : MonoBehaviour
 
     private Vector3 whereIAm;
 
-    private double radius;
+    [SerializeField]private float maxRadius;
+    private float radius;
     [SerializeField]private int maxExplosionDmg_oneGreater = 11;
 
     //chnage radius as it goes?
@@ -15,7 +16,7 @@ public class explosionDMG : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enabled = false;
+        
         whereIAm = this.transform.position;
         radius = GetComponent<CircleCollider2D>().radius;
     }
@@ -26,8 +27,10 @@ public class explosionDMG : MonoBehaviour
 
     }
 
-    public void enableCollider(){
-        enabled = true;
+    private void changeRadius(float newRad){
+        Debug.Log("changeRad is called");
+        radius = newRad;
+        GetComponent<CircleCollider2D>().radius = newRad;
     }
 
 
@@ -39,7 +42,7 @@ public class explosionDMG : MonoBehaviour
         {
             int proximity = (int)(whereIAm - enemy.transform.position).magnitude;
             Debug.Log("prox =  " + proximity);
-            int dmgAmount = (int)(maxExplosionDmg_oneGreater - (proximity/radius));
+            int dmgAmount = (int)(maxExplosionDmg_oneGreater - (proximity/maxRadius));
             enemy.Damage(dmgAmount);
             Debug.Log("did " + dmgAmount + "damage prox");
         }

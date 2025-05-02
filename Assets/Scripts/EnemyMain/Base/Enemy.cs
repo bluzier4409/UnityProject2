@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -17,6 +18,8 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
     public bool Attackable { get; set; }
 
     private CircleCollider2D circleCollider2D;
+
+    public GameObject explosionPrefabAfterDeath;
 
     
 
@@ -84,11 +87,13 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
         {
             Die();
         }
+
     }
 
     
     
     
+
 
     public void Die()
     {
@@ -112,6 +117,9 @@ public class Enemy : MonoBehaviour, IDamage, IMove, ITrigger
                 playerHealth health;
                 health = target.GetComponent<playerHealth>();
                 health.Damage(5);
+
+                Debug.Log("should explode here");
+                Instantiate(explosionPrefabAfterDeath, transform.position, quaternion.identity);
             }
         }
     }
