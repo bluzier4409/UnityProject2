@@ -33,8 +33,6 @@ public class icebullet : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             Rigidbody2D frozenRb = collider.GetComponent<Rigidbody2D>();
-            Debug.Log("hit");
-         
             ObjHealth health = collider.GetComponent<ObjHealth>();
             health.Damage(bulletDammage);
         }
@@ -42,10 +40,7 @@ public class icebullet : MonoBehaviour
 
         if (collider.IsTouchingLayers(LayerMask.GetMask("walls")))
         {
-            Debug.Log("hit");
             Destroy(gameObject);
-            
-            
         }
         
       
