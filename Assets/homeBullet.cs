@@ -15,10 +15,11 @@ public class HomeBullet : MonoBehaviour
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(transform.up * speed, ForceMode2D.Impulse);
     }
 
     private void FixedUpdate(){
-        rb.velocity = transform.up * speed;
+        
     }
 
     

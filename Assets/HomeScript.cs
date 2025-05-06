@@ -15,7 +15,10 @@ public class HomeScript : MonoBehaviour
         if (other.GetComponent<ObjHealth>() != null)
         {
             rb = homingScript.GetComponent<Rigidbody2D>();
-            rb.AddForce(rb.transform.up * 500, ForceMode2D.Impulse);
+            Debug.Log(rb);
+            Vector2 direction = other.transform.position - transform.position;
+            rb.velocity = Vector2.zero;
+            rb.AddForce(direction * 3, ForceMode2D.Impulse);
         }
     }
 }
