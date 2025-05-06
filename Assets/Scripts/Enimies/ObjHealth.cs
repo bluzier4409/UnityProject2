@@ -9,6 +9,8 @@ public class ObjHealth : MonoBehaviour
     [SerializeField]private int health = 10;
 
     private GameObject deadCheck;
+        public SpriteRenderer spriteRend;
+
 
 
     void Start()
@@ -29,10 +31,12 @@ public class ObjHealth : MonoBehaviour
         }
 
         this.health -= amount;
-        Debug.Log("damage " +  health.ToString());
+        Debug.Log("damage: " +  health.ToString());
         if(health < 1){
             die();
         }
+        else{{StartCoroutine(colorWhenHit());}
+}
     }
 
     public void Heal(int amount){
@@ -49,4 +53,13 @@ public class ObjHealth : MonoBehaviour
 
   
     }
+
+    IEnumerator colorWhenHit(){
+        Debug.Log("set color red");
+        spriteRend.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        spriteRend.color = Color.white;
+
+    }
+
 }
