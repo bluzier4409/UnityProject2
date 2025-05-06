@@ -143,11 +143,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.21, y: -2.96, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 9079241647013311451}
   - {fileID: 8676173326573364621}
+  - {fileID: 9079241647013311451}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5563333457899486397
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 100
   target: {fileID: 0}
-  sr: {fileID: 1652030157512936051}
+  sr: {fileID: 1567812509102166636}
   IdleBase: {fileID: 11400000, guid: f995509c2076b49279f98167a30f1a2b, type: 2}
   ChaseBase: {fileID: 11400000, guid: 1e32ff0fa224a4402b3e0dee89536d54, type: 2}
   AttackBase: {fileID: 11400000, guid: 1096e8c49684c477d9cc881ad462eca4, type: 2}
@@ -227,9 +227,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.04}
-  m_Size: {x: 0.32, y: 0.14}
-  m_Direction: 1
+  m_Offset: {x: -0.10286742, y: 0.028282214}
+  m_Size: {x: 0.17918567, y: 0.2737863}
+  m_Direction: 0
 --- !u!114 &4257023536235941165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  spriteRend: {fileID: 1567812509102166636}
 --- !u!1 &7508138918004983792
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8676173326573364621}
+  - component: {fileID: 1567812509102166636}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -271,49 +273,16 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 728227892261261355}
+  m_Children: []
   m_Father: {fileID: 9067246743817838155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7994792427616889331
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 728227892261261355}
-  - component: {fileID: 1652030157512936051}
-  m_Layer: 0
-  m_Name: Rat-1.png
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &728227892261261355
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994792427616889331}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8676173326573364621}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1652030157512936051
+--- !u!212 &1567812509102166636
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994792427616889331}
+  m_GameObject: {fileID: 7508138918004983792}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -347,9 +316,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 88b30c0a905c642b8bb6d54ae955a7ef, type: 3}
-  m_Color: {r: 0.5827773, g: 1, b: 0.5411765, a: 1}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 5c54489379e70448cb1ec0d70426325d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
