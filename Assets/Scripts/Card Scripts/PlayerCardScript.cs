@@ -135,7 +135,8 @@ public void discardCard(int whereInHandNum)
 
 Debug.Log("Discarding card: " + _hand[whereInHandNum].getName());
 
-_hand[whereInHandNum].SetActiveStatus(false);
+
+Debug.Log("player card return");
 
 _discard.Add(_hand[whereInHandNum]);
 _hand.RemoveAt(whereInHandNum);
@@ -438,6 +439,8 @@ void reshuffle(List<Card> deck)
      
      attack.setBulletType(originalbullet);
  }
+
+ 
  
  
 }

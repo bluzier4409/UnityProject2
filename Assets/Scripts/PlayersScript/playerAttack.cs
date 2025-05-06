@@ -77,11 +77,16 @@ public class playerAttack : MonoBehaviour
         //Debug.Log("Cannot shoot while shop is open!");
         return;
     }
-    if (cardSystem.GetComponent<PlayerCardScript>().whatIsActive() >= 0){
-        Debug.Log("return idk why");
+
+    int ActiveInt = cardSystem.GetComponent<PlayerCardScript>().whatIsActive();
+    if (ActiveInt >= 0){
+        Debug.Log("return idk why" + ActiveInt);
         return;
         
-    } //remove later idk sorry
+    }
+    else {Debug.Log("return dont work");}
+    Debug.Log("return "+ActiveInt);
+    
     Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
    }
 
