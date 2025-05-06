@@ -16,9 +16,13 @@ public class HomeScript : MonoBehaviour
         {
             rb = homingScript.GetComponent<Rigidbody2D>();
             Debug.Log(rb);
-            Vector2 direction = other.transform.position - transform.position;
+            Vector2 direction = other.transform.position - rb.transform.position;
             rb.velocity = Vector2.zero;
+            float angle = MathF.Atan2(direction.y - transform.position.y, direction.x - transform.position.x) * Mathf.Rad2Deg - 90f;
+            rb.transform.rotation = Quaternion.Euler(0,0, angle);
             rb.AddForce(direction * 3, ForceMode2D.Impulse);
         }
     }
+    
+    
 }
