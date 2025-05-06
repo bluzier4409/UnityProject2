@@ -26,7 +26,6 @@ public class bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Destroy(this.gameObject);
-        Debug.Log("OAIOJDAIOFSDIOFOIJSDFIJ");
       if(collider.GetComponent<ObjHealth>() != null)
         {
             Debug.Log("hit");
