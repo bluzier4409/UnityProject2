@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="de422e1f-ba97-4658-8e7e-4746b3355fbd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Card Scripts/PlayerCardScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Card Scripts/PlayerCardScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/icebullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/icebullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HomeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HomeScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/homeBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/homeBullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/ricochetbullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayersScript/ricochetbullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/homeBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/homeBullet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +145,9 @@
       <workItem from="1745341614625" duration="4105000" />
       <workItem from="1745514887039" duration="2755000" />
       <workItem from="1745860357254" duration="4472000" />
-      <workItem from="1746035211854" duration="3327000" />
+      <workItem from="1746035211854" duration="4143000" />
+      <workItem from="1746205699148" duration="4887000" />
+      <workItem from="1746551062144" duration="1469000" />
     </task>
     <servers />
   </component>

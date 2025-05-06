@@ -65,6 +65,7 @@ public class ricochetbullet : MonoBehaviour
             newDir = Vector2.Reflect(curDire, point.normal);
             //Instantiate(this, newDir, Quaternion.FromToRotation(Vector2.up, randDir));
             transform.rotation = Quaternion.FromToRotation(Vector2.up, newDir);
+            rb.velocity *= speed;
             lifeSpan -= 1;
         }
     }
