@@ -52,18 +52,13 @@ public class ricochetbullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("hit");
         if(collision.gameObject.tag == "Walls")
         {
             Debug.Log("hit wall");
             ContactPoint2D point = collision.contacts[0];
-            //Vector2 pointPos = new Vector2(point.point.x, point.point.y);
             Vector2 newDir = Vector2.zero;
-           // Vector2 randDir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
             Vector2 curDire = this.transform.TransformDirection(Vector2.up);
-            
             newDir = Vector2.Reflect(curDire, point.normal);
-            //Instantiate(this, newDir, Quaternion.FromToRotation(Vector2.up, randDir));
             transform.rotation = Quaternion.FromToRotation(Vector2.up, newDir);
             rb.velocity *= speed;
             lifeSpan -= 1;
