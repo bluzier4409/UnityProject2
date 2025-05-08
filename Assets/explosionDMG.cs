@@ -28,7 +28,7 @@ public class explosionDMG : MonoBehaviour
     }
 
     private void changeRadius(float newRad){
-        Debug.Log("changeRad is called");
+        //Debug.Log("changeRad is called");
         radius = newRad;
         GetComponent<CircleCollider2D>().radius = newRad;
     }

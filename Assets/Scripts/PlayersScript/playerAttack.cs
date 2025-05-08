@@ -80,7 +80,7 @@ public class playerAttack : MonoBehaviour
 
     int ActiveInt = cardSystem.GetComponent<PlayerCardScript>().whatIsActive();
     if (ActiveInt >= 0){
-        Debug.Log("return idk why" + ActiveInt);
+        Debug.Log("return this num" + ActiveInt);
         return;
         
     }

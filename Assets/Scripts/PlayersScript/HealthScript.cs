@@ -20,7 +20,7 @@ public class HealthScript : MonoBehaviour
     //set this to the amount of normal hearts the player will have
     void Start()
     {
-        Debug.unityLogger.Log("HealthScript");
+        //Debug.unityLogger.Log("HealthScript");
 
         setHealth(startHeartNum);
         
@@ -37,7 +37,7 @@ public class HealthScript : MonoBehaviour
         hearts = new Image[num];
         
 
-        Debug.unityLogger.Log("create " + (num));
+        Debug.unityLogger.Log("create hearts: " + (num));
         for (int i=0;i<hearts.Length;i++)
         {
             //Debug.unityLogger.Log("new heart number " + i);

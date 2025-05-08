@@ -38,13 +38,23 @@ public class indicateSelectedCard : MonoBehaviour
         //goBackDown(keyNum);
     }*/
 
-    public void indicate(int keyNum){
-        cardToMove = layout.gameObject.transform.GetChild(keyNum);
-        cardToMove.Translate(0, (float)0.5, 0);
+    public void indicate(int keyNum, Card card){
+        if (card.getIndicated() == false){
+            card.setIndicated(true);
+            cardToMove = layout.gameObject.transform.GetChild(keyNum);
+            cardToMove.Translate(0, (float)0.5, 0);
+        }
+        else return;
+        
     }
-    public void goBackDown(int keyNum){
-        cardToMove = layout.gameObject.transform.GetChild(keyNum);
-        cardToMove.Translate(0, (float)-0.5, 0);
+    public void goBackDown(int keyNum, Card card){
+        if (card.getIndicated() == true){
+            card.setIndicated(false);
+            cardToMove = layout.gameObject.transform.GetChild(keyNum);
+            cardToMove.Translate(0, (float)-0.5, 0);
+        }
+        else return;
+        
     }
 
     //for each card in hand, if card is active, goBackDown(that Card)

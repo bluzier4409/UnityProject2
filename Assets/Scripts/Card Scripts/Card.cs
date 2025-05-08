@@ -18,6 +18,8 @@ public class Card : MonoBehaviour
      private GameObject physicalCard;
      private GameObject abilityPrefab;
 
+     private bool indicated = false;
+
 //defult constructor
    public Card()
    {
@@ -131,6 +133,14 @@ public class Card : MonoBehaviour
 
   public GameObject GetAbilityObject(){
     return this.abilityPrefab;
+  }
+
+  public bool getIndicated(){
+    return indicated;
+  }
+
+  public void setIndicated(bool toBe){
+    indicated = toBe;
   }
 
 }

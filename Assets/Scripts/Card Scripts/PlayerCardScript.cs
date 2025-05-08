@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.Collections;
@@ -74,6 +75,7 @@ public playerAttack atk;
         
     }
 
+
 public void Draw()
 {
     // Draw until hand has 3 cards or deck is empty
@@ -85,21 +87,13 @@ public void Draw()
         }
 
         // Draw 3 cards from the deck to the hand
-        for (int i = 0; i < 3; i++)
-        {
-            if (_deck.Count > 0)
-            {
-                Card drawnCard = _deck[0];
-                _deck.RemoveAt(0);  // Remove the card from the deck
-                _hand.Add(drawnCard);  // Add the card to the hand
-            }
-        }
+        StartCoroutine(waitAndDraw());
 
-        Debug.Log("Hand after drawing cards:");
+        /*Debug.Log("Hand after drawing cards:");
         foreach (Card card in _hand)
         {
             Debug.Log(card.getName());
-        }
+        }*/
 
         updateCardsShown();  // Update the UI (or internal tracking) of cards
     }
@@ -133,7 +127,7 @@ public void discardCard(int whereInHandNum)
     _discard.Add(card);*/
 
 
-Debug.Log("Discarding card: " + _hand[whereInHandNum].getName());
+//Debug.Log("Discarding card: " + _hand[whereInHandNum].getName());
 
 
 Debug.Log("player card return");
@@ -149,7 +143,7 @@ _hand.RemoveAt(whereInHandNum);
         Draw(); 
     }
 
-    Debug.Log("Updated Hand: ");
+    /*Debug.Log("Updated Hand: ");
     foreach (Card handCard in _hand)
     {
         Debug.Log(handCard.getName());
@@ -159,7 +153,7 @@ _hand.RemoveAt(whereInHandNum);
     foreach (Card discardCard in _discard)
     {
         Debug.Log(discardCard.getName());
-    }
+    }*/
     
 
     updateCardsShown();
@@ -204,7 +198,7 @@ _hand.RemoveAt(whereInHandNum);
   {
     
     if(card.GetActiveStatus() == true){
-        indicateScript.goBackDown(x);
+        indicateScript.goBackDown(x, _hand[x]);
         card.SetActiveStatus(false);
     }
     x = x+1;
@@ -226,13 +220,13 @@ _hand.RemoveAt(whereInHandNum);
   if (Input.GetKeyDown(KeyCode.Alpha1))
   {
     if (_hand[0].GetActiveStatus() == true)
-    {indicateScript.goBackDown(0);   
+    {indicateScript.goBackDown(0,_hand[0]);   
     _hand[0].SetActiveStatus(false);
     }
     else{
    resetActivity();
    _hand[0].SetActiveStatus(true);
-   indicateScript.indicate(0);
+   indicateScript.indicate(0, _hand[0]);
     }
     printWhatsActive();
    return 1;
@@ -240,13 +234,13 @@ _hand.RemoveAt(whereInHandNum);
   else if (Input.GetKeyDown(KeyCode.Alpha2))
   {
     if (_hand[1].GetActiveStatus() == true)
-    {indicateScript.goBackDown(1);   
+    {indicateScript.goBackDown(1, _hand[1]);   
     _hand[1].SetActiveStatus(false);
     }
     else {
    resetActivity();
    _hand[1].SetActiveStatus(true);
-    indicateScript.indicate(1);
+    indicateScript.indicate(1, _hand[1]);
     }
     printWhatsActive();
    return 2;
@@ -254,13 +248,13 @@ _hand.RemoveAt(whereInHandNum);
   else if (Input.GetKeyDown(KeyCode.Alpha3))
   {
     if (_hand[2].GetActiveStatus() == true)
-    {indicateScript.goBackDown(2);   
+    {indicateScript.goBackDown(2, _hand[2]);   
     _hand[2].SetActiveStatus(false);
     }
     else{
    resetActivity();
    _hand[2].SetActiveStatus(true);
-    indicateScript.indicate(2);
+    indicateScript.indicate(2, _hand[2]);
     }
    printWhatsActive();
    return 3;
@@ -439,6 +433,25 @@ void reshuffle(List<Card> deck)
      
      attack.setBulletType(originalbullet);
  }
+
+ private IEnumerator<WaitForSeconds> waitAndDraw(){
+        yield return new WaitForSeconds(.2f);
+        for (int i = 0; i < 3; i++)
+        {
+            if (_deck.Count > 0)
+            {
+                Card drawnCard = _deck[0];
+                _deck.RemoveAt(0);  // Remove the card from the deck
+                _hand.Add(drawnCard);    
+                drawnCard.SetActiveStatus(false);   
+                yield return new WaitForSeconds(.2f);
+                updateCardsShown();
+            }
+        }
+ }
+
+
+ 
 
  
  

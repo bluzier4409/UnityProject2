@@ -18841,6 +18841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: explode_rat
       objectReference: {fileID: 0}
+    - target: {fileID: 8574300374600036699, guid: 29ee988665b374fba98be9cf8cef5ca5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
