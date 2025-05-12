@@ -167,6 +167,10 @@ public class PlayerCardScript : MonoBehaviour
         player.transform.position = mousePos;
     }
 
+    public void playLasar(Card card){
+        Instantiate(card.GetAbilityObject(),this.transform.position, Quaternion.identity);
+    }
+
     public int whatIsActive()
     {
         for (int i = 0; i < _hand.Count; i++)
