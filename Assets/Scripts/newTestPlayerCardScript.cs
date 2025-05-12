@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerCardScript : MonoBehaviour
+public class newTestPlayerCardScript : MonoBehaviour
 {
     [Header("UI")]
     public Text numCardsText;
@@ -49,6 +49,9 @@ public class PlayerCardScript : MonoBehaviour
     {
         numCardsText.text = _deck.Count.ToString();
         checkActive();
+
+        if (Input.GetKeyDown(KeyCode.P)) discardCard(1);
+        if (Input.GetKeyDown(KeyCode.L)) Draw();
 
         if (whatIsActive() >= 0 && Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -132,7 +135,7 @@ public class PlayerCardScript : MonoBehaviour
         if (index >= _hand.Count) return;
 
         Card card = _hand[index];
-        //Debug.Log("Playing card: " + card.ToString());
+        Debug.Log("Playing card: " + card.ToString());
 
         discardCard(index);
 
@@ -196,21 +199,16 @@ public class PlayerCardScript : MonoBehaviour
     }
 
     public void updateCardsShown()
-{
-    foreach (Transform child in handPlace) Destroy(child.gameObject);
-    foreach (Transform child in discardPlace) Destroy(child.gameObject);
-
-    for (int i = 0; i < _hand.Count; i++)
     {
-        GameObject cardUI = Instantiate(_hand[i].GetGameObject(), handPlace);
+        foreach (Transform child in handPlace) Destroy(child.gameObject);
+        foreach (Transform child in discardPlace) Destroy(child.gameObject);
 
-    }
+        foreach (Card card in _hand)
+            Instantiate(card.GetGameObject(), handPlace);
 
-    if (_discard.Count > 0)
-    {
-        Instantiate(_discard[^1].GetGameObject(), discardPlace);
+        if (_discard.Count > 0)
+            Instantiate(_discard[^1].GetGameObject(), discardPlace);
     }
-}
 
     public List<Card> getHand() => _hand;
 

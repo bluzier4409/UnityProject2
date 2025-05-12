@@ -37,9 +37,7 @@ public class playerAttack : MonoBehaviour
             meleeAttack();
         }
 
-        if (Input.GetMouseButtonDown(0)){
-            Shoot();
-        }
+       
 
         
 
@@ -71,7 +69,7 @@ public class playerAttack : MonoBehaviour
         meleeAttackArea.SetActive(Attacking);
    }
 
-   private void Shoot(){
+   public void Shoot(){
     // Prevent shooting if the shop UI is open
     if (purchaseUI != null && (purchaseUI.activeSelf || purchaseUI2.activeSelf)) {
         //Debug.Log("Cannot shoot while shop is open!");
@@ -80,13 +78,8 @@ public class playerAttack : MonoBehaviour
 
     int ActiveInt = cardSystem.GetComponent<PlayerCardScript>().whatIsActive();
     if (ActiveInt >= 0){
-        Debug.Log("return this num" + ActiveInt);
         return;
-        
     }
-    else {Debug.Log("return dont work");}
-    Debug.Log("return "+ActiveInt);
-    
     Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
    }
 

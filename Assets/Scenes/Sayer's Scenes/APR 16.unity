@@ -19408,6 +19408,14 @@ PrefabInstance:
       propertyPath: layout
       value: 
       objectReference: {fileID: 2048701657}
+    - target: {fileID: 3655572595349849056, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
+      propertyPath: handPlace
+      value: 
+      objectReference: {fileID: 2048701658}
+    - target: {fileID: 3655572595349849056, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
+      propertyPath: moveDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5629552251165745223, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
       propertyPath: cam
       value: 
@@ -19428,6 +19436,10 @@ PrefabInstance:
       propertyPath: handPlace
       value: 
       objectReference: {fileID: 2048701658}
+    - target: {fileID: 5629552251165745223, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5629552251165745223, guid: cb52577e43c4c49a08f05c69881d2ac7, type: 3}
       propertyPath: discardPlace
       value: 
