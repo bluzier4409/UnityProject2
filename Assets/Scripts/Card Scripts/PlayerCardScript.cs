@@ -31,13 +31,11 @@ public class PlayerCardScript : MonoBehaviour
     {
         // Initialize deck
         _deck.Add(new Card("Bomb", "PlaceObj", false, false, cardPrefabs[0], cardAbilitiesPrefabs[0]));
-        _deck.Add(new Card("B", "Ranged", false, false, cardPrefabs[1]));
+        _deck.Add(new Card("SpinLasar", "OnPersonThenGo", false, false, cardPrefabs[1], cardAbilitiesPrefabs[1]));
         _deck.Add(new Card("C", "Consumable", false, false, cardPrefabs[2]));
         _deck.Add(new Card("D", "Melee", false, false, cardPrefabs[3]));
-        _deck.Add(new Card("G", "Ranged", false, false, cardPrefabs[1]));
         _deck.Add(new Card("E", "Ranged", false, false, cardPrefabs[4]));
         _deck.Add(new Card("IceBullet", "Bullet Replacer", false, false, cardPrefabs[5], iceBullet, 10f));
-        _deck.Add(new Card("G", "Ranged", false, false, cardPrefabs[1]));  // Duplicate G
         _deck.Add(new Card("Ricochet Bullet", "Bullet Replacer", false, false, cardPrefabs[6], ricochetBullet, 5f));
         _deck.Add(new Card("Teleport", "Teleport", false, false, cardPrefabs[7]));
 
@@ -49,6 +47,7 @@ public class PlayerCardScript : MonoBehaviour
     {
         numCardsText.text = _deck.Count.ToString();
         checkActive();
+
 
         if (whatIsActive() >= 0 && Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -148,6 +147,10 @@ public class PlayerCardScript : MonoBehaviour
                 Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
                 Instantiate(card.GetAbilityObject(), mousePos, Quaternion.identity);
                 break;
+            case "OnPersonThenGo":
+                Debug.Log("lasar gets called");
+                playOnPersonThenGo(card, cam.ScreenToWorldPoint(Input.mousePosition));
+                break;
         }
     }
 
@@ -167,8 +170,11 @@ public class PlayerCardScript : MonoBehaviour
         player.transform.position = mousePos;
     }
 
-    public void playLasar(Card card){
-        Instantiate(card.GetAbilityObject(),this.transform.position, Quaternion.identity);
+    public void playOnPersonThenGo(Card card, Vector3 goTo){
+        Instantiate(card.GetAbilityObject(),player.transform.position, Quaternion.identity);
+        Debug.Log(goTo.ToString() + "to here");
+        card.GetAbilityObject().GetComponent<spinLasar>().moveTo(goTo);
+
     }
 
     public int whatIsActive()
