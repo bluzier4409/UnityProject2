@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 [CreateAssetMenu(fileName = "Chase - Direct", menuName = "Enemy Logic/Chase Logic/Direct")]
 public class EnemyChaseDirect : EnemyChaseSO
 {
-    private float speed = 5f;
+    private float speed = 8f;
     public override void Initialize(GameObject gameObject, Enemy enemy)
     {
         base.Initialize(gameObject, enemy);
