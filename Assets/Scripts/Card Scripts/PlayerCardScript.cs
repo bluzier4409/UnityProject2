@@ -29,6 +29,9 @@ public class PlayerCardScript : MonoBehaviour
 
     private void Awake()
     {
+
+
+
         // Initialize deck
         _deck.Add(new Card("Bomb", "PlaceObj", false, false, cardPrefabs[0], cardAbilitiesPrefabs[0]));
         _deck.Add(new Card("SpinLasar", "OnPersonThenGo", false, false, cardPrefabs[1], cardAbilitiesPrefabs[1]));
