@@ -89526,6 +89526,11 @@ MonoBehaviour:
   coinsText: {fileID: 948662322}
   itemOneLeft: 2
   itemTwoLeft: 2
+--- !u!1 &1628608242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1546903050877649260, guid: a2ff101c1eca84d51a69e2681fcdffb5, type: 3}
+  m_PrefabInstance: {fileID: 964287702}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765911744
 GameObject:
   m_ObjectHideFlags: 0
@@ -89780,6 +89785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1530589964}
+  cardCanvasUI: {fileID: 1628608242}
 --- !u!4 &1888907159
 Transform:
   m_ObjectHideFlags: 0

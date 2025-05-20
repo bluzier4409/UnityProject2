@@ -40,6 +40,7 @@ public class PlayerCardScript : MonoBehaviour
         _deck.Add(new Card("Teleport", "Teleport", false, false, cardPrefabs[7]));
 
         numCardsText.text = _deck.Count.ToString();
+        reshuffle(_deck);
         Draw();
     }
 

@@ -12,6 +12,7 @@ public class GameManagerScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject gameOverUI;
+    public GameObject cardCanvasUI;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class GameManagerScript : MonoBehaviour
     public void gameOver()
     {
         gameOverUI.SetActive(true);
+        cardCanvasUI.SetActive(false);
         Image panelImage = gameOverUI.GetComponent<Image>();
         StartCoroutine((animation(panelImage)));
         

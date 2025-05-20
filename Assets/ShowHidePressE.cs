@@ -3,6 +3,8 @@ using UnityEngine;
 public class ShowHidePressE : MonoBehaviour {
     public GameObject pressEObject;  // Reference to the PressE object
     public GameObject purchaseUI;  // Reference to the PressE object
+
+    public GameObject CardCanvasUI;
     private bool isPlayerInRange = false; // Whether the player is in range to press E
     private void Start() {
         // Initially hide the object when the game starts
@@ -79,12 +81,16 @@ public class ShowHidePressE : MonoBehaviour {
     public void ShowPurchaseUI() {
         if (purchaseUI != null) {
             purchaseUI.SetActive(true);
+            CardCanvasUI.SetActive(false);
+
         }
     }
 
     public void HidePurchaseUI() {
         if (purchaseUI != null) {
             purchaseUI.SetActive(false);
+            CardCanvasUI.SetActive(true);
+
         }
     }
 
