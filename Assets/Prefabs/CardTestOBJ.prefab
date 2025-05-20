@@ -47,26 +47,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numCardsText: {fileID: 0}
-  cardPrefabs:
-  - {fileID: 3698102231567720832, guid: b27df15fa803e4b9d861aee548e7820a, type: 3}
-  - {fileID: 3698102231567720832, guid: 305e9750dbdbc4740b2de1ff3e07eae9, type: 3}
-  - {fileID: 3698102231567720832, guid: f272a3d8f42b846e384706b7f7d171fe, type: 3}
-  - {fileID: 3698102231567720832, guid: ad8f66d74a04743988eba3845fa9e449, type: 3}
-  - {fileID: 3698102231567720832, guid: 2284425daec5140c984566b3d3733873, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 3279372359176138938, guid: 5130bd02331684e6a9b09eb81d028901, type: 3}
-  cardAbilitiesPrefabs:
-  - {fileID: 7055585975719631963, guid: a84c4b8ae645c4bdab0598e818eb761c, type: 3}
   handPlace: {fileID: 0}
   deckPlace: {fileID: 0}
   discardPlace: {fileID: 0}
+  cardPrefabs:
+  - {fileID: 3698102231567720832, guid: b27df15fa803e4b9d861aee548e7820a, type: 3}
+  - {fileID: 8776731611617704170, guid: cd279b8b49e1c48ffa5c8fb2a0928c19, type: 3}
+  - {fileID: 3698102231567720832, guid: f272a3d8f42b846e384706b7f7d171fe, type: 3}
+  - {fileID: 3698102231567720832, guid: ad8f66d74a04743988eba3845fa9e449, type: 3}
+  - {fileID: 3698102231567720832, guid: 2284425daec5140c984566b3d3733873, type: 3}
+  - {fileID: 1109473497240129868, guid: 3ad11095333d74abc9c60c9907fa97f8, type: 3}
+  - {fileID: 662858008816615849, guid: be654dc3574da447e877f829f55402ff, type: 3}
+  - {fileID: 3279372359176138938, guid: 5130bd02331684e6a9b09eb81d028901, type: 3}
+  cardAbilitiesPrefabs:
+  - {fileID: 7055585975719631963, guid: a84c4b8ae645c4bdab0598e818eb761c, type: 3}
+  - {fileID: 7139333257670395073, guid: 062494f0799a941e5a583be2a46102fe, type: 3}
   cam: {fileID: 0}
-  atk: {fileID: 0}
+  camera: {fileID: 0}
   player: {fileID: 0}
   ricochetBullet: {fileID: 698235667843136800, guid: e5a2da9698e0447608dc6908a59b15ca, type: 3}
   iceBullet: {fileID: 698235667843136800, guid: 896d7ab035c4a400f90eb72bac0b57f4, type: 3}
-  camera: {fileID: 0}
+  atk: {fileID: 0}
 --- !u!114 &7655944219863538688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,5 +92,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e0f49311d9b4282a4e73474a5ea6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layout: {fileID: 0}
-  manager: {fileID: 0}
+  moveDistance: 20
+  handPlace: {fileID: 0}
