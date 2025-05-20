@@ -177,7 +177,7 @@ public class PlayerCardScript : MonoBehaviour
     public void playOnPersonThenGo(Card card, Vector3 goTo){
         Instantiate(card.GetAbilityObject(),player.transform.position, Quaternion.identity);
         Debug.Log(goTo.ToString() + "to here");
-        card.GetAbilityObject().GetComponent<spinLasar>().moveTo(goTo);
+        card.GetAbilityObject().GetComponent<moveLasar>().moveTo(goTo);
 
     }
 
