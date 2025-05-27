@@ -34,10 +34,10 @@ public class PlayerCardScript : MonoBehaviour
 
         // Initialize deck
         _deck.Add(new Card("Bomb", "PlaceObj", false, false, cardPrefabs[0], cardAbilitiesPrefabs[0]));
-        _deck.Add(new Card("SpinLasar", "OnPersonThenGo", false, false, cardPrefabs[1], cardAbilitiesPrefabs[1]));
-        _deck.Add(new Card("C", "Consumable", false, false, cardPrefabs[2]));
-        _deck.Add(new Card("D", "Melee", false, false, cardPrefabs[3]));
-        _deck.Add(new Card("E", "Ranged", false, false, cardPrefabs[4]));
+        _deck.Add(new Card("IceBullet", "Bullet Replacer", false, false, cardPrefabs[5], iceBullet, 10f));
+        _deck.Add(new Card("Ricochet Bullet", "Bullet Replacer", false, false, cardPrefabs[6], ricochetBullet, 5f));
+        _deck.Add(new Card("Teleport", "Teleport", false, false, cardPrefabs[7]));
+        _deck.Add(new Card("Bomb", "PlaceObj", false, false, cardPrefabs[0], cardAbilitiesPrefabs[0]));
         _deck.Add(new Card("IceBullet", "Bullet Replacer", false, false, cardPrefabs[5], iceBullet, 10f));
         _deck.Add(new Card("Ricochet Bullet", "Bullet Replacer", false, false, cardPrefabs[6], ricochetBullet, 5f));
         _deck.Add(new Card("Teleport", "Teleport", false, false, cardPrefabs[7]));
